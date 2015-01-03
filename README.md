@@ -1,4 +1,6 @@
-blog
+Azimuth1 Blog
 ====
 
-Company public blog
+Our public blog
+
+GitHub Pages and Jekyll powered.
