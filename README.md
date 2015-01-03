@@ -1,0 +1,4 @@
+blog
+====
+
+Company public blog
