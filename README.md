@@ -1,6 +1,4 @@
-Azimuth1 Blog
+Website content
 ====
 
-Our public blog
-
-GitHub Pages and Jekyll powered.
+Full of daring tales of adventure and intrigue.
