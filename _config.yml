@@ -15,6 +15,10 @@ avatar: http://azimuth1.github.io/azimuth1-website/images/main_logo.png
 # Flags below are optional
 #
 
+
+
+source: ./blogs/
+destination: ./blogs/_site/
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
