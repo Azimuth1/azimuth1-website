@@ -19,7 +19,7 @@ avatar: http://azimuth1.github.io/azimuth1-website/images/main_logo.png
 
 source: ./blogs
 destination: ./blogs/_site
-baseurl: /test
+baseurl: /az
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
