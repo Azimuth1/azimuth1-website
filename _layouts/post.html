@@ -1,0 +1,21 @@
+---
+layout: template
+---
+
+<div id="blog" class="slide center">
+    <div class="container">
+
+        <h1 class="red">{{ page.title }}</h1>
+
+        <div class="entry">
+            {{ content }}
+        </div>
+
+        <div class="date text-muted">
+            Written on {{ page.date | date: "%B %e, %Y" }}
+        </div>
+
+        {% include disqus.html %}
+
+    </div>
+</div>

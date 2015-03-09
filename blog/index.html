@@ -1,0 +1,53 @@
+---
+layout: template
+---
+
+<div id="blog" class="slide center">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="border_img_div">
+                    <h2 class="head3" style=" margin-top:4px;">BLOG ARCHIVE</h2> </div>
+                <div class="jumbotron-blog">
+                
+
+
+
+                        {% for post in site.posts %}
+                    <div class="blog_div w100">
+                        <h4 class="head4">{{ post.title }}</h4>
+                        <p class="paragraf">{{ post.date | date: "%-d %B %Y" }}</p>
+                        <p class="paragraf2">{{ post.excerpt }}</p> <a href="{{ site.baseurl }}{{ post.url }}" class="read_more">READ MORE</a> </div> 
+                        {% endfor %}
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_sgap"></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="newsleter">
+                    <div class="row">
+                        <div class="border_img_div">
+                            <h5 class="tooler_h">NEWSLETTER</h5> </div>
+                        <p class="newslater_p">Subscribe to our newsletter to get latest update and greate promotions to your inbox</p>
+                    </div>
+                    <div class="row">
+                        <form action="" class="form01">
+                            <input class="name" type="text" placeholder="Your Name" />
+                            <input class="email" type="text" placeholder="Your E-mail" />
+                            <button class="button01">I AGREE TO SUBSCRIBE NEWSLETTER</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

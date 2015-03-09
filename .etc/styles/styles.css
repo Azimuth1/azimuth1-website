@@ -1,0 +1,143 @@
+/*
+html, body {
+    height: 100%;
+    width: 100%;
+}*/
+
+body {
+    background: url(../images/body_bg.png) repeat;
+}
+.w100 {
+    width: 100%;
+}
+.font_family_style {
+    font-family: Century Gothic;
+    font-size: 23px;
+    color: #000;
+}
+.font_family_style span {
+    color: #780000;
+}
+.slide {
+    min-height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
+    padding: 85px 20px;
+    margin: 50px 10px;
+    text-align: center;
+    background: url(../images/body_bg.png) repeat;
+    /*
+  background-color: #34495E;
+  color: #E4E6E5;
+  padding-bottom: 15px;
+  padding-top: 35px;
+*/
+}
+.slide .container {
+    padding: 20px 20px;
+    background: #fff;
+    border: 1px solid #D6D6D6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#about {
+    color: #A8A8A8;
+}
+.navbar-brand {
+    padding: 0px 15px;
+}
+.option-com {
+    float: left;
+    width: 100%;
+    min-height: 45px;
+}
+.catagory_style {
+    float: left;
+    /*width: 100%;*/
+    
+    list-style: none;
+}
+.catagory_style li {
+    float: left;
+    line-height: 45px;
+    margin-right: 2px;
+    background: #000;
+}
+.catagory_style li a {
+    float: left;
+    font-family: Century Gothic;
+    font-size: 14px;
+    color: #FFF;
+    padding: 0px 20px;
+    line-height: 40px;
+}
+/*blog*/
+
+.slide.center {
+    text-align: left;
+}
+.red {
+    color: #700;
+}
+.head3 {
+    font-weight: bold;
+    background: none repeat scroll 0 0 #FFF;
+    float: left;
+    font-weight: bold;
+    padding-right: 15px;
+    width: auto;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #000 !important;
+    font-family: Century Gothic;
+    font-size: 28px;
+}
+.head4 {
+    font-weight: bold;
+    color: #700;
+    font-family: Century Gothic;
+    font-size: 22px;
+    text-indent: 20px;
+}
+.paragraf {
+    color: #D2D2D2;
+    font-family: Century Gothic;
+    font-size: 12px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    line-height: 16px;
+}
+.paragraf2 {
+    float: left;
+    font-family: Century Gothic;
+    font-size: 14px;
+    color: #111;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+.read_more {
+    float: right;
+    font-family: Century Gothic;
+    font-size: 13px;
+    color: #FFF;
+    font-weight: bold;
+    margin-top: 0px;
+    background: #780000;
+    padding: 2px 8px;
+}
+.border_img_div {
+    float: left;
+    background: url(../images/border.png) repeat-x center;
+    width: 100%;
+}
+.tooler_h {
+    color: #000;
+    float: left;
+    font-family: Century Gothic;
+    font-size: 22px;
+    font-weight: bold;
+    padding-right: 15px;
+    width: auto;
+    background: #FFF;
+}
