@@ -2,77 +2,160 @@
 layout: template
 ---
 
+<div id="home" class="slide">
+    <div class="container">
+        <div id="carousel-example-generic" class="carousel" data-ride="carousel">
 
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
 
-
-
-
-<div class="posts">
-    <div class="jumbotron">
-        <ul class="rslides" id="slider1">
-            <li><img src="images/moab.jpg" alt=""> </li>
-            <li><img src="images/brazil-ir.jpg" alt=""> </li>
-            <li><img src="images/logantrails.jpg" alt=""> </li>
-        </ul>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-2"> </div>
-        <div class="col-sm-8">
-            <h4 class="font_family_style"><span>Environmental Analytics</span> | See your world more clearly.</h4> </div>
-        <div class="col-sm-2"> </div>
-    </div>
-    
-    <div class="row" id="portfolio">
-        <div>
-            <div class="border_img_div">
-                <h2 class="head3" style=" margin-top:4px;">Portfolio</h2> </div>
-        </div>
-    </div>
-    <div class="row">
-        <section id="options" class="clearfix">
-            <div class="option-combo option-com">
-                <ul id="filter" class="option-set clearfix catagory_style" data-option-key="filter">
-                    <li><a href="#show-all" data-option-value="*" class="selected selection_active">ALL</a> </li>
-                    <li><a href="#portfolio_box00" data-option-value=".transportation">TRANSPORTATION</a> </li>
-                    <li><a href="#portfolio_box11" data-option-value=".smartdata">SmartData&reg;</a> </li>
-                    <li><a href="#portfolio_box22" data-option-value=".energy">ENERGY</a> </li>
-                    <li><a href="#portfolio_box33" data-option-value=".visualization">VISUALIZATION</a> </li>
-                    <li><a href="#portfolio_box44" data-option-value=".geospatial">GEOSPATIAL</a> </li>
-                    <li><a href="#portfolio_box44" data-option-value=".analytics">ANALYTICS</a> </li>
-                    <li><a href="#portfolio_box55" data-option-value=".rd">R+D</a> </li>
-                </ul>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img class="w100" src="images/moab.jpg" alt="">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="w100" src="images/brazil-ir.jpg" alt="">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="w100" src="images/logantrails.jpg" alt="">
+                    <div class="carousel-caption">
+                        ...
+                    </div>
+                </div>
             </div>
-        </section>
-    </div>
-    <br />
-    <div class="row">
-        <div id="container_box" class="super-list variable-sizes clearfix">
-            <div class="transportation geospatial energy rd col-md-3 margin_col">
-                <div> <img src="images/terrainnetwork.png" alt="..." class="img-thumbnail"> </div>
-            </div>
-            <div class="smartdata visualization analytics col-md-3 margin_col">
-                <div> <img src="images/boringlog.png" alt="..." class="img-thumbnail"> </div>
-            </div>
-            <div class="smartdata analytics rd col-md-3 margin_col">
-                <div> <img src="images/labrador.png" alt="..." class="img-thumbnail"> </div>
-            </div>
-            <div class="energy visualization analytics col-md-3 margin_col">
-                <div> <img src="images/welldata.png" alt="..." class="img-thumbnail"> </div>
-            </div>
-            <div class="smartdata visualization analytics geospatial col-md-3">
-                <div> <img src="images/sds.png" alt="..." class="img-thumbnail"> </div>
+            <div class="row">
+
+                <div class="col-md-12 text-center">
+                    <h4 class="font_family_style"><span>Environmental Analytics</span> | See your world more clearly.</h4>
+                </div>
+
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="border_img_div">
-                <h2 class="head3" style="margin-top:10px;">CLIENTS</h2> </div>
+</div>
+
+<div id="portfolio" class="slide">
+    <div class="container">
+        <div class="row" id="portfolio">
+            <div>
+                <div class="border_img_div">
+                    <h2 class="head3">Portfolio</h2> </div>
+            </div>
+        </div>
+        <div class="row">
+            <section id="options" class="clearfix">
+                <div class="option-combo option-com">
+                    <ul id="filter" class="option-set clearfix catagory_style" data-option-key="filter">
+                        <li><a href="#show-all" data-option-value="*" class="selected selection_active">ALL</a> </li>
+                        <li><a href="#portfolio_box00" data-option-value=".transportation">TRANSPORTATION</a> </li>
+                        <li><a href="#portfolio_box11" data-option-value=".smartdata">SmartData&reg;</a> </li>
+                        <li><a href="#portfolio_box22" data-option-value=".energy">ENERGY</a> </li>
+                        <li><a href="#portfolio_box33" data-option-value=".visualization">VISUALIZATION</a> </li>
+                        <li><a href="#portfolio_box44" data-option-value=".geospatial">GEOSPATIAL</a> </li>
+                        <li><a href="#portfolio_box44" data-option-value=".analytics">ANALYTICS</a> </li>
+                        <li><a href="#portfolio_box55" data-option-value=".rd">R+D</a> </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <br />
+        <div class="row">
+            <div id="container_box" class="super-list variable-sizes clearfix">
+                <div class="transportation geospatial energy rd col-md-3 margin_col">
+                    <div> <img src="images/terrainnetwork.png" alt="..." class="img-thumbnail"> </div>
+                </div>
+                <div class="smartdata visualization analytics col-md-3 margin_col">
+                    <div> <img src="images/boringlog.png" alt="..." class="img-thumbnail"> </div>
+                </div>
+                <div class="smartdata analytics rd col-md-3 margin_col">
+                    <div> <img src="images/labrador.png" alt="..." class="img-thumbnail"> </div>
+                </div>
+                <div class="energy visualization analytics col-md-3 margin_col">
+                    <div> <img src="images/welldata.png" alt="..." class="img-thumbnail"> </div>
+                </div>
+                <div class="smartdata visualization analytics geospatial col-md-3">
+                    <div> <img src="images/sds.png" alt="..." class="img-thumbnail"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="border_img_div">
+                    <h2 class="head3" style="margin-top:10px;">CLIENTS</h2> </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12"> <img src="images/logo-dbs.png" alt="dbS Prductions Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-dhs.png" alt="DHS Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-ct.png" alt="DHS Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-openwhere.png" alt="OpenWhere Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-geoeye.png" alt="GeoEye Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-doe.jpg" alt="Dept of Energy Logo" class="slider_img" style="margin-right:3px;"> </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12"> <img src="images/logo-dbs.png" alt="dbS Prductions Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-dhs.png" alt="DHS Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-ct.png" alt="DHS Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-openwhere.png" alt="OpenWhere Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-geoeye.png" alt="GeoEye Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-doe.jpg" alt="Dept of Energy Logo" class="slider_img" style="margin-right:3px;"> </div>
+</div>
+
+<div id="about" class="slide">
+    <div class="container">
+        <div class="footer_top" id="about">
+            <div class="col-md-6 border_bg">
+                <h5 class="load_heading">ABOUT AZIMUTH1</h5> <img src="{{ site.baseurl }}/images/load.png" alt="" class="load_img">
+                <p class="load_text"> We aim to see the world more clearly through advanced analytics. Our work with energy, environmental, logistics and security clients has shown that collecting and analyzing data in real time is an untapped source of efficiency for enterprise organizations. Our mechanism for making that possible is to bring the modern data science capabilities of big data architectures, statistical predictive modeling, and advanced interactive data visualization to help our customers make smarter resource allocation decisions. </p>
+                <p class="load_text"> <em>That's what we're passionate about, and that's what we're here to help you accomplish.</em> </p> <a href="" class="load_anchor">Find out more</a> </div>
+            <div class="col-md-6 border_bg">
+                </br> <a class="twitter-timeline" href="https://twitter.com/Azimuth1Tech" data-widget-id="425307765049815040">Tweets by @Azimuth1Tech</a> </div>
+        </div>
     </div>
-    <div class="row"> </div>
+</div>
+
+<div id="blog" class="slide center">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="border_img_div">
+                    <h2 class="head3" style=" margin-top:4px;">BLOG ARCHIVE</h2>
+                </div>
+                <div class="jumbotron-blog">
+
+                    {% for post in site.posts %}
+                    <div class="blog_div w100">
+                        <h4 class="head4">{{ post.title }}</h4>
+                        <p class="paragraf">{{ post.date | date: "%-d %B %Y" }}</p>
+                        <p class="paragraf2">{{ post.excerpt }}</p> <a href="{{ site.baseurl }}{{ post.url }}" class="read_more">READ MORE</a> </div>
+                    {% endfor %}
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_sgap"></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="newsleter">
+                    <div class="row">
+                        <div class="border_img_div">
+                            <h5 class="tooler_h">NEWSLETTER</h5> </div>
+                        <p class="newslater_p">Subscribe to our newsletter to get latest update and greate promotions to your inbox</p>
+                    </div>
+                    <div class="row">
+                        <form action="" class="form01">
+                            <input class="name" type="text" placeholder="Your Name" />
+                            <input class="email" type="text" placeholder="Your E-mail" />
+                            <button class="button01">I AGREE TO SUBSCRIBE NEWSLETTER</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>

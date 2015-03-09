@@ -24,77 +24,53 @@ layout: template
 
 
 -->
-<div class="row">
-    <div class="col-sm-8">
-        <div class="border_img_div">
-            <h2 class="head3" style=" margin-top:4px;">BLOG ARCHIVE</h2> </div>
-        <div class="jumbotron-blog">
-            <div class="blog_div w100">
-                <h4 class="head4">Blog post title one</h4>
-                <p class="paragraf">Published on 05:34pm Sunday, 24 November 2013 by Admin | Category One</p>
-                <p class="paragraf2">This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p> <a href="blog-detail.html" class="read_more">READ MORE</a> </div> {% for post in site.posts %}
-            <div class="blog_div w100">
-                <h4 class="head4">{{ post.title }}</h4>
-                <p class="paragraf">{{ post.date | date: "%-d %B %Y" }}</p>
-                <p class="paragraf2">{{ post.excerpt }}</p> <a href="{{ site.baseurl }}{{ post.url }}" class="read_more">READ MORE</a> </div> {% endfor %}
-            <div class="v_gap"></div>
-            <div class="v_gap"></div>
-            <div class="v_gap"></div>
-            <div class="v_gap"></div>
-            <div class="v_gap"></div>
-            <div class="v_gap"></div>
-            <div class="v_gap"></div>
-            <div class="v_gap"></div>
-            <div class="v_sgap"></div>
-            <div class="pagi">
-                <div class="pagi1">
-                    <button class="button01 prevbtn">PREVIOUS</button>
-                </div>
-                <div class="pagi2"> PAGE 2 OF 10 </div>
-                <div class="pagi3">
-                    <button class="button01 nextbtn">NEXT</button>
-                </div>
-                <div class="clear"></div>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="thumbnail populer">
-            <h5 class="populer_h">Popular Post</h5>
-            <ul class="populer_ul">
-                <li>free template for <span>133 views</span> </li>
-                <li>free template for <span>133 views</span> </li>
-                <li>free template for <span>133 views</span> </li>
-                <li>free template for <span>133 views</span> </li>
-            </ul>
-        </div>
-        <br>
-        <div class="thumbnail">
-            <div class="border_img_div">
-                <h5 class="tooler_h">AWESOME PROJECT</h5> </div> <img src="{{ site.baseurl }}/images/tooler.png" alt="" class="awesome_igm"> </div>
-        <br>
-        <div class="newsleter">
-            <div class="row">
-                <div class="arrow_box">
-                    <h1>&nbsp;</h1>
-                    <p class="newslater_p">I am happy to see your apps! Really great idea. Highly recommended to everyone. Trusted and always have a good communication with us. Keep it up!</p>
-                </div>
-            </div>
-            <div class="row"> <img src="{{ site.baseurl }}/images/aroow.png" alt="" class="slider_img slider_margin">
-                <div class=""> <img src="{{ site.baseurl }}/images/slider.png" alt="" class="slider_img slider_margin1"> </div> <img src="{{ site.baseurl }}/images/right_awro.png" alt="" class="slider_img slider_margin2"> </div>
-            <div class="row">
+
+<div id="blog" class="slide center">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-8">
                 <div class="border_img_div">
-                    <h5 class="tooler_h">NEWSLETTER</h5> </div>
-                <p class="newslater_p">Subscribe to our newsletter to get latest update and greate promotions to your inbox</p>
+                    <h2 class="head3" style=" margin-top:4px;">BLOG ARCHIVE</h2> </div>
+                <div class="jumbotron-blog">
+                
+
+
+
+                        {% for post in site.posts %}
+                    <div class="blog_div w100">
+                        <h4 class="head4">{{ post.title }}</h4>
+                        <p class="paragraf">{{ post.date | date: "%-d %B %Y" }}</p>
+                        <p class="paragraf2">{{ post.excerpt }}</p> <a href="{{ site.baseurl }}{{ post.url }}" class="read_more">READ MORE</a> </div> 
+                        {% endfor %}
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_gap"></div>
+                    <div class="v_sgap"></div>
+                </div>
             </div>
-            <div class="row">
-                <form action="" class="form01">
-                    <input class="name" type="text" placeholder="Your Name" />
-                    <input class="email" type="text" placeholder="Your E-mail" />
-                    <button class="button01">I AGREE TO SUBSCRIBE NEWSLETTER</button>
-                </form>
+            <div class="col-sm-4">
+                <div class="newsleter">
+                    <div class="row">
+                        <div class="border_img_div">
+                            <h5 class="tooler_h">NEWSLETTER</h5> </div>
+                        <p class="newslater_p">Subscribe to our newsletter to get latest update and greate promotions to your inbox</p>
+                    </div>
+                    <div class="row">
+                        <form action="" class="form01">
+                            <input class="name" type="text" placeholder="Your Name" />
+                            <input class="email" type="text" placeholder="Your E-mail" />
+                            <button class="button01">I AGREE TO SUBSCRIBE NEWSLETTER</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
-</div>
 </div>
