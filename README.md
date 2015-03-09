@@ -1,4 +1,4 @@
-Azimuth1 website layout
+##  Azimuth1 website layout
 
 ====
 
@@ -13,19 +13,18 @@ Azimuth1 website layout
 - post.html: Blog post background template
 
 ## _/_posts: New Blog Posts_
+- Blog Posts
 
-## _/js/main.js: custom javascript_
-
-## _/styles/styles.css: custom css_
 
 <br>
-
+##  Notes
 - This website uses Jekyll. Go to the homepage to learn more: http://jekyllrb.com/docs/home/
 
 - All Styles are generates using Bootstrap and a few custom styles in styles/styles.css
 
 - Older/unused files are in /.etc
 
+##  Instructions
 
 1. Install Jekyll
   		gem install jekyll
