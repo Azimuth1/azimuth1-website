@@ -1,18 +1,78 @@
 ---
-layout: home
+layout: template
 ---
 
+
+
+
+
+
 <div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+    <div class="jumbotron">
+        <ul class="rslides" id="slider1">
+            <li><img src="images/moab.jpg" alt=""> </li>
+            <li><img src="images/brazil-ir.jpg" alt=""> </li>
+            <li><img src="images/logantrails.jpg" alt=""> </li>
+        </ul>
+    </div>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+    <div class="row">
+        <div class="col-sm-2"> </div>
+        <div class="col-sm-8">
+            <h4 class="font_family_style"><span>Environmental Analytics</span> | See your world more clearly.</h4> </div>
+        <div class="col-sm-2"> </div>
+    </div>
+    
+    <div class="row" id="portfolio">
+        <div>
+            <div class="border_img_div">
+                <h2 class="head3" style=" margin-top:4px;">Portfolio</h2> </div>
+        </div>
+    </div>
+    <div class="row">
+        <section id="options" class="clearfix">
+            <div class="option-combo option-com">
+                <ul id="filter" class="option-set clearfix catagory_style" data-option-key="filter">
+                    <li><a href="#show-all" data-option-value="*" class="selected selection_active">ALL</a> </li>
+                    <li><a href="#portfolio_box00" data-option-value=".transportation">TRANSPORTATION</a> </li>
+                    <li><a href="#portfolio_box11" data-option-value=".smartdata">SmartData&reg;</a> </li>
+                    <li><a href="#portfolio_box22" data-option-value=".energy">ENERGY</a> </li>
+                    <li><a href="#portfolio_box33" data-option-value=".visualization">VISUALIZATION</a> </li>
+                    <li><a href="#portfolio_box44" data-option-value=".geospatial">GEOSPATIAL</a> </li>
+                    <li><a href="#portfolio_box44" data-option-value=".analytics">ANALYTICS</a> </li>
+                    <li><a href="#portfolio_box55" data-option-value=".rd">R+D</a> </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <br />
+    <div class="row">
+        <div id="container_box" class="super-list variable-sizes clearfix">
+            <div class="transportation geospatial energy rd col-md-3 margin_col">
+                <div> <img src="images/terrainnetwork.png" alt="..." class="img-thumbnail"> </div>
+            </div>
+            <div class="smartdata visualization analytics col-md-3 margin_col">
+                <div> <img src="images/boringlog.png" alt="..." class="img-thumbnail"> </div>
+            </div>
+            <div class="smartdata analytics rd col-md-3 margin_col">
+                <div> <img src="images/labrador.png" alt="..." class="img-thumbnail"> </div>
+            </div>
+            <div class="energy visualization analytics col-md-3 margin_col">
+                <div> <img src="images/welldata.png" alt="..." class="img-thumbnail"> </div>
+            </div>
+            <div class="smartdata visualization analytics geospatial col-md-3">
+                <div> <img src="images/sds.png" alt="..." class="img-thumbnail"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="border_img_div">
+                <h2 class="head3" style="margin-top:10px;">CLIENTS</h2> </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12"> <img src="images/logo-dbs.png" alt="dbS Prductions Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-dhs.png" alt="DHS Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-ct.png" alt="DHS Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-openwhere.png" alt="OpenWhere Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-geoeye.png" alt="GeoEye Logo" class="slider_img" style="margin-right:3px;"> <img src="images/logo-doe.jpg" alt="Dept of Energy Logo" class="slider_img" style="margin-right:3px;"> </div>
+    </div>
+    <div class="row"> </div>
 </div>
