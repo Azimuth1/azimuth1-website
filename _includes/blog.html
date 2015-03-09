@@ -1,25 +1,19 @@
----
-layout: template
----
-
 <div id="blog" class="slide center">
     <div class="container">
 
         <div class="row">
             <div class="col-sm-8">
                 <div class="border_img_div">
-                    <h2 class="head3" style=" margin-top:4px;">BLOG ARCHIVE</h2> </div>
+                    <h2 class="head3" style=" margin-top:4px;">BLOG ARCHIVE</h2>
+                </div>
                 <div class="jumbotron-blog">
-                
 
-
-
-                        {% for post in site.posts %}
+                    {% for post in site.posts %}
                     <div class="blog_div w100">
                         <h4 class="head4">{{ post.title }}</h4>
                         <p class="paragraf">{{ post.date | date: "%-d %B %Y" }}</p>
-                        <p class="paragraf2">{{ post.excerpt }}</p> <a href="{{ site.baseurl }}{{ post.url }}" class="read_more">READ MORE</a> </div> 
-                        {% endfor %}
+                        <p class="paragraf2">{{ post.excerpt }}</p> <a href="{{ site.baseurl }}{{ post.url }}" class="read_more">READ MORE</a> </div>
+                    {% endfor %}
                     <div class="v_gap"></div>
                     <div class="v_gap"></div>
                     <div class="v_gap"></div>
