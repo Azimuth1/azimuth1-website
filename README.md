@@ -2,7 +2,7 @@
 
 ====
 
-## _/_incudes: contains basic page content_
+## _/_includes: contains basic page content_
 - home.html
 - portfolio.html
 - about.html
@@ -15,6 +15,8 @@
 ## _/_posts: New Blog Posts_
 - Blog Posts
 
+## _/_data: data files for dynamic customization
+- authors.yml: metadata for individual post authors.
 
 <br>
 ##  Notes
