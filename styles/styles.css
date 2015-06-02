@@ -368,7 +368,9 @@ hr.small {
   text-align: center;
 }
 
-.intro-header .post-heading h1 {
+.intro-header .post-heading h1,
+.intro-header .site-heading h1,
+.intro-header .page-heading h1 {
     color: white;
    -webkit-text-stroke: 1.5px #444; /* stroke color and weight */
 }
