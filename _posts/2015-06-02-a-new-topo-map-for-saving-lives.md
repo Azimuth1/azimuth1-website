@@ -1,14 +1,13 @@
 ---
 published: false
-layout:     post
-title:      "A new topo map designed for search and rescue"
-subtitle:   "Using open map data to help save lives outdoors"
-date:       2015-06-01 12:00:00
-author:     "Jason Dalton"
-header-img: "post_img/post-bg-06.jpg"
+layout: post
+title: A new topo map designed for search and rescue
+subtitle: Using open map data to help save lives outdoors
+date: {}
+author: Jason Dalton
+"header-img": "post_img/post-bg-06.jpg"
 ---
 
-## A new topo map designed for search and rescue 
 
 _This article was originally submitted for presentation at State of the Map US 2015 in NYC_
 
@@ -57,6 +56,6 @@ Trail shelters - possible waiting area for overdue subjects, and navigation poin
 You can access the new SAR map here and at this link.   Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.
 
 INSERT MAP EMBED HERE
-<iframe width="620" height="315" src="http://azimuth1.kara.link/FIND/" frameborder="0" allowfullscreen></iframe>
+<iframe width="620" height="315" src="http://azimuth1.kara.link/FIND/" frameborder="0"> </iframe>
 
 INSERT COMMENTS SECTION
