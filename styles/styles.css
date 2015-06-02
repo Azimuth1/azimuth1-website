@@ -60,6 +60,9 @@ body {
     padding: 0px 15px;
 }
 
+.navbar-nav li a {
+    font-family: 'Roboto', sans-serif;
+}
 .option-com {
     float: left;
     width: 100%;
