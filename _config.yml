@@ -18,8 +18,11 @@ avatar: http://azimuth1.github.io/azimuth1-website/images/main_logo.png
 #
 
 
-
-
+twitter_username: azimuth1tech
+github_username:  Azimuth1
+linkedin_username: azimuth1
+paginate: 5
+paginate_path: "/blog/page:num/"
 destination: ./_site
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -27,12 +30,12 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: Azimuth1
+  github: barryclark/jekyll-now
   instagram:
-  linkedin: Azimuth1
+  linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter: Azimuth1Tech
+  twitter: jekyllrb
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
 
@@ -45,7 +48,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://www.azimuth1.com
+url:
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
