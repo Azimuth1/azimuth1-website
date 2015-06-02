@@ -367,14 +367,18 @@ hr.small {
 .intro-header .page-heading {
   text-align: center;
 }
+
+.intro-header .page-heading h1 {
+    color: white;
+   -webkit-text-stroke: 1.5px #444; /* stroke color and weight */
+
+}
 .intro-header .site-heading h1,
 .intro-header .page-heading h1 {
   margin-top: 0;
   font-size: 50px;
-  color: white;
-   -webkit-text-stroke: 1.5px #444; /* stroke color and weight */
-
 }
+
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
   font-size: 24px;
