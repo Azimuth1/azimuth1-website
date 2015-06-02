@@ -1,6 +1,8 @@
 ---
 layout: template
+published: true
 ---
+
 
 <div id="blog" class="slide center">
     <div class="container">
@@ -12,7 +14,11 @@ layout: template
         </div>
 
         <div class="date text-muted">
-            Written on {{ page.date | date: "%B %e, %Y" }}
+            Written by 
+          {% assign author = site.data.authors[page.author] %}
+			<a rel="author"  href="{{ author.twitter }}" title="{{ author.name }}">
+                 {{ author.name }}
+            </a>  {{ page.date | date: "%B %e, %Y" }}
         </div>
 
         {% include disqus.html %}
