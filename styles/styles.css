@@ -355,7 +355,8 @@ hr.small {
 .intro-header .page-heading {
   padding: 100px 0 50px;
 }
-.intro-header .page-heading h1 {
+
+h1 {
   color: white;
     -webkit-text-stroke: 1px #000; /* stroke color and weight */
 }
