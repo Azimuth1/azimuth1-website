@@ -371,6 +371,7 @@ hr.small {
 .intro-header .page-heading h1 {
   margin-top: 0;
   font-size: 50px;
+  color: #500;
   -webkit-text-stroke: 1px #000; /* stroke color and weight */
 }
 .intro-header .site-heading .subheading,
