@@ -51,5 +51,8 @@ Trail shelters - possible waiting area for overdue subjects, and navigation poin
 You can access the new SAR map here and at this link.   Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.
 
 INSERT MAP EMBED HERE
+<iframe src="http://azimuth1.kara.link/FIND/" width="600" height="200">
+  <p>Your browser does not support iframes.</p>
+</iframe>
 
 INSERT COMMENTS SECTION
