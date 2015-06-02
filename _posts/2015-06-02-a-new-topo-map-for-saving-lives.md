@@ -1,8 +1,5 @@
 ---
 published: false
----
-
----
 layout:     post
 title:      "A new topo map designed for search and rescue"
 subtitle:   "Using open map data to help save lives outdoors"
