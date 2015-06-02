@@ -358,7 +358,7 @@ hr.small {
 
 h1 {
   color: white;
-    -webkit-text-stroke: 1px #000; /* stroke color and weight */
+    -webkit-text-stroke: 2px #000; /* stroke color and weight */
 }
 
 @media only screen and (min-width: 768px) {
