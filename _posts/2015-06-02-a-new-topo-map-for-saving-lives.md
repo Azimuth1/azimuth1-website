@@ -4,7 +4,7 @@ layout:     post
 title:      "A new topo map designed for search and rescue"
 subtitle:   "Using open map data to help save lives outdoors"
 date:       2015-06-01 12:00:00
-author:     "Jason Dalton"
+author:     jason.dalton
 header-img: "post_img/post-bg-06.jpg"
 ---
 
