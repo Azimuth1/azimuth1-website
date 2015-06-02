@@ -355,6 +355,7 @@ hr.small {
 .intro-header .page-heading {
   padding: 100px 0 50px;
   color: white;
+    -webkit-text-stroke: 1px #000; /* stroke color and weight */
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
@@ -371,8 +372,6 @@ hr.small {
 .intro-header .page-heading h1 {
   margin-top: 0;
   font-size: 50px;
-  color: #550000;
-  -webkit-text-stroke: 1px #000; /* stroke color and weight */
 }
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
