@@ -1,7 +1,7 @@
 ---
 published: true
 layout:     post
-title:      "A new topo map designed for search and rescue"
+title:      "Designing a topo map for search and rescue"
 subtitle:   "Using open map data to help save lives outdoors"
 date:       2015-06-01 12:00:00
 author:     "jason.dalton"
