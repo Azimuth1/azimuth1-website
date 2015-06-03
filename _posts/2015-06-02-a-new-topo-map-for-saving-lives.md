@@ -27,9 +27,11 @@ Contour lines are algorithmically generated from digital elevation data rather t
 Utility lines, like trails, are often used by lost persons to travel.  They are an important feature for search task planning and navingating in the field.
 
 
-| Pre-2009 Raster utilities | Current Vector maps without utilities |
-|:-------------:|:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old2.png) | ![]({{site.baseurl}}/images/USGS_new2.png) |
+<th><td> Pre-2009 Raster utilities </td><td> Current Vector maps without utilities </td>
+</th>
+<tr>
+<td> ![]({{site.baseurl}}/images/USGS_old2.png) </td><td> ![]({{site.baseurl}}/images/USGS_new2.png) </td>
+</tr>
 
 Trails were removed from the new USGS topo series, a critical feature to know about for search and rescue.
 
