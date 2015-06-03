@@ -21,17 +21,17 @@ Contour lines are algorithmically generated from digital elevation data rather t
 
 |Raster Version|New Vector Version|
 | :-------------: |:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old1.png)| ![]({{site.baseurl}}/images/USGS_new1.png)
+| ![]({{site.baseurl}}/images/USGS_old1.png)| ![]({{site.baseurl}}/images/USGS_new1.png)|
 
 Utilities
 |Raster Version|New Vector Version|
 | :-------------: |:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old1.png)| ![]({{site.baseurl}}/images/USGS_new1.png)
+| ![]({{site.baseurl}}/images/USGS_old1.png)| ![]({{site.baseurl}}/images/USGS_new1.png)|
 
 Trails
 |Raster Version|New Vector Version|
 | :-------------: |:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old1.png)| ![]({{site.baseurl}}/images/USGS_new1.png)
+| ![]({{site.baseurl}}/images/USGS_old1.png)| ![]({{site.baseurl}}/images/USGS_new1.png)|
 
 Buildings
 
