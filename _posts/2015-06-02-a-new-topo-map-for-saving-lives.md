@@ -22,7 +22,7 @@ Contour lines are algorithmically generated from digital elevation data rather t
 
 |Pre-2009 Raster Contours|Current Vector Contours|
 |:-------------:|:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old1.png){: width="250px"} | ![]({{site.baseurl}}/images/USGS_new1.png =250x) |
+| ![]({{site.baseurl}}/images/USGS_old1.png){: width="300px"} | ![]({{site.baseurl}}/images/USGS_new1.png){: width="300px"} |
 
 Utility lines, like trails, are often used by lost persons to travel.  They are an important feature for search task planning and navingating in the field.
 
