@@ -20,26 +20,26 @@ In 2009, the USGS began changing the style and delivery of their topo maps under
 Contour lines are algorithmically generated from digital elevation data rather than from manual photogrammetry.  Faster, cheaper, but lacks details for precise navigation in microterrain. [1]
 
 |Pre-2009 Raster Contours|Current Vector Contours|
-| :-------------: |:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old1.png)| ![]({{site.baseurl}}/images/USGS_new1.png)|
+|:-------------:|:-------------:|
+| ![]({{site.baseurl}}/images/USGS_old1.png) | ![]({{site.baseurl}}/images/USGS_new1.png) |
 
 Utility lines, like trails, are often used by lost persons to travel.  They are an important feature for search task planning and navingating in the field.
 
 |Pre-2009 Raster utilities|Current Vector maps without utilities|
-| :-------------: |:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old2.png)| ![]({{site.baseurl}}/images/USGS_new2.png)|
+|:-------------:|:-------------:|
+| ![]({{site.baseurl}}/images/USGS_old2.png) | ![]({{site.baseurl}}/images/USGS_new2.png) |
 
 Trails were removed from the new USGS topo series, a critical feature to know about for search and rescue.
 
 |Pre-2009 Raster trails|Current Vector maps without trails|
-| :-------------: |:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old3.png)| ![]({{site.baseurl}}/images/USGS_new3.png)|
+|:-------------:|:-------------:|
+| ![]({{site.baseurl}}/images/USGS_old3.png) | ![]({{site.baseurl}}/images/USGS_new3.png) |
 
 Building were removed from the new USGS topo series.  They just change much faster than the topo map series are updated.
 
 |Pre-2009 Raster buildings|Current Vector maps without buildings|
-| :-------------: |:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old3.png)| ![]({{site.baseurl}}/images/USGS_new3.png)|
+|:-------------:|:-------------:|
+| ![]({{site.baseurl}}/images/USGS_old3.png) | ![]({{site.baseurl}}/images/USGS_new3.png) |
 
 
 ### A new topo map for search missions
