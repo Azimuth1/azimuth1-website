@@ -59,6 +59,8 @@ baseurl: ""
 #
 # !! You don't need to change any of the configuration flags below !!
 #
+# Except when you do...  updated markdown renderer to kramdown, the new GitHub Pages default.
+# http://milanaryal.com/2015/writing-on-github-pages-and-jekyll-using-markdown/
 
 markdown: kramdown
 highlighter: pygments
