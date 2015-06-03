@@ -19,6 +19,7 @@ In 2009, the USGS began changing the style and delivery of their topo maps under
 
 Contour lines are algorithmically generated from digital elevation data rather than from manual photogrammetry.  Faster, cheaper, but lacks details for precise navigation in microterrain. [1]
 
+|--+--|
 | Pre-2009 Raster Contours | Current Vector Contours |
 |:-------------:|:-------------:|
 | ![]({{site.baseurl}}/images/USGS_old1.png) | ![]({{site.baseurl}}/images/USGS_new1.png) |
