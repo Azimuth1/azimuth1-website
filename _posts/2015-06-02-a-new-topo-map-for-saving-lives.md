@@ -37,6 +37,9 @@ Trails were removed from the new USGS topo series, a critical feature to know ab
 
 Building were removed from the new USGS topo series.  They just change much faster than the topo map series are updated.
 
+|Pre-2009 Raster buildings|Current Vector maps without buildings|
+| :-------------: |:-------------:|
+| ![]({{site.baseurl}}/images/USGS_old3.png)| ![]({{site.baseurl}}/images/USGS_new3.png)|
 
 
 ### A new topo map for search missions
