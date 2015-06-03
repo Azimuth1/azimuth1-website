@@ -52,7 +52,7 @@ Aquaducts - feature where finds are often made.
 Trail shelters - possible waiting area for overdue subjects, and navigation points.
 
 
-You can access the new SAR map here and at <a href="http://azimuth1.kara.link/FIND/">this link</a>.   Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.
+You can access the new SAR map here and at <a href="azimuth1.kara.link/FIND/">this link</a>.   Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.
 
 <iframe width="800" height="400" src="http://azimuth1.kara.link/FIND/" frameborder="0" allowfullscreen></iframe>
 
