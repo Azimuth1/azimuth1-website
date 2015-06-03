@@ -17,6 +17,18 @@ A child is lost in the forest.  An elderly dementia patient wanders away from ho
 
 In 2009, the USGS began changing the style and delivery of their topo maps under the new USTOPO program.  The new USTopo map style has several cartographic improvements for readability on digital devices. They are more flexible in that they are delivered in layered PDF files rather than fixed raster images.  However, many important features were removed or degraded that can impact the ability of SAR teams to accurately navigate and ensure that they have covered an area.
 
+|---
+| Default aligned | Left aligned | Center aligned | Right aligned
+|-|:-|:-:|-:
+| First body part | Second cell | Third cell | fourth cell
+| Second line |foo | **strong** | baz
+| Third line |quux | baz | bar
+|---
+| Second body
+| 2 line
+|===
+| Footer row
+
 Contour lines are algorithmically generated from digital elevation data rather than from manual photogrammetry.  Faster, cheaper, but lacks details for precise navigation in microterrain. [1]
 
 |Pre-2009 Raster Contours|Current Vector Contours|
