@@ -34,19 +34,17 @@ Utility lines, like trails, are often used by lost persons to travel.  They are 
 
 Trails were removed from the new USGS topo series, a critical feature to know about for search and rescue.
 
-|---
 |Pre-2009 Raster trails|Current Vector maps without trails|
 |:-------------:|:-------------:|
 | ![]({{site.baseurl}}/images/USGS_old3.png){: width="350px"} | ![]({{site.baseurl}}/images/USGS_new3.png){: width="350px"} |
-|---
 
-Building were removed from the new USGS topo series.  They just change much faster than the topo map series are updated.
 
-|---
+Buildings were removed from the new USGS topo series.  They just change much faster than the topo map series are updated.
+
 |Pre-2009 Raster buildings|Current Vector maps without buildings|
 |:-------------:|:-------------:|
 | ![]({{site.baseurl}}/images/USGS_old3.png){: width="350px"} | ![]({{site.baseurl}}/images/USGS_new3.png){: width="350px"} |
-|---
+
 
 ### A new topo map for search missions
 To improve the existing topo map, we supplemented the USGS data with features available from the OpenStreetMap database, and other open source licensed data that could be integrated into a topo map tailored for SAR use.
