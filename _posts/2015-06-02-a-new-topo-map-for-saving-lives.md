@@ -47,7 +47,7 @@ Buildings were removed from the new USGS topo series.  They just change much fas
 
 
 ### A new topo map for search missions
-To improve the existing topo map, we supplemented the USGS data with features available from the OpenStreetMap database, and other open source licensed data that could be integrated into a topo map tailored for SAR use.
+Azimuth1 is part of a team working on support tools for first responders formed by Robert Koester of dbS Productions, a long time lost person behavior researcher and publisher for SAR related topics.  We are the tech strategy and design component of the program, and it helps that I (Jason) has 12 years of SAR experience as a volunteer searcher and search manager to help guide our design decisions.   We are undertaking an effort to improve the existing topo map.  We've supplemented the USGS data with features available from the OpenStreetMap database, and other open source licensed data that could be integrated into a topo map tailored for SAR use.
 We added back the useful features that USGS had to remove.  
 
 Trails
