@@ -1,12 +1,13 @@
 ---
 published: true
-layout:     post
-title:      "Designing a topo map for search and rescue"
-subtitle:   "Using open map data to help save lives outdoors"
-date:       2015-06-01 12:00:00
-author:     "jason.dalton"
-header-img: "images/topo-bg.png"
+layout: post
+title: Designing a topo map for search and rescue
+subtitle: Using open map data to help save lives outdoors
+date: {}
+author: jason.dalton
+"header-img": "images/topo-bg.png"
 ---
+
 
 _This article was originally submitted for presentation at State of the Map US 2015 in NYC_
 
@@ -16,11 +17,21 @@ A child is lost in the forest.  An elderly dementia patient wanders away from ho
 
 The new USTopo map style has several cartographic improvements for readability on digital devices. They are more flexible in that they are delivered in layered PDF files rather than fixed raster images.  However, many important features were removed or degraded that can impact the ability of SAR teams to accurately navigate and ensure that they have covered an area.
 
-Contour lines
+Contour lines are algorithmically generated from digital elevation data rather than from manual photogrammetry.  Faster, cheaper, but lacks details for precise navigation in microterrain. [1]
+
+|Raster Version|New Vector Version|
+| :-------------: |:-------------:|
+| ![]({{site.baseurl}}/images/USGS_old1.png)| ![]({{site.baseurl}}/images/USGS_new1.png)
 
 Utilities
+|Raster Version|New Vector Version|
+| :-------------: |:-------------:|
+| ![]({{site.baseurl}}/images/USGS_old1.png)| ![]({{site.baseurl}}/images/USGS_new1.png)
 
 Trails
+|Raster Version|New Vector Version|
+| :-------------: |:-------------:|
+| ![]({{site.baseurl}}/images/USGS_old1.png)| ![]({{site.baseurl}}/images/USGS_new1.png)
 
 Buildings
 
@@ -55,4 +66,9 @@ Trail shelters - possible waiting area for overdue subjects, and navigation poin
 You can access the new SAR map here and at <a href="http://azimuth1.kara.link/FIND/" target="_blank">this link</a>.   Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.
 
 <iframe width="800" height="400" src="http://azimuth1.kara.link/FIND/" frameborder="0" allowfullscreen></iframe>
+
+FOOTNOTES
+
+[1] To which everyone says "So use GPS and you get that precision back."  Which is partly true, but even with the growth of GPS and GIS in SAR operations, there are still some real deficiencies.  Getting high quality maps onto GPS is difficult.  Handheld units typically require expensive map upgrades or a complex series of steps to update your own map data.  Mobile phone GPS apps have the ability to display high quality maps, but require precaching of maps before going in the field since mobile coverage isn't usually present.  Then there's the issue of battery life.  Constant navigation over a 6-10 hour task would deplete most phone batteries.  Extra capacity battery cases, rechargers, solar chargers, etc just add to the already significant weight of gear carried by most field searchers.   Then there's the logistics of getting GPS track data back onto a central map at search base.  Without wifi, compliant software, etc, there are just too many possible devices and connections for a thinly staffed search base to accommodate most possibilities.  The future of mobile mapping in SAR is coming, but it stands on battery and interoperability.
+
 
