@@ -30,7 +30,7 @@ Utility lines, like trails, are often used by lost persons to travel.  They are 
 <th><td> Pre-2009 Raster utilities </td><td> Current Vector maps without utilities </td>
 </th>
 <tr>
-<td> ![]({{site.baseurl}}/images/USGS_old2.png) </td><td> ![]({{site.baseurl}}/images/USGS_new2.png) </td>
+<td> ![]({{site.baseurl}}/images/USGS_old2.png){: width="350px"} </td><td> ![]({{site.baseurl}}/images/USGS_new2.png){: width="350px"} </td>
 </tr>
 
 Trails were removed from the new USGS topo series, a critical feature to know about for search and rescue.
@@ -38,7 +38,7 @@ Trails were removed from the new USGS topo series, a critical feature to know ab
 |---
 |Pre-2009 Raster trails|Current Vector maps without trails|
 |:-------------:|:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old3.png) | ![]({{site.baseurl}}/images/USGS_new3.png) |
+| ![]({{site.baseurl}}/images/USGS_old3.png){: width="350px"} | ![]({{site.baseurl}}/images/USGS_new3.png){: width="350px"} |
 |---
 
 Building were removed from the new USGS topo series.  They just change much faster than the topo map series are updated.
@@ -46,7 +46,7 @@ Building were removed from the new USGS topo series.  They just change much fast
 |---
 |Pre-2009 Raster buildings|Current Vector maps without buildings|
 |:-------------:|:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old3.png) | ![]({{site.baseurl}}/images/USGS_new3.png) |
+| ![]({{site.baseurl}}/images/USGS_old3.png){: width="350px"} | ![]({{site.baseurl}}/images/USGS_new3.png){: width="350px"} |
 |---
 
 ### A new topo map for search missions
