@@ -62,6 +62,7 @@ body {
 
 .navbar-nav li a {
     font-family: 'Roboto', sans-serif;
+    background-color: #fff;
 }
 .option-com {
     float: left;
