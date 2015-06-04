@@ -17,24 +17,32 @@ A child is lost in the forest.  An elderly dementia patient wanders away from ho
 
 In 2009, the USGS began changing the style and delivery of their topo maps under the new USTOPO program.  The new USTopo map style has several cartographic improvements for readability on digital devices. They are more flexible in that they are delivered in layered PDF files rather than fixed raster images.  However, many important features were removed or degraded that can impact the ability of SAR teams to accurately navigate and ensure that they have covered an area.
 
-Contour lines are algorithmically generated from digital elevation data rather than from manual photogrammetry.  Faster, cheaper, but lacks details for precise navigation in microterrain[^1].   
+Contour lines are algorithmically generated from digital elevation data rather than from manual photogrammetry.  Faster, cheaper, but lacks details for precise navigation in microterrain[^1].
+
 |Pre-2009 Raster Contours| |Current Vector Contours|
 |:-------------:|-|:-------------:|
 | ![]({{site.baseurl}}/images/USGS_old1.png){: width="350px"} | | ![]({{site.baseurl}}/images/USGS_new1.png){: width="350px"} |
 
-Utility lines, like trails, are often used by lost persons to travel.  They are an important feature for search task planning and navingating in the field.   
+   
+
+Utility lines, like trails, are often used by lost persons to travel.  They are an important feature for search task planning and navingating in the field.
+
 | Pre-2009 Raster utilities |  | Current Vector maps without utilities |
 |:-------------:|-|:-------------:|
 | ![]({{site.baseurl}}/images/USGS_old2.png){: width="350px"} | | ![]({{site.baseurl}}/images/USGS_new2.png){: width="350px"} |
 
+   
 
-Trails were removed from the new USGS topo series, a critical feature to know about for search and rescue.   
+Trails were removed from the new USGS topo series, a critical feature to know about for search and rescue.
+
 |Pre-2009 Raster trails| |Current Vector maps without trails|
 |:-------------:|-|:-------------:|
 | ![]({{site.baseurl}}/images/USGS_old3.png){: width="350px"} | | ![]({{site.baseurl}}/images/USGS_new3.png){: width="350px"} |
 
+  
 
-Buildings were removed from the new USGS topo series.  They just change much faster than the topo map series are updated.   
+Buildings were removed from the new USGS topo series.  They just change much faster than the topo map series are updated.
+
 |Pre-2009 Raster buildings| |Current Vector maps without buildings|
 |:-------------:|-|:-------------:|
 | ![]({{site.baseurl}}/images/usgs-bldg-old.png){: width="350px"} | | ![]({{site.baseurl}}/images/usgs-bldg-new.png){: width="350px"} |
