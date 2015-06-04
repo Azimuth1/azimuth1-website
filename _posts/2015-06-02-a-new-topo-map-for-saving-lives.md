@@ -27,23 +27,23 @@ Contour lines are algorithmically generated from digital elevation data rather t
 Utility lines, like trails, are often used by lost persons to travel.  They are an important feature for search task planning and navingating in the field.
 
 
-| Pre-2009 Raster utilities | Current Vector maps without utilities |
-|:-------------:|:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old2.png){: width="350px"} | ![]({{site.baseurl}}/images/USGS_new2.png){: width="350px"} |
+| Pre-2009 Raster utilities |  | Current Vector maps without utilities |
+|:-------------:|-|:-------------:|
+| ![]({{site.baseurl}}/images/USGS_old2.png){: width="350px"} | | ![]({{site.baseurl}}/images/USGS_new2.png){: width="350px"} |
 
 
 Trails were removed from the new USGS topo series, a critical feature to know about for search and rescue.
 
-|Pre-2009 Raster trails|Current Vector maps without trails|
-|:-------------:|:-------------:|
-| ![]({{site.baseurl}}/images/USGS_old3.png){: width="350px"} | ![]({{site.baseurl}}/images/USGS_new3.png){: width="350px"} |
+|Pre-2009 Raster trails| |Current Vector maps without trails|
+|:-------------:|-|:-------------:|
+| ![]({{site.baseurl}}/images/USGS_old3.png){: width="350px"} | | ![]({{site.baseurl}}/images/USGS_new3.png){: width="350px"} |
 
 
 Buildings were removed from the new USGS topo series.  They just change much faster than the topo map series are updated.
 
-|Pre-2009 Raster buildings|Current Vector maps without buildings|
-|:-------------:|:-------------:|
-| ![]({{site.baseurl}}/images/usgs-bldg-old.png){: width="350px"} | ![]({{site.baseurl}}/images/usgs-bldg-new.png){: width="350px"} |
+|Pre-2009 Raster buildings| |Current Vector maps without buildings|
+|:-------------:|-|:-------------:|
+| ![]({{site.baseurl}}/images/usgs-bldg-old.png){: width="350px"} | | ![]({{site.baseurl}}/images/usgs-bldg-new.png){: width="350px"} |
 
 ---
 
