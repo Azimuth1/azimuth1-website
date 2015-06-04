@@ -57,7 +57,7 @@ Trails
 
 Utilities
 
-![]({{site.baseurl}}/images/sar-utilities.png){: width="450px"}
+![]({{site.baseurl}}/images/sar-utility.png){: width="450px"}
 
 Buildings
 
