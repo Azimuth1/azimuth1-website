@@ -51,7 +51,7 @@ Buildings were removed from the new USGS topo series.  They just change much fas
 Azimuth1 is part of a team working on support tools for first responders formed by Robert Koester of dbS Productions, a long time lost person behavior researcher and publisher for SAR related topics. The work is supported by the First Responder Group within the DHS Office of Science and Technology. We are the tech strategy and design component of the program and are undertaking an effort to improve the existing topo map to better support search missions.  We've supplemented the USGS data with features available from the OpenStreetMap database, and other open source licensed data that could be integrated into a topo map tailored for SAR use.
 We added back the useful features that USGS had to remove.  
 
-#### Trails
+**Trails**  
 ![]({{site.baseurl}}/images/sar-contour.png){: width="450px"}
 
 #### Utilities
@@ -65,16 +65,16 @@ Since USGS strives for equal data coverage across the whole United States, they 
 ### Features for SAR
 Some map features that may not be generally applicable or interesting but are useful for searchers to know  valuable for SAR use are included on this topo.
 
-**Medical** - local doctors, and other EMS - medical support in the event of an injury or when the lost person is found and needs medical attention.  Search dog handlers will see any known veterinarian offices from their task map and planning maps. 
+**Medical** - local doctors, and other EMS - medical support in the event of an injury or when the lost person is found and needs medical attention.  Search dog handlers will see any known veterinarian offices from their task map and planning maps.  
 ![]({{site.baseurl}}/images/sar-hospital.png){: width="450px"}
 
-**Churches** - often used as areas to set up base operations and staging areas for volunteers to rest and eat.
+**Churches** - often used as areas to set up base operations and staging areas for volunteers to rest and eat.   
 ![]({{site.baseurl}}/images/sar-church.png){: width="450px"}
 
-**Aquaducts** - feature where finds are often made.
+**Aquaducts** - feature where finds are often made.   
 ![]({{site.baseurl}}/images/sar-aquaduct.png){: width="450px"}
 
-**Shelters** - possible waiting area for overdue subjects, and navigation points.
+**Shelters** - possible waiting area for overdue subjects, and navigation points.   
 ![]({{site.baseurl}}/images/sar-shelter.png){: width="450px"}
 
 
