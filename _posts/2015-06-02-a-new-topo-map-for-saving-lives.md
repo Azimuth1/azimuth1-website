@@ -60,23 +60,27 @@ We added back the useful features that USGS had to remove.
 #### Buildings
 ![]({{site.baseurl}}/images/sar-bldg.png){: width="450px"}
 
-#### Shelters
-![]({{site.baseurl}}/images/sar-shelter.png){: width="450px"}
-
 Since USGS strives for equal data coverage across the whole United States, they would not include a dataset of trails in a single state for example, even if it was very good.   Our approach is just the opposite.  If we can include only one item listed as 'culvert' and that culvert is useful to a particular missing person search then it's useful to put on our map.  in other words we don't require that we show _every_ culvert before we show _any_ culvert.   This is exactly where OpenStreetMap is such a strong dataset.  The completeness of coverage of any of those high level of detail features varies widely across the map, but in places where volunteers have taken the time to map and verify detailed feature data, it is extremely valuable in that area.
 
 ### Features for SAR
 Some map features that may not be generally applicable or interesting but are useful for searchers to know  valuable for SAR use are included on this topo.
 
-Hospitals, local doctors, and other EMS - medical support in the event of an injury or when the lost person is found and needs medical attention.
+#### Hospitals
+local doctors, and other EMS - medical support in the event of an injury or when the lost person is found and needs medical attention.  Search dog handlers will see any known veterinarian offices from their task map and planning maps. 
+![]({{site.baseurl}}/images/sar-hospital.png){: width="450px"}
 
-Veterinarians - search dog handlers will see any known veterinarian offices from their task map and planning maps. 
+#### Churches
+often used as areas to set up base operations and staging areas for volunteers to rest and eat.
+![]({{site.baseurl}}/images/sar-church.png){: width="450px"}
 
-Churches - often used as areas to set up base operations and staging areas for volunteers to rest and eat.
+#### Aquaducts
+feature where finds are often made.
+![]({{site.baseurl}}/images/sar-aquaduct.png){: width="450px"}
 
-Aquaducts - feature where finds are often made.
+#### Shelters
+possible waiting area for overdue subjects, and navigation points.
+![]({{site.baseurl}}/images/sar-shelter.png){: width="450px"}
 
-Trail shelters - possible waiting area for overdue subjects, and navigation points.
 
 
 You can access the new SAR map below and at <a href="http://azimuth1.kara.link/FIND/" target="_blank">this link</a>. Right now, we're just hosting the state of Virginia (our home state) but will have the whole US available very soon.  SAR folks! Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.   And look for our next post in this series where we detail the data, technology, and processing used to create these maps.
