@@ -79,12 +79,12 @@ Some map features that may not be generally applicable or interesting but are us
 
 
 
-You can access the new SAR map below and at <a href="http://azimuth1.kara.link/FIND/" target="_blank">this link</a>. Right now, we're just hosting the state of Virginia (our home state) but will have the whole US available very soon.
+You can access the new SAR map below and at <a href="http://199.38.183.92/FIND/" target="_blank">this link</a>. Right now, we're just hosting the state of Virginia (our home state) but will have the whole US available very soon.
 
 SAR folks! Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.   And look for our next post in this series where we detail the data, technology, and processing used to create these maps.
 
 #### Our topo for the state of Virginia
-<iframe width="800" height="400" src="http://azimuth1.kara.link/FIND/" frameborder="0" allowfullscreen></iframe>
+<iframe width="800" height="400" src="http://199.38.183.92/FIND/" frameborder="0" allowfullscreen></iframe>
 
 #### FOOTNOTES
 [^1]: To which everyone says "So use GPS and you get that precision back."  Which is partly true, but even with the growth of GPS and GIS in SAR operations, there are still some real deficiencies.  Getting high quality maps onto GPS units is difficult.  Handheld units typically require expensive map upgrades or a complex series of steps to update your own map data.  Mobile phone GPS apps have the ability to display high quality maps, but require precaching of maps before going in the field since mobile coverage isn't usually available.  Then there's the issue of battery life.  Constant navigation over a 6-10 hour task would deplete most phone batteries.  Extra capacity battery cases, rechargers, solar chargers, etc just add to the already significant weight of gear carried by most field searchers.   Then there's the logistics of getting GPS track data back onto a central map at search base.  Without wifi, compliant software, etc, there are just too many possible devices and connections for a thinly staffed search base to accommodate most possibilities.  The future of mobile mapping in SAR is coming, but right now it stands on the weak shoulders of battery life and interoperability.  Then there's the issue of training.  If a team leader loses or breaks a GPS unit, we don't want them to be out of commission until a new one can be found.  The essential skills of precise land navigation with map and compass will be in our forseeable future, so we want to provide a map that searchers deserve.
