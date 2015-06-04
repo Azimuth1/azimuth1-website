@@ -1,4 +1,4 @@
-##  Azimuth1 website layout
+##  Azimuth1 website
 
 ##### _Full of daring tales of adventure and intrigue._
 ====
