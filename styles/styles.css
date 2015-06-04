@@ -490,6 +490,10 @@ hr.small {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+
+.foonotes {
+    font-size: 10px;
+}
 footer {
   padding: 50px 0 65px;
 }
