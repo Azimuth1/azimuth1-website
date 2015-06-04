@@ -81,12 +81,12 @@ Some map features that may not be generally applicable or interesting but are us
 
 
 
-You can access the new SAR map below and at <a href="http://http://sandlot.azimuth1.net/FIND/" target="_blank">this link</a>. Right now, we're just hosting the state of Virginia (our home state) but will have the whole US available very soon.
+You can access the new SAR map below and at <a href="http://sandlot.azimuth1.net/FIND/" target="_blank">this link</a>. Right now, we're just hosting the state of Virginia (our home state) but will have the whole US available very soon.
 
 SAR folks! Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.   And look for our next post in this series where we detail the data, technology, and processing used to create these maps.
 
 #### Our topo for the state of Virginia
-<iframe class='mapembed' width="800" height="400" src="http://http://sandlot.azimuth1.net/FIND/" frameborder="0" allowfullscreen></iframe>
+<iframe class='mapembed' width="800" height="380" src="http://sandlot.azimuth1.net/FIND/" frameborder="0" allowfullscreen></iframe>
 
 **FOOTNOTES**
 
