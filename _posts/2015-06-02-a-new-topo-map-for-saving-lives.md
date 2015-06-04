@@ -68,21 +68,20 @@ Some map features that may not be generally applicable or interesting but are us
 **Medical** - local doctors, and other EMS - medical support in the event of an injury or when the lost person is found and needs medical attention.  Search dog handlers will see any known veterinarian offices from their task map and planning maps. 
 ![]({{site.baseurl}}/images/sar-hospital.png){: width="450px"}
 
-#### Churches
-often used as areas to set up base operations and staging areas for volunteers to rest and eat.
+**Churches** - often used as areas to set up base operations and staging areas for volunteers to rest and eat.
 ![]({{site.baseurl}}/images/sar-church.png){: width="450px"}
 
-#### Aquaducts
-feature where finds are often made.
+**Aquaducts** - feature where finds are often made.
 ![]({{site.baseurl}}/images/sar-aquaduct.png){: width="450px"}
 
-#### Shelters
-possible waiting area for overdue subjects, and navigation points.
+**Shelters** - possible waiting area for overdue subjects, and navigation points.
 ![]({{site.baseurl}}/images/sar-shelter.png){: width="450px"}
 
 
 
-You can access the new SAR map below and at <a href="http://azimuth1.kara.link/FIND/" target="_blank">this link</a>. Right now, we're just hosting the state of Virginia (our home state) but will have the whole US available very soon.  SAR folks! Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.   And look for our next post in this series where we detail the data, technology, and processing used to create these maps.
+You can access the new SAR map below and at <a href="http://azimuth1.kara.link/FIND/" target="_blank">this link</a>. Right now, we're just hosting the state of Virginia (our home state) but will have the whole US available very soon.
+
+SAR folks! Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.   And look for our next post in this series where we detail the data, technology, and processing used to create these maps.
 
 #### Our topo for the state of Virginia
 <iframe width="800" height="400" src="http://azimuth1.kara.link/FIND/" frameborder="0" allowfullscreen></iframe>
