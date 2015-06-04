@@ -51,17 +51,21 @@ Buildings were removed from the new USGS topo series.  They just change much fas
 Azimuth1 is part of a team working on support tools for first responders formed by Robert Koester of dbS Productions, a long time lost person behavior researcher and publisher for SAR related topics. The work is supported by the First Responder Group within the DHS Office of Science and Technology. We are the tech strategy and design component of the program and are undertaking an effort to improve the existing topo map to better support search missions.  We've supplemented the USGS data with features available from the OpenStreetMap database, and other open source licensed data that could be integrated into a topo map tailored for SAR use.
 We added back the useful features that USGS had to remove.  
 
-Trails
+#### Trails
 
 ![]({{site.baseurl}}/images/sar-contour.png){: width="450px"}
 
-Utilities
+#### Utilities
 
 ![]({{site.baseurl}}/images/sar-utility.png){: width="450px"}
 
-Buildings
+#### Buildings
 
 ![]({{site.baseurl}}/images/sar-bldg.png){: width="450px"}
+
+#### Shelters
+
+![]({{site.baseurl}}/images/sar-shelter.png){: width="450px"}
 
 Since USGS strives for equal data coverage across the whole United States, they would not include a dataset of trails in a single state for example, even if it was very good.   Our approach is just the opposite.  If we can include only one item listed as 'culvert' and that culvert is useful to a particular search then it's useful to put on our map.  We don't require that we show _every_ culvert before we show _any_ culvert.   This is exactly where OpenStreetMap is a strong dataset.  The completeness of coverage of any of those high level of detail features varies widely across the US, but in places where volunteers have taken the time to map and verify detailed feature data, it is extremely valuable in that area.
 
