@@ -69,7 +69,7 @@ Some map features that may not be generally applicable or interesting but are us
 ![]({{site.baseurl}}/images/sar-hospital.png){: width="450px"}
 
 **Churches** - often used as areas to set up base operations and staging areas for volunteers to rest and eat.
-![]({{site.baseurl}}/images/sar-church.png){: width="450px"}   [image coming soon]
+![]({{site.baseurl}}/images/sar-church.png){: width="450px"}
 
 **Aquaducts** - feature where finds are often made.
 ![]({{site.baseurl}}/images/sar-aquaduct.png){: width="450px"}
