@@ -1,6 +1,6 @@
 ##  Azimuth1 website layout
 
-Full of daring tales of adventure and intrigue.
+##### _Full of daring tales of adventure and intrigue._
 ====
 
 ## _/_includes: contains basic page content_
