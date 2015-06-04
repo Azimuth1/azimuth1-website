@@ -52,13 +52,16 @@ Azimuth1 is part of a team working on support tools for first responders formed 
 We added back the useful features that USGS had to remove.  
 
 Trails
-![]({{site.baseurl}}/images/usgs-bldg-old.png){: width="450px"}
+
+![]({{site.baseurl}}/images/sar-contour.png){: width="450px"}
 
 Utilities
+
 ![]({{site.baseurl}}/images/sar-utilities.png){: width="450px"}
 
 Buildings
-![]({{site.baseurl}}/images/usgs-bldg-old.png){: width="450px"}
+
+![]({{site.baseurl}}/images/sar-bldg.png){: width="450px"}
 
 Since USGS strives for equal data coverage across the whole United States, they would not include a dataset of trails in a single state for example, even if it was very good.   Our approach is just the opposite.  If we can include only one item listed as 'culvert' and that culvert is useful to a particular search then it's useful to put on our map.  We don't require that we show _every_ culvert before we show _any_ culvert.   This is exactly where OpenStreetMap is a strong dataset.  The completeness of coverage of any of those high level of detail features varies widely across the US, but in places where volunteers have taken the time to map and verify detailed feature data, it is extremely valuable in that area.
 
