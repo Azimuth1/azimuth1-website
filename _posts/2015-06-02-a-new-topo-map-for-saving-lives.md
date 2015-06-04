@@ -13,7 +13,7 @@ _This article was originally submitted for presentation at State of the Map US 2
 
 A child is lost in the forest.  An elderly dementia patient wanders away from home.  A hiker is overdue from a weekend outing.  These scenarios happen daily around the world and wilderness search and rescue teams are called in to find that missing person.  Wilderness SAR teams are specially trained to travel in small groups over varying terrain in all weather, day and night. The lives saved by SAR each year owe their safe return to the training, dedication, and compassion of a largely volunteer SAR response across the globe.  The problem of finding lost individuals starts on a map.  Maps are used to find likely places where the lost person may have stopped, lost their way, or tried to reach, and so are used to prioritize search tasks for a search mission.  The same map is used in the field as a team leader navigates their way through the task, delineating which areas they have searched and where they have not.  A good map is critical to this accurate accounting of the search effort to ensure that the entire area is being covered appropriately. In the United States the map most often used for search missions is the USGS 7.5 minute series topographic map.  These maps have a long history of exhaustive work and meticulous detail that went into each map revision.  As changes in our environment appeared more rapidly, and USGS sought to streamline their map production process to save time, money, and labor, several tradeoffs were made that impacted the usefullness of these maps for SAR purposes.  
 
-### USGS updates their map style
+## USGS updates their map style
 
 In 2009, the USGS began changing the style and delivery of their topo maps under the new USTOPO program.  The new USTopo map style has several cartographic improvements for readability on digital devices. They are more flexible in that they are delivered in layered PDF files rather than fixed raster images.  However, many important features were removed or degraded that can impact the ability of SAR teams to accurately navigate and ensure that they have covered an area.
 
@@ -47,7 +47,7 @@ Buildings were removed from the new USGS topo series.  They just change much fas
 
 ---
 
-### A new topo map for search missions
+## A new topo map for search missions
 Azimuth1 is part of a team working on support tools for first responders formed by Robert Koester of dbS Productions, a long time lost person behavior researcher and publisher for SAR related topics.  We are the tech strategy and design component of the program, and it helps that I (Jason) has 12 years of SAR experience as a volunteer searcher and search manager to help guide our design decisions.   We are undertaking an effort to improve the existing topo map.  We've supplemented the USGS data with features available from the OpenStreetMap database, and other open source licensed data that could be integrated into a topo map tailored for SAR use.
 We added back the useful features that USGS had to remove.  
 
