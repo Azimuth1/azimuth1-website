@@ -65,8 +65,7 @@ Since USGS strives for equal data coverage across the whole United States, they 
 ### Features for SAR
 Some map features that may not be generally applicable or interesting but are useful for searchers to know  valuable for SAR use are included on this topo.
 
-#### Medical
-local doctors, and other EMS - medical support in the event of an injury or when the lost person is found and needs medical attention.  Search dog handlers will see any known veterinarian offices from their task map and planning maps. 
+##Medical## - local doctors, and other EMS - medical support in the event of an injury or when the lost person is found and needs medical attention.  Search dog handlers will see any known veterinarian offices from their task map and planning maps. 
 ![]({{site.baseurl}}/images/sar-hospital.png){: width="450px"}
 
 #### Churches
