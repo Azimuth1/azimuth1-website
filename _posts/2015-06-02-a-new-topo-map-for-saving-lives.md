@@ -52,19 +52,15 @@ Azimuth1 is part of a team working on support tools for first responders formed 
 We added back the useful features that USGS had to remove.  
 
 #### Trails
-
 ![]({{site.baseurl}}/images/sar-contour.png){: width="450px"}
 
 #### Utilities
-
 ![]({{site.baseurl}}/images/sar-utility.png){: width="450px"}
 
 #### Buildings
-
 ![]({{site.baseurl}}/images/sar-bldg.png){: width="450px"}
 
 #### Shelters
-
 ![]({{site.baseurl}}/images/sar-shelter.png){: width="450px"}
 
 Since USGS strives for equal data coverage across the whole United States, they would not include a dataset of trails in a single state for example, even if it was very good.   Our approach is just the opposite.  If we can include only one item listed as 'culvert' and that culvert is useful to a particular missing person search then it's useful to put on our map.  in other words we don't require that we show _every_ culvert before we show _any_ culvert.   This is exactly where OpenStreetMap is such a strong dataset.  The completeness of coverage of any of those high level of detail features varies widely across the map, but in places where volunteers have taken the time to map and verify detailed feature data, it is extremely valuable in that area.
@@ -83,11 +79,12 @@ Aquaducts - feature where finds are often made.
 Trail shelters - possible waiting area for overdue subjects, and navigation points.
 
 
-You can access the new SAR map here and at <a href="http://azimuth1.kara.link/FIND/" target="_blank">this link</a>.  SAR folks! Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.   And look for our next post in this series where we detail the data, technology, and processing used to create these maps.
+You can access the new SAR map below and at <a href="http://azimuth1.kara.link/FIND/" target="_blank">this link</a>. Right now, we're just hosting the state of Virginia (our home state) but will have the whole US available very soon.  SAR folks! Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.   And look for our next post in this series where we detail the data, technology, and processing used to create these maps.
 
+#### Our topo for the state of Virginia
 <iframe width="800" height="400" src="http://azimuth1.kara.link/FIND/" frameborder="0" allowfullscreen></iframe>
 
-### FOOTNOTES
+#### FOOTNOTES
 [^1]: To which everyone says "So use GPS and you get that precision back."  Which is partly true, but even with the growth of GPS and GIS in SAR operations, there are still some real deficiencies.  Getting high quality maps onto GPS units is difficult.  Handheld units typically require expensive map upgrades or a complex series of steps to update your own map data.  Mobile phone GPS apps have the ability to display high quality maps, but require precaching of maps before going in the field since mobile coverage isn't usually available.  Then there's the issue of battery life.  Constant navigation over a 6-10 hour task would deplete most phone batteries.  Extra capacity battery cases, rechargers, solar chargers, etc just add to the already significant weight of gear carried by most field searchers.   Then there's the logistics of getting GPS track data back onto a central map at search base.  Without wifi, compliant software, etc, there are just too many possible devices and connections for a thinly staffed search base to accommodate most possibilities.  The future of mobile mapping in SAR is coming, but right now it stands on the weak shoulders of battery life and interoperability.  Then there's the issue of training.  If a team leader loses or breaks a GPS unit, we don't want them to be out of commission until a new one can be found.  The essential skills of precise land navigation with map and compass will be in our forseeable future, so we want to provide a map that searchers deserve.
 
 
