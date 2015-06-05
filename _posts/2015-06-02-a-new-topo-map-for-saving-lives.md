@@ -50,7 +50,7 @@ Buildings were removed from the new US Topo series.  They just change much faste
 ---
 
 ## So we made a new topo map for search missions
-Azimuth1 is part of a team working on support tools for first responders formed by Robert Koester of dbS Productions, a long time lost person behavior researcher and publisher for SAR related topics. The work is supported by the First Responder Group within the DHS Office of Science and Technology. Azimuth1 is providing the tech strategy and design component of the program and among other things, we are undertaking an effort to improve the existing topo map to better support search missions.  We've supplemented the USGS data with features available from the OpenStreetMap database, and other open source licensed data, that could be integrated into a topo map tailored for SAR use.
+Azimuth1 is part of a team working on support tools for first responders formed by Robert Koester of [dbS Productions](http://www.dbs-sar.com/), a long time lost person behavior researcher and publisher for SAR related topics. The work is supported by the First Responder Group within the DHS Office of Science and Technology. Azimuth1 is providing the tech strategy and design component of the program and among other things, we are undertaking an effort to improve the existing topo map to better support search missions.  We've supplemented the USGS data with features available from the OpenStreetMap database, and other open source licensed data, that could be integrated into a topo map tailored for SAR use.
 
 First, we added back the useful features that USGS had to remove.  
 
