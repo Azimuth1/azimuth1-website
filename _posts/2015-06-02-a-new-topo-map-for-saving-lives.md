@@ -17,7 +17,8 @@ A child is lost in the forest.  An elderly dementia patient wanders away from ho
 
 In 2009, the USGS began changing the style and delivery of their topo maps under the new [US Topo](http://nationalmap.gov/ustopo/) program.  As changes in our environment appeared more rapidly, and USGS sought to streamline their map production process to save time, money, and labor, several tradeoffs were made that impacted the usefullness of these maps for SAR purposes.  The new US Topo map style has several cartographic improvements for readability on digital devices, and they are delivered in more flexible layered PDF files rather than fixed raster images.  However, many important features were removed or degraded that can impact the ability of SAR teams to accurately navigate and ensure that they have covered an area.
 
-_The new contour lines are algorithmically generated from digital elevation data rather than from manual photogrammetry.  Faster, cheaper, but lacks details for precise navigation in microterrain[^1]._  
+_The new contour lines are algorithmically generated from digital elevation data rather than from manual photogrammetry.  Faster, cheaper, but lacks details for precise navigation in microterrain[^1]._
+
 |Pre-2009 Raster Contours| |Current Vector Contours|
 |:-------------:|-|:-------------:|
 | ![]({{site.baseurl}}/images/USGS_old1.png){: width="350px"} | | ![]({{site.baseurl}}/images/USGS_new1.png){: width="350px"} |
