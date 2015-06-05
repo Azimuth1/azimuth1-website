@@ -17,7 +17,7 @@ A child is lost in the forest.  An elderly dementia patient wanders away from ho
 
 In 2009, the USGS began changing the style and delivery of their topo maps under the new <a href="http://nationalmap.gov/ustopo/" target="_blank">US Topo</a> program.  As changes in our environment appeared more rapidly, the USGS sought to streamline their map production process to increase production, save time, money, and labor. Several tradeoffs were made that impacted the usefullness of these maps for SAR purposes. The new US Topo map style has several cartographic improvements for readability on digital devices, and they are delivered in more flexible layered PDF files rather than fixed raster images.  However, many important features were removed or degraded that can impact the ability of SAR teams to accurately navigate and ensure that they have covered an area.
 
-The new contour lines are algorithmically generated from digital elevation data rather than from manual photogrammetry.  Faster, cheaper, but lacks details for precise navigation in microterrain[^1].
+The new contour lines are algorithmically generated from digital elevation data rather than from manual photogrammetry.  Faster, cheaper, but lacks details for precise navigation in microterrain [^1].
 
 |Pre-2009 Raster Contours| |Current Vector Contours|
 |:-------------:|-|:-------------:|
@@ -52,7 +52,7 @@ Buildings were removed from the new US Topo series.  They just change much faste
 ## So we made a new topo map for search missions
 Azimuth1 is part of a team working on support tools for first responders formed by Robert Koester of <a href="http://dbs-sar.com/" target="_blank">dbS Productions</a>, a long time lost person behavior researcher and publisher for SAR related topics. The work is supported by the First Responder Group within the DHS Office of Science and Technology. Azimuth1 is providing the tech strategy and design component of the program and among other things, we are undertaking an effort to improve the existing topo map to better support search missions.  We've supplemented the USGS data with features available from the OpenStreetMap database, and other open source licensed data, that could be integrated into a topo map tailored for SAR use.
 
-First, we added back the useful features that USGS had to remove[^2].  
+First, we added back the useful features that USGS had to remove [^2].  
 
 **Trails**  
 ![]({{site.baseurl}}/images/sar-contour.png){: width="450px"}
