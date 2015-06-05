@@ -51,7 +51,7 @@ Buildings were removed from the new US Topo series.  They just change much faste
 
 ## So we made a new topo map for search missions
 Azimuth1 is part of a team working on support tools for first responders formed by Robert Koester of dbS Productions, a long time lost person behavior researcher and publisher for SAR related topics. The work is supported by the First Responder Group within the DHS Office of Science and Technology. Azimuth1 is providing the tech strategy and design component of the program and among other things, we are undertaking an effort to improve the existing topo map to better support search missions.  We've supplemented the USGS data with features available from the OpenStreetMap database, and other open source licensed data, that could be integrated into a topo map tailored for SAR use.   
-First we added back the useful features that USGS had to remove.  
+First, we added back the useful features that USGS had to remove.  
 
 **Trails**  
 ![]({{site.baseurl}}/images/sar-contour.png){: width="450px"}
@@ -62,12 +62,12 @@ First we added back the useful features that USGS had to remove.
 **Buildings**  
 ![]({{site.baseurl}}/images/sar-bldg.png){: width="450px"}
 
-Since USGS strives for equal data coverage across the whole United States, they would not include a dataset of trails in a single state for example, even if it was very good.   Our approach is just the opposite.  If we can include only one item listed as 'culvert' and that culvert is useful to a particular missing person search then it's useful to put on our map.  in other words we don't require that we show _every_ culvert before we show _any_ culvert.   This is exactly where OpenStreetMap is such a strong dataset.  The completeness of coverage of any of those high level of detail features varies widely across the map, but in places where volunteers have taken the time to map and verify detailed feature data, it is extremely valuable in that area.
+Since USGS strives for equal data coverage across the whole United States, they would not include a dataset of trails in a single state for example, even if it was very good.   Our approach is just the opposite.  If we can include only one item listed as 'culvert' and that culvert is useful to a particular missing person search then it's useful to put on our map.  in other words we don't require that we show _every_ culvert before we show _any_ culvert.   This is exactly where OpenStreetMap is such a strong dataset.  The completeness of coverage for those high level of detail features varies widely across the country, but in places where volunteers have taken the time to map and verify detailed feature data, it is extremely valuable in that area.
 
 ### Features for SAR
-Some map features that may not be generally applicable or interesting but are useful for searchers to know  valuable for SAR use are included on this topo.
+Second, we added map features that were specifically chosen to help searchers:
 
-**Medical** - local doctors, and other EMS - medical support in the event of an injury or when the lost person is found and needs medical attention.  Search dog handlers will see any known veterinarian offices from their task map and planning maps.  
+**Medical** - local doctors, and other EMS - medical support in the event of an injury or when the lost person is found and needs medical attention.  Search dog handlers will now see any known veterinarian offices from their task map and planning maps.  
 ![]({{site.baseurl}}/images/sar-hospital.png){: width="450px"}
 
 **Churches** - often used as areas to set up base operations and staging areas for volunteers to rest and eat.   
