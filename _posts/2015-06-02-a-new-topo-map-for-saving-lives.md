@@ -33,7 +33,7 @@ Utility lines, like trails, are often used by lost persons to travel.  They are 
 
    
 
-Trails were removed from the new US Topo series, a critical feature to know about for search and rescue.
+Trails were removed from the new US Topo series - a critical feature to know about for search and rescue.
 
 |Pre-2009 Raster trails| |Current Vector maps without trails|
 |:-------------:|-|:-------------:|
@@ -63,7 +63,7 @@ First, we added back the useful features that USGS had to remove.
 **Buildings**  
 ![]({{site.baseurl}}/images/sar-bldg.png){: width="450px"}
 
-Since USGS strives for equal data coverage across the whole United States, it would not include a dataset of trails in a single state for example, even if it was very good. Our approach is just the opposite. If we can include only one item listed as 'culvert' and that culvert is useful to a particular missing person search then it's useful to put on our map.  In other words, we don't require that we show _every_ culvert before we show _any_ culvert.  The mapping of these detailed features varies widely across the country. But in places where volunteers have taken the time to map and verify detailed feature data, it is extremely valuable to searchers in that area.  This is exactly why OpenStreetMap is such a valuable dataset for custom mapping.
+Since USGS strives for equal data coverage across the whole United States, it would not include a dataset of trails in a single state, even if it was very good. Our approach is just the opposite. If we can include only one item listed as 'culvert' and that culvert is useful to a particular missing person search then it's useful to put on our map.  In other words, we don't require that we show _every_ culvert before we show _any_ culvert.  The mapping of these detailed features varies widely across the country. But in places where volunteers have taken the time to map and verify detailed feature data, it is extremely valuable to searchers in that area.  This is exactly why OpenStreetMap is such a valuable dataset for custom mapping.
 
 ### Features for SAR
 Second, we added map features that were specifically chosen to help searchers:
