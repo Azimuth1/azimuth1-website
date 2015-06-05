@@ -33,7 +33,7 @@ Utility lines, like trails, are often used by lost persons to travel.  They are 
 
    
 
-Trails were removed from the new USGS topo series, a critical feature to know about for search and rescue.
+Trails were removed from the new US Topo series, a critical feature to know about for search and rescue.
 
 |Pre-2009 Raster trails| |Current Vector maps without trails|
 |:-------------:|-|:-------------:|
@@ -41,7 +41,7 @@ Trails were removed from the new USGS topo series, a critical feature to know ab
 
   
 
-Buildings were removed from the new USGS topo series.  They just change much faster than the topo map series are updated.
+Buildings were removed from the new US Topo series.  They just change much faster than the topo map series are updated.
 
 |Pre-2009 Raster buildings| |Current Vector maps without buildings|
 |:-------------:|-|:-------------:|
@@ -50,7 +50,7 @@ Buildings were removed from the new USGS topo series.  They just change much fas
 ---
 
 ## So we made a new topo map for search missions
-Azimuth1 is part of a team working on support tools for first responders formed by Robert Koester of dbS Productions, a long time lost person behavior researcher and publisher for SAR related topics. The work is supported by the First Responder Group within the DHS Office of Science and Technology. We are the tech strategy and design component of the program and are undertaking an effort to improve the existing topo map to better support search missions.  We've supplemented the USGS data with features available from the OpenStreetMap database, and other open source licensed data that could be integrated into a topo map tailored for SAR use.
+Azimuth1 is part of a team working on support tools for first responders formed by Robert Koester of dbS Productions, a long time lost person behavior researcher and publisher for SAR related topics. The work is supported by the First Responder Group within the DHS Office of Science and Technology. Azimuth1 is providing the tech strategy and design component of the program and among other things, we are undertaking an effort to improve the existing topo map to better support search missions.  We've supplemented the USGS data with features available from the OpenStreetMap database, and other open source licensed data that could be integrated into a topo map tailored for SAR use.
 We added back the useful features that USGS had to remove.  
 
 **Trails**  
