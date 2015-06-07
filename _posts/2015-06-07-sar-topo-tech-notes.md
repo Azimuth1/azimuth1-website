@@ -3,7 +3,7 @@ published: true
 layout: post
 title: A technical overview of our SAR topo implementation
 date: 2015-06-07 12:00:00
-author: kara.mahoney
+author: kara_mahoney
 "header-img": "images/post_header_6715.png"
 ---
 
