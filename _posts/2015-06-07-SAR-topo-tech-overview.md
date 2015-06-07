@@ -69,7 +69,9 @@ That being said, Mapbox Studio is a very powerful, and actively evolving design 
     - Query includes all features `natural=peak`.
     - Elevation from OSM is included in label.
 
-INSERT IFRAME MAP HERE
+You can view the map below and [here](http://sandlot.azimuth1.net/FIND/).
+
+<iframe class='mapembed' width="800" height="380" src="http://sandlot.azimuth1.net/FIND/" frameborder="0" allowfullscreen></iframe>
 
 #### As it stands
 
