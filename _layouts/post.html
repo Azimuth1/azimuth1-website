@@ -33,6 +33,13 @@ layout: template
                 <div class="addthis_sharing_toolbox"></div>
                 {{ content }}
                 <hr>
+            <div class="row">
+                Written by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
+                <a href="http://www.twitter.com/{{author.twitter}}">
+                    Follow {{ author.pronoun }} on Twitter
+                </a>
+                </span>
+            </div>
 
                 <ul class="pager">
                     {% if page.previous.url %}
@@ -49,15 +56,6 @@ layout: template
             </div>
         </div>
         
-        <div class="row">
-            Written by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
-            <a href="http://www.twitter.com/{{author.twitter}}">
-                Follow {{ author.pronoun }} on Twitter
-            </a>
-            </span>
-        </div>
-
-
         <div class="row">
             <div id="disqus_thread"></div>
             <script type="text/javascript">
