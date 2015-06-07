@@ -46,12 +46,12 @@ layout: template
         
         {% assign author = site.data.authors[page.author] %}
         {%  if !author %}
-            {% assign author = "Azimuth1 Team" %}
+            {% assign author = site.data.authors[azimuth1'] %}
         {% endif %}
         <div class="row">
             <span>
                         Written by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
-            <a href="www.twitter.com/{{site.data.authors.[page.author].twitter}}">
+            <a href="http://www.twitter.com/{{site.data.authors.[page.author].twitter}}">
                 Follow on Twitter
             </a>
             </span>
