@@ -29,7 +29,7 @@ description: "The science of better decisions."
             {{ post.subtitle }}
         </h3> {% endif %}
         </a>
-        <p class="post-meta">Posted by {{ site.data.authors[post.author] }} on {{ post.date | date: "%B %-d, %Y" }}</p>
+        <p class="post-meta">Posted by {{ site.data.authors[post.author.name] }} on {{ post.date | date: "%B %-d, %Y" }}</p>
     </div>
     <hr> {% endfor %}
     <!-- Pager -->
