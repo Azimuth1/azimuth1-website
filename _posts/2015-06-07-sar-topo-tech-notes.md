@@ -8,9 +8,9 @@ author: kara.mahoney
 ---
 
 
-# FIND: Search and Rescue Topographic Map
+# A Search and Rescue Topographic Map
 
-As you may have read in our [preceding post](http://www.azimuth1.com/a-new-topo-map-for-saving-lives/), Azimuth1's Search and Rescue (SAR) map seeks to combine the vital features of USGS topographic maps with the ease of use, readability, and higher update frequency of a vector tile based map, in addition to providing supplemental data that may prove useful in SAR related work. This next post is meant to further elaborate on the process behind the SAR map's creation and current status. 
+As you may have read in our [preceding post](http://www.azimuth1.com/a-new-topo-map-for-saving-lives/), the Search and Rescue (SAR) map we are building seeks to combine the vital features of USGS topographic maps with the ease of use, readability, and higher update frequency of a vector tile based map, in addition to providing supplemental data that may prove useful in SAR related work. This next post is meant to further elaborate on the process behind the SAR map's creation and current status. 
 
 #### A brief introduction
 
