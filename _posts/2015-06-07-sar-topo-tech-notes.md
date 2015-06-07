@@ -46,8 +46,8 @@ That being said, Mapbox Studio is a very powerful, and actively evolving design 
 
 #### Data Sources and Layers
 
-- United States elevation contours, Source: <a href="ftp://rockyftp.cr.usgs.gov/vdelivery/Datasets/Staged/Elev/" target="_blank">USGS</a>).
-- USGS Hydrogeography dataset, Source: <a href="http://nhd.usgs.gov/" target="_blank">USGS NHD</a>).
+- United States elevation contours, Source: <a href="ftp://rockyftp.cr.usgs.gov/vdelivery/Datasets/Staged/Elev/" target="_blank">USGS</a>.
+- USGS Hydrogeography dataset, Source: <a href="http://nhd.usgs.gov/" target="_blank">USGS NHD</a>.
 - National Land Cover Database 2011, Source: <a href="http://www.mrlc.gov/index.php" target="_blank">MRLC</a>.
     - Exploring more recent vector datasets for this.
 - Roads, trails, transportation infrastructure, and building footprints, Source: OpenStreetMap.
