@@ -18,7 +18,7 @@ As you may have read in our [preceding post](http://www.azimuth1.com/a-new-topo-
 
 #### Picking a platform
 
-When we were first exploring possible platforms for this project, we'd started with <a href="https://www.mapbox.com/" target="_blank">Mapbox</a> and their new map design tool <a href="https://www.mapbox.com/mapbox-studio/#darwin" target="_blank">Mapbox Studio</a>. The initial prototype for the SAR map was built using the <a href="https://github.com/mapbox/mapbox-studio-outdoors.tm2" target="_blank">Mapbox Outdoors</a> style and source in Studio. However, we ran into two primary issues. 
+When we were first exploring possible platforms for this project, we'd started with <a href="https://www.mapbox.com/" target="_blank">Mapbox</a> and their new map design tool <a href="https://www.mapbox.com/mapbox-studio/#darwin" target="_blank">Mapbox Studio</a>. The initial prototype for the SAR map was inspired by the <a href="https://github.com/mapbox/mapbox-studio-outdoors.tm2" target="_blank">Mapbox Outdoors</a> style and source in Studio. However, we ran into two primary issues. 
 
 1. The more data we wanted to incorporate into the map, the less Mapbox Studio seemed suited to our needs. With the wide variety of substantial datasets we're working with, this project just doesn't lend itself to efficient use of the Studio model, which is highly suited to rapid, lightweight web map development and styling.
 2. Mapbox does not currently support combining both remote and local data sources for vector tile source creation and styling via Studio, and for the purposes of this prototype we wanted to create something completely independent of sources that require internet access, to support use in the field by searchers.
