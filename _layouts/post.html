@@ -43,16 +43,21 @@ layout: template
             </div>
         </div>
         
-        <span class="author-name">
-          {{ site.data.authors.[page.author].name }}
-        </span>
-        <a href="www.twitter.com/{{site.data.authors.[page.author].twitter}}">
-          <i class="ico-twitter"></i>
-        </a>
-        <a href="www.github.com/{{site.data.authors.[page.author].github}}">
-          <i class="ico-github"></i>
-        </a>
         
+        {% assign author = site.data.authors[page.author] %}
+        {%  if !author %}
+            {% assign author = "Azimuth1 Team" %}
+        {% endif %}
+        <div class="row">
+            <span>
+                        Written by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
+            <a href="www.twitter.com/{{site.data.authors.[page.author].twitter}}">
+                Follow on Twitter
+            </a>
+            </span>
+        </div>
+
+
         <div class="row">
             <div id="disqus_thread"></div>
             <script type="text/javascript">
