@@ -3,6 +3,7 @@ azimuth1:
   web: http://azimuth1.com
   email: contact@azimuth1.com
   bio: " "
+  pronoun: us
   avatar: jason-dalton-photo.jpg
   twitter: azimuth1tech
 
@@ -11,6 +12,7 @@ jason_dalton:
   web: http://about.me/JasonDalton
   email: jason.dalton@azimuth1.com
   bio: " "
+  pronoun: him
   avatar: jason-dalton-photo.jpg
   twitter: jasonrdalton
 
@@ -18,6 +20,7 @@ kara_mahoney:
   name: Kara Mahoney
   email: kara.mahoney@azimuth1.com
   bio: " "
+  pronoun: her
   web: http://kara.link
   avatar: kara-mahoney-photo.jpg
   twitter: Ainulindale
@@ -26,5 +29,6 @@ kyle_kalwarski:
   name: Kyle Kalwarski
   email: kyle.kalwarski@azimuth1.com
   bio: " "
+  pronoun: him
   avatar: kyle-kalwarski-photo.jpg
   twitter: skitol
