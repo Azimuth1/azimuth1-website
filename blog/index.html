@@ -2,6 +2,11 @@
 layout: template
 description: "The science of better decisions."
 ---
+{% assign author = site.data.authors[page.author] %}
+{%  if author %}
+{% else %}
+    {% assign author = site.data.authors[azimuth1] %}
+{% endif %}
 
 <!-- Page Header -->
 <header class="intro-header" style="background-image: url(/images/brazil-ir.jpg)" style="padding-top:60px">
@@ -29,7 +34,7 @@ description: "The science of better decisions."
             {{ post.subtitle }}
         </h3> {% endif %}
         </a>
-        <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+        <p class="post-meta">Posted by {{ author.name }} on {{ post.date | date: "%B %-d, %Y" }}</p>
     </div>
     <hr> {% endfor %}
     <!-- Pager -->
