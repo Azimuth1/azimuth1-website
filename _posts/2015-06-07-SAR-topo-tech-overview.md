@@ -3,9 +3,9 @@ published: false
 layout: post
 title: The SAR Topographic Map
 subtitle: A technical overview
-date: {}
+date: {2015-06-07 12:00:00}
 author: Kara Mahoney
-"header-img": "post_header_6715.png"
+"header-img": "images/post_header_6715.png"
 ---
 
 # FIND: Search and Rescue Topographic Map
