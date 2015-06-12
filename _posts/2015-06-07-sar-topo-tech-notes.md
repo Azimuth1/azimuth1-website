@@ -4,19 +4,19 @@ layout: post
 title: A technical overview of our SAR topo implementation
 date: 2015-06-07 12:00:00
 author: kara_mahoney
-"header-img": "images/post_header_6715.png"
+folder: /blog/assets/2015-06-07-sar-topo-tech-notes
+headerColor: '#fff'
 ---
 
 
-# A Search and Rescue Topographic Map
 
-As you may have read in our [preceding post](http://www.azimuth1.com/a-new-topo-map-for-saving-lives/), the Search and Rescue (SAR) map we are building seeks to combine the vital features of USGS topographic maps with the ease of use, readability, and higher update frequency of a vector tile based map, in addition to providing supplemental data that may prove useful in SAR related work. This follow-up post is meant to further elaborate on the process behind the SAR map's creation and current status. 
+As you may have read in our [preceding post](http://www.azimuth1.com/a-new-topo-map-for-saving-lives/), the Search and Rescue (SAR) map we are building seeks to combine the vital features of USGS topographic maps with the ease of use, readability, and<!--more--> higher update frequency of a vector tile based map, in addition to providing supplemental data that may prove useful in SAR related work. This follow-up post is meant to further elaborate on the process behind the SAR map's creation and current status. 
 
-#### A brief introduction
+## A brief introduction
 
-<img style="float: right" src="/images/VA_Old Rag Mtn_topo_thumb.jpg">To start things off, I love the old USGS topographic maps. I love their style. I have a 1984 Old Rag quadrangle hanging above my desk. Those older USGS topos featured more detailed surface features (e.g. trails and utilities) but are, unfortunately, limited by their age and format. Newer USGS topos are generally in <a href="https://en.wikipedia.org/wiki/GeoPDF" target="_blank">GeoPDF</a>, a format which allows for multiple layers that can be toggled depending on the view you want, all enveloped together in a PDF. This comes with its own advantages, however they do not include some of the more specific features one would want for SAR work, as reviewed in [Jason's post](http://www.azimuth1.com/a-new-topo-map-for-saving-lives/). In addition, GeoPDF not a particularly lightweight platform. With our SAR topo we hope to take everything that's great about both the older and newer USGS topographic maps, add in any other data that will prove useful in a search and rescue situation, and provide a fully interactive map that can still be used in offline field situations.
+<img style="float: right" src="{{page.folder}}/VA_Old Rag Mtn_topo_thumb.jpg">To start things off, I love the old USGS topographic maps. I love their style. I have a 1984 Old Rag quadrangle hanging above my desk. Those older USGS topos featured more detailed surface features (e.g. trails and utilities) but are, unfortunately, limited by their age and format. Newer USGS topos are generally in <a href="https://en.wikipedia.org/wiki/GeoPDF" target="_blank">GeoPDF</a>, a format which allows for multiple layers that can be toggled depending on the view you want, all enveloped together in a PDF. This comes with its own advantages, however they do not include some of the more specific features one would want for SAR work, as reviewed in [Jason's post](http://www.azimuth1.com/a-new-topo-map-for-saving-lives/). In addition, GeoPDF not a particularly lightweight platform. With our SAR topo we hope to take everything that's great about both the older and newer USGS topographic maps, add in any other data that will prove useful in a search and rescue situation, and provide a fully interactive map that can still be used in offline field situations.
 
-#### Picking a platform
+## Picking a platform
 
 When we were first exploring possible platforms for this project, we'd started with <a href="https://www.mapbox.com/" target="_blank">Mapbox</a> and their new map design tool <a href="https://www.mapbox.com/mapbox-studio/#darwin" target="_blank">Mapbox Studio</a>. The initial prototype for the SAR map was inspired by the <a href="https://github.com/mapbox/mapbox-studio-outdoors.tm2" target="_blank">Mapbox Outdoors</a> style and source in Studio. However, we ran into two primary issues. 
 
@@ -25,8 +25,7 @@ When we were first exploring possible platforms for this project, we'd started w
 
 That being said, Mapbox Studio is a very powerful, and actively evolving design tool. The work we did initially in Studio really provided a foundation for how we decided to move forward with the project. Using both the <a href="http://wiki.openstreetmap.org" target="_blank">OpenStreetMap</a> data and the supplemental SAR data we'd compiled for styling in Studio, we created an `.mbtiles` archive. <a href="https://www.mapbox.com/guides/an-open-platform/" target="_blank">MBTiles</a> is "an efficient format for storing [large vector and raster tilesets] in a single <a href="https://www.sqlite.org/" target="_blank">SQLite</a> database." Once these sources are combined and exported, we can locally host them with relative ease. For this prototype, we're using a simple <a href="https://nodejs.org/">Node</a> server for hosting the tiles in concert with <a href="https://www.mapbox.com/mapbox-gl/" target="_blank">Mapbox GL</a>, Mapbox's OpenGL based vector tile renderer, for the client side rendering. This is further detailed below in **Work Flow**, followed by an overview of all the different datasets we used in **Data Sources and Layers**.
 
-#### Work Flow
-
+## Work Flow
 1. Data wrangling. Compiling all of the necessary data from a wide variety of sources.
     - Running test extracts on OSM data with <a href="https://wiki.openstreetmap.org/wiki/Osmosis" target="_blank">Osmosis</a>.
     - Performing any necessary conversions, e.g. converting the <a href="http://www.mrlc.gov/nlcd2011.php" target="_blank">National Land Cover Data</a> from <a href="https://trac.osgeo.org/geotiff/" target="_blank">GeoTIFF</a> to vector with <a href="http://www.gdal.org/ogr2ogr.html" target="_blank">ogr2ogr</a>.
@@ -44,8 +43,10 @@ That being said, Mapbox Studio is a very powerful, and actively evolving design 
 7. This vector tile rendering utility can be contained within a single local Javascript utility, e.g. <a href="https://github.com/nwjs/nw.js/" target="_blank">NW.js</a>, for simple offline use.
     - The Virginia prototype takes up just under 3 GB, easy to store a flash drive.
 
-#### Data Sources and Layers
 
+
+
+## Data Sources and Layers
 - United States elevation contours, Source: <a href="ftp://rockyftp.cr.usgs.gov/vdelivery/Datasets/Staged/Elev/" target="_blank">USGS</a>.
 - USGS Hydrogeography dataset, Source: <a href="http://nhd.usgs.gov/" target="_blank">USGS NHD</a>.
 - National Land Cover Database 2011, Source: <a href="http://www.mrlc.gov/index.php" target="_blank">MRLC</a>.
@@ -71,9 +72,13 @@ That being said, Mapbox Studio is a very powerful, and actively evolving design 
 
 You can view the map below and <a href="http://sandlot.azimuth1.net/FIND/" target="blank">here</a>.
 
-<iframe class='mapembed' width="800" height="380" src="http://sandlot.azimuth1.net/FIND/" frameborder="0" allowfullscreen></iframe>
+<iframe class='mapfembed rofw cofntainer' width="100%" height="380" src="http://sandlot.azimuth1.net/FIND/" frameborder="0" allodwfullscreen></iframe>
 
-#### As it stands
+
+
+
+
+## As it stands
 
 There are still quite a few things to work on with this prototype, beyond improving general performance: there's a whole lot to be done with the dynamic labeling, we need to add airport information (e.g. runways, boundaries, etc), distinguish dirt roads from paved roads with more distinctive styling, add styling for mines and caves, add pattern overlay for wetlands, update the land cover data, and refine a few of the OSM queries, just to name a few. Blue contour lines over snow or ice cover have been suggested, as well as differentiating between tree canopy type (e.g. deciduous vs coniferous). Please let us know of any additional features you feel could be potentially helpful to SAR efforts that you'd like to see included in the map!
 

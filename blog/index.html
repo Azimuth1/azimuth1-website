@@ -1,35 +1,29 @@
 ---
 layout: template
-description: "The science of better decisions."
 ---
 
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url(/images/brazil-ir.jpg)" style="padding-top:60px">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>{% if page.name %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                    <hr class="small">
-                    <span class="subheading">{{ page.description }}</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
 
 
-<div class="container bg-white" >
+<div class="container bg-white pad4y">
     {% for post in paginator.posts %}
-    <div class="post-preview">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-            <h2 class="post-title red">            {{ post.title }}
-        </h2> {% if post.subtitle %}
-            <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3> {% endif %}
-        </a>
-        <p class="post-meta">Posted by {{ site.data.authors[post.author].name }} on {{ post.date | date: "%B %-d, %Y" }}</p>
+  
+    <div class="mar2y row" style="background-image: url('/blog/assets/{{post.path | replace:'_posts/','' | replace:'.md',''}}/header.png')">
+   
+        <div class="col-sm-5 pad4y" style="background:#eee">
+            <div class="text-blue text-capitalize">
+                 <a href="{{site.baseurl}}{{ post.url }}"><h1>{{ post.title}}</h1></a>
+                <h3 class="small em mar00">{{ post.subtitle }}</h3>
+            </div>
+            <p class="small em text-turq">{{ site.data.authors[post.author].name }} | {{ post.date | date: "%B %-d, %Y" }}</p>
+            <p class="small">
+                {{ post.excerpt | strip_html}}....</p>
+            <a href="{{site.baseurl}}{{ post.url }}">
+                <div class="text-center">
+                    <a class="btn btn-default" href="{{site.baseurl}}{{ post.url }}" role="button">MORE</a>
+                </div>
+            </a>
+        </div>
+        
     </div>
     <hr> {% endfor %}
     <!-- Pager -->

@@ -5,49 +5,44 @@ layout: template
 {% assign author = site.data.authors[page.author] %}
 {%  if author %}
 {% else %}
-    {% assign author = site.data.authors[azimuth1] %}
+{% assign author = site.data.authors[azimuth1] %}
+{% assign assets = '/blog/assets/{{page.date | date: "%Y-%m-%d"}}-{{page.id | replace:'/','-' | replace:'-blog-','' | }}' %}
+    
 {% endif %}
 
-<!-- Post Header -->
-<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
-                <div class="post-heading">
-                    <h1>{{ page.title }}</h1>
-                    {% if page.subtitle %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
-                    {% endif %}
-                    <span class="meta">Posted by {{ author.name }} on {{ page.date | date: "%B %-d, %Y" }}</span>
+
+
+
+
+    <div class="slide container-fluid bg-white postPage">
+        <div class="row bgImage" style="background-image: url('/blog/assets/{{page.date | date: "%Y-%m-%d"}}-{{page.id | replace:'/','-' | replace:'-blog-','' | }}/header.png')">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12" style="padding-top:50px;">
+                <div style="color:{{page.headerColor}}">
+                    <div class="page-header">
+                        <h1>{{page.title}} <br><small>{{ page.subtitle }}</small></h1>
+                        <h3>Posted by {{ author.name }} on {{ page.date | date: "%B %-d, %Y" }}</h3>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+        <div class="row pad1">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 pad00 pad4y">
                 <div class="addthis_sharing_toolbox"></div>
                 {{ content }}
                 <hr>
-            <div class="row">
-                Written by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> </br>
-                <a href="http://www.twitter.com/{{author.twitter}}">
+                <div class="row">
+                    Written by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> </br>
+                    <a href="http://www.twitter.com/{{author.twitter}}">
                     Follow {{ author.pronoun }} on Twitter
                 </a>
-                </span>
-            </div>
-
+                    </span>
+                </div>
                 <ul class="pager">
                     {% if page.previous.url %}
                     <li class="previous">
                         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
                     </li>
-                    {% endif %}
-                    {% if page.next.url %}
+                    {% endif %} {% if page.next.url %}
                     <li class="next">
                         <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
                     </li>
@@ -55,21 +50,22 @@ layout: template
                 </ul>
             </div>
         </div>
-        
         <div class="row">
             <div id="disqus_thread"></div>
             <script type="text/javascript">
-                /* * * CONFIGURATION VARIABLES * * */
-                var disqus_shortname = 'azimuth1blog';
-                
-                /* * * DON'T EDIT BELOW THIS LINE * * */
-                (function() {
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'azimuth1blog';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
         </div>
     </div>
-</article>
+

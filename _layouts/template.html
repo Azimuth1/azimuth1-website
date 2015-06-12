@@ -1,13 +1,10 @@
 <!doctype html>
 <html>
-
 {% include head.html %}
 
 <body>
-
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
         <div class="container">
-
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -15,37 +12,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
-                <a class="navbar-brand" href="#">
-                    <img height="40" src="{{ site.baseurl }}/images/main_logo.png" alt="logo" class="_logo_main" />
+                <a class="navbar-brand pad00 mar0x" href="/">
+                    <img height="40" src="{{ site.baseurl }}/pics/logo2.png" alt="logo" class="_logo_main" />
                 </a>
             </div>
-
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active" data-slide="#home"><a href="{{ site.baseurl }}#home">Home</a> </li>
-                    <li data-slide="#portfolio"><a href="{{ site.baseurl }}#portfolio">Portfolio</a> </li>
-                    <li data-slide="#about"><a href="{{ site.baseurl }}#about">About</a> </li>
-                    <li data-slide=""><a href="/blog/">Blog</a> </li>
-                    <li><a href="mailto:contact@azimuth1.com">Contact</a> </li>
-
+                <ul class="nav navbar-nav navbar-right">
+                    <li data-slide="#home"><a href="/">Home</a> </li>
+                    <li data-slide="#portfolio"><a href="#portfolio.html">Portfolio</a> </li>
+                    <li data-slide="#about"><a href="/about.html">About</a> </li>
+                    <li data-slide="#blog"><a href="/blog">Blog</a> </li>
+                 
                 </ul>
-
             </div>
-
         </div>
     </nav>
-
     {{ content }}
 
-    <div id="footer">
-        <div class="container"> <code class="code">Copyright&copy; 2013-2015 - Azimuth1</code>
-            <div class="pgs_body" onclick="page_scroll(); return false;">
-                <div class="pgs_l"> Back to top </div>
-                <div class="pgs_r"> <img src="{{ site.baseurl }}/images/back-to-top.png" width="16" height="13" /> </div>
-            </div>
-        </div>
-    </div>
+     {% include footer.html %}
 </body>
 {% include analytics.html %}
+
 </html>

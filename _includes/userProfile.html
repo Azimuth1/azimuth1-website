@@ -1,0 +1,34 @@
+<div class="row pad1">
+    <div class="col-md-3 text-center _bg-blue pad0" _style="  background-color: #ECFDFF;">
+        <img class="img-circle" style="max-width:150px" src="{{person.avatar}}" alt="{{person.name}}" href="assets/images/people/full/_JHU8978_a.jpg">
+        <div>
+            <a href="https://twitter.com/{{ person.twitter }}">
+                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+            </a>
+            <a href="https://github.com/{{ person.github }}">
+                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+            </a>
+            <a href="https://www.linkedin.com/{{ person.linkedin }}">
+                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="h2 text-blue">{{person.name}}
+            <div class="small">{{person.title}}</div>
+            <div class="small">{{person.email}}</div>
+        </div>
+        <p>{{person.bio}}</p>
+    </div>
+
+</div>
+<hr class="mar00">

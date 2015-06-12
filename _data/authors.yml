@@ -1,34 +1,43 @@
-azimuth1:
-  name: Azimuth1 Team
-  web: http://azimuth1.com
-  email: contact@azimuth1.com
-  bio: " "
-  pronoun: us
-  avatar: jason-dalton-photo.jpg
-  twitter: azimuth1tech
 
 jason_dalton:
   name: Jason Dalton
   web: http://about.me/JasonDalton
   email: jason.dalton@azimuth1.com
-  bio: " "
+  bio: "Jason practices and teaches spatial analysis using statistics and data mining."
+  title: "Founder, CEO"
   pronoun: him
-  avatar: jason-dalton-photo.jpg
+  avatar: /pics/bios/jason-dalton-photo.jpg
   twitter: jasonrdalton
-
-kara_mahoney:
-  name: Kara Mahoney
-  email: kara.mahoney@azimuth1.com
-  bio: " "
-  pronoun: her
-  web: http://kara.link
-  avatar: kara-mahoney-photo.jpg
-  twitter: Ainulindale
+  github: skitol
 
 kyle_kalwarski:
   name: Kyle Kalwarski
   email: kyle.kalwarski@azimuth1.com
-  bio: " "
+  bio: "Kyle develops seriously wonderful software for geospatial mobile and web."
+  title: "Sr Software Developer"
   pronoun: him
-  avatar: kyle-kalwarski-photo.jpg
+  avatar: /pics/bios/kyle-kalwarski-photo.jpg
   twitter: skitol
+
+kara_mahoney:
+  name: Kara Mahoney
+  email: kara.mahoney@azimuth1.com
+  bio: "Kara creates tremendous software that wrangles massive spatial data using Python and JavaScript"
+  title: "Software developer"
+  pronoun: her
+  web: http://kara.link
+  avatar: /pics/bios/kara-mahoney-photo.jpg
+  twitter: Ainulindale
+
+
+
+anna:
+  name: Anna Milligan
+  email: anna.milligan@azimuth1.com
+  bio: "Anna designs insightful interfaces for environmental remediation."
+  title: "Environmental Analyst"
+  pronoun: her
+  web: 
+  avatar: /pics/bios/anna-milligan-photo.jpg
+  twitter: 
+
