@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/Azimuth1_icon.png">
+    <title>Azimuth1 - Bayesian sensor fusion calculator</title>
+    <!-- Bootstrap core CSS 
+    <link href="styles/bootstrap/dist/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="styles/bootstrap/jumbotron.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="styles/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="styles/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//www.google.com/jsapi"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39271630-1', 'azimuth1.com');
+  ga('send', 'pageview');
+
+</script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+
+<script>
+function bayesUpdates(){
+var P=document.getElementById('assumptions').rows[0].cells[1].innerHTML;
+var x=document.getElementById('dataTable');
+
+  for (var i=1;i<11;i++){
+    var reading = x.rows[i].cells[2].children[0].selectedIndex;
+    var pod = x.rows[i].cells[1].innerHTML;
+    if (reading == 1) {
+        pod = 1-pod;
+    }
+    var Pe = P*pod + (1-P)*(1-pod);
+    x.rows[i].cells[3].innerHTML=(P * pod / Pe);  //Baysian update
+    P = (P * pod / Pe);  //set Prior P to the newly calculated estimate
+  }
+}
+
+</script>
+    <!--
+    <script src="styles/bootstrap/dist/js/bootstrap.min.js"></script>
+    -->
+	<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/common.css">   
+</head>
+    <body>    
+        <div class="container">
+            <div class="row"> 
+                <div class="starter-template">
+                   <img src="images/main_logo.png" alt="logo" class="logo_main" />
+                </div>	
+            </div>
+            <div class="navbar navbar-default">
+              <div class="container-nav">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                      </button>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="index.html#portfolio">Portfolio</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <!-- <li><a href="blog.html">Blog</a></li> -->
+                            <li><a href="mailto:contact@azimuth1.com">Contact</a></li>
+                      </ul>
+                     </div><!--/.navbar-collapse -->
+              </div>
+            </div>
+
+<h3>Quick Start Guide</h3>
+<p>
+    Click the "Calculate" button to generate probabiilties updated through Bayesian reasoning after 10 simulated sensor observations.
+    You can change the values of each observation's Sensor Accuracy and the resulting detection reading from the sensor.
+</p>
+
+<div class="container"> &nbsp; &nbsp;
+<table id="assumptions" border="1">
+<tr>
+<td>Starting probability P[H]:</td>
+<td contentEditable="true">0.0001</td>
+</tr>
+</table>
+<p>
+<h3>Bayesian Sensor Fusion Calculator</h3>
+<div class="CSSTableGenerator" >
+<table id="dataTable" border="1">
+<tr>
+<th>Observation:</th>
+<th>Sensor Accuracy [0.0 - 1.0]</th>
+<th>Sensor Reading [True, False]</th>
+<th>Updated Probability</th>
+</tr>
+<tr>
+<td>1</td>
+<td contentEditable="true" min="0.0" max="1.0">0.9</td>
+<td>
+<select>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td contentEditable="true">0.9</td>
+<td>
+<select>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td contentEditable="true">0.9</td>
+<td>
+<select>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4</td>
+<td contentEditable="true">0.9</td>
+<td>
+<select>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td contentEditable="true">0.9</td>
+<td>
+<select>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6</td>
+<td contentEditable="true">0.9</td>
+<td>
+<select>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>7</td>
+<td contentEditable="true">0.9</td>
+<td>
+<select>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td >8</td>
+<td contentEditable="true">0.9</td>
+<td>
+<select>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>9</td>
+<td contentEditable="true">0.9</td>
+<td>
+<select>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>10</td>
+<td contentEditable="true">0.9</td>
+<td>
+<select>
+  <option value="True">True</option>
+  <option value="False">False</option>
+</select>
+</td>
+<td>0</td>
+</tr>
+</table>
+</div>
+<form>
+<input type="button" onclick="bayesUpdates()" value="Calculate">
+</form>
+
+<script>
+function drawVisualization() {
+  // Create and populate the data table.
+  var data = google.visualization.arrayToDataTable([
+    [' ', ' '],
+    ['1',   .0008989],
+    ['2',   .0080357],
+    ['3',   .0679530],
+    ['4',   .3961956],
+    ['5',   .8551877],
+    ['6',   .9815326],
+    ['7',   .9979138],
+    ['8',   .9997678],
+    ['9',   .9999742],
+    ['10',  .9999971]
+  ]);
+
+// Create and populate the data table.
+        var options = {
+          title: 'Updated probability',
+          curveType: "function",
+          width: 600,
+          height: 400,
+          vAxis: {maxValue: 1},
+          legend: {position: 'none'}
+        };
+
+  // Create and draw the visualization.
+      new google.visualization.LineChart(document.getElementById('visualization')).
+          draw(data, options);
+      };
+      google.setOnLoadCallback(drawVisualization);
+</script>
+
+<div id="visualization" style="width: 600px; height: 400px;"></div>
+
+<h3>How to use the calculator</h3>
+<p>
+    This page calculates the updated probability of an anomaly or target by updating the probability to account for new evidence 
+    coming from a sensor.  We have provided some example numbers for the Starting Probability and the Probability of Detection of 
+    your sensors - you will need to enter your own values for your work.  The calculator will then provide updated probabilities for 
+    up to 10 observations from any sensor POD you provide.   You can also specify when a sensor gives a reading of 'False' or 'Non-detect'.
+    For sensors that provide a measurement or concentration, you should use a threshold and for all sensor readings above your threshold, indicate a readong of 'True'. 
+    A more advanced approach would be to model the POD as a function of the sensor reading rather than a fixed threshold.   If there is enough interest,
+    I'll add that function.
+</p>
+
+<h3>What's this all about?</h3>
+<p>All sensors and detectors used in environmental site characterization have an inherent probability of detection that is
+    based on the attributes of the sensor.  How sensitive it is, the internal electrical noise dampening, and environmental
+    factors all lead to an uncertain result when a sensor indicates the presence of some target compound.  Of course, this can be 
+    generalized to any sensor or anomaly detection system.  There is some chance that the system will indicate the presense of an 
+    anomaly when it doesn't really exist.  That is called a false positive, or a Type I error.  This uncertainty in the results, plus the 
+    rarity of the target compounds means that even with a positive sensor response, the probability that the target is actually there can still be 
+    quite low.   Many people find this difficult to understand, and while there are many descriptions and explanations of Bayes Theorem online, I 
+    find this calculator lets you explore different settings of your sensors and results, leading to a better undersanding of how to 
+    apply Bayes Theorem.  Some good exercises to try:
+</p>
+<p>
+            <i class="fa fa-circle fa-fw"></i> Set a Sensor POD value of 0.5 and observe the effect this has on the Updated Probability.
+</br>
+            <i class="fa fa-circle fa-fw"></i> Set a Sensor Reading to False and observe the effect this has on the Updated Probability.
+</p>
+ 
+
+
+            </div>
+        	<div id="footer">
+                    <div class="container">
+                        <code class="code">Copyright&copy; 2014 - Azimuth1</code>
+                        <div class="pgs_body" onclick="page_scroll(); return false;">
+                            <div class="pgs_l">
+                            Back to top
+                            </div>
+                            <div class="pgs_r">
+                                <img src="images/back-to-top.png" width="16" height="13" />
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+<!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52dff7c234c96acc"></script>
+<script type="text/javascript">
+  addthis.layers({
+    'theme' : 'transparent',
+    'share' : {
+      'position' : 'left',
+      'numPreferredServices' : 5
+    }, 
+    'follow' : {
+      'services' : [
+        {'service': 'twitter', 'id': 'azimuth1tech'},
+        {'service': 'linkedin', 'id': 'azimuth1', 'usertype': 'company'}
+      ]
+    }   
+  });
+</script>
+<!-- AddThis Smart Layers END -->
+   </body>
+</html>
