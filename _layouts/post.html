@@ -6,7 +6,7 @@ layout: template
 {%  if author %}
 {% else %}
 {% assign author = site.data.authors[azimuth1] %}
-{% assign assets = '/blog/assets/{{page.date | date: "%Y-%m-%d"}}-{{page.id | replace:'/','-' | replace:'-blog-','' | }}' %}
+{% assign assets = '{{page.baseurl}}/blog/assets/{{page.date | date: "%Y-%m-%d"}}-{{page.id | replace:'/','-' | replace:'-blog-','' | }}' %}
     
 {% endif %}
 
@@ -15,7 +15,7 @@ layout: template
 
 
     <div class="slide container-fluid bg-white postPage">
-        <div class="row bgImage" style="background-image: url('/blog/assets/{{page.date | date: "%Y-%m-%d"}}-{{page.id | replace:'/','-' | replace:'-blog-','' | }}/header.png')">
+        <div class="row bgImage" style="background-image: url('{{site.baseurl}}/blog/assets/{{page.date | date: "%Y-%m-%d"}}-{{page.id | replace:'/','-' | replace:'-blog-','' | }}/header.png')">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12" style="padding-top:50px;">
                 <div style="color:{{page.headerColor}}">
                     <div class="page-header">

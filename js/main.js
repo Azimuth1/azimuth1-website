@@ -12,13 +12,13 @@
             var $this = $('.navbar-nav li[data-slide="' + relPath + '"]');
             setPageLoc($this);
         }
-        (function($) {
-            $(document).ready(function() {
+        (function ($) {
+            $(document).ready(function () {
                 // hide .navbar first
                 //      $(".navbar").hide();
                 // fade in .navbar
-                $(function() {
-                    $(window).scroll(function() {
+                $(function () {
+                    $(window).scroll(function () {
                         // set distance user needs to scroll before we fadeIn navbar
                         if ($(this).scrollTop() > 100) {
                             $('.navbar').fadeOut();
@@ -28,12 +28,12 @@
                     });
                     $('.gallery .item').hover(
 
-                        function() {
+                        function () {
                             $(this).find('.info').animate({
                                 opacity: 0.7
                             }, 300);
                         },
-                        function() {
+                        function () {
                             $(this).find('.info').animate({
                                 opacity: 0
                             }, 100);
@@ -42,7 +42,7 @@
                     var relPath = window.location.hash || '#home';
                     var pathName = window.location.pathname.replace('.html', '');
                     console.log(pathName)
-                    relPath = pathName === '/about' ? '#about' : relPath;
+                    relPath = pathName.indexOf('/about') !== -1 ? '#about' : relPath;
                     relPath = pathName.indexOf('/blog') !== -1 ? '#blog' : relPath;
                     relPath = pathName.indexOf('/portfolio') !== -1 ? '#portfolio' : relPath;
                     console.log(relPath)
@@ -51,19 +51,22 @@
                     $('[data-slide="' + relPath + '"]')
                         .addClass('active');
                     $('.navbar-nav li a')
-                        .click(function(e) {
+                        .click(function (e) {
                             //e.preventDefault()
                             var $this = $(this)
                                 .parent();
                             var attr = $this.attr('data-slide');
-                            if (attr === '#blog') {
+                            /*if (attr === '#blog') {
                                 return;
-                            }
+                            }*/
+                            console.log(window.location.pathname)
                             if (window.location.pathname !== '/') {
                                 var attr = $this.attr('data-slide');
-                                window.location.href = window.location.origin + attr;
+                                console.log(window.location.origin + pathName + attr)
+                                window.location.href = window.location.origin + pathName + attr;
                             } else {
-                                //e.preventDefault()
+                                alert('!')
+                                    //e.preventDefault()
                                 $('html,body')
                                     .animate({
                                         scrollTop: ($(attr)
@@ -72,7 +75,7 @@
                                     }, 500);
                             }
                         });
-                    ! function(d, s, id) {
+                    ! function (d, s, id) {
                         var js, fjs = d.getElementsByTagName(s)[0],
                             p = /^http:/.test(d.location) ? 'http' : 'https';
                         if (!d.getElementById(id)) {

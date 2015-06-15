@@ -6,18 +6,18 @@
     <link rel="shortcut icon" href="images/Azimuth1_icon.png">
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
     <!-- Custom Fonts -->
-    <link href="/resources/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ site.baseurl }}/resources/fontawesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Roboto|Open+Sans|Lato|Source+Sans+Pro' rel='stylesheet' type='text/css'>
-    <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <script src="/resources/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/resources/jquery.min.js"></script>
     
-    <script type="text/javascript" src="/resources/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/resources/bootstrap/js/bootstrap.min.js"></script>
     
     <link rel="stylesheet" href="{{ site.baseurl }}/styles/styles.css">
     <!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52dff7c234c96acc"></script>-->
 
 
-    <script type='text/javascript' src='{{ site.url }}/js/main.js'></script>
+    <script type='text/javascript' src='{{ site.baseurl }}/js/main.js'></script>
 </head>
