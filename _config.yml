@@ -64,7 +64,7 @@ baseurl: "/azimuth-1"
 markdown: kramdown
 highlighter: pygments
 #permalink: /:year/
-permalink: /blog/:title.html
+permalink: azimuth-1/blog/:title.html
 # The release of Jekyll Now that you're using
 version: v1.1.0
 
