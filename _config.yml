@@ -21,7 +21,7 @@ twitter_username: azimuth1tech
 github_username:  Azimuth1
 linkedin_username: azimuth1
 paginate: 5
-paginate_path: "/blog/page:num/"
+paginate_path: "/azimuth1-website/blog/page:num/"
 destination: ./_site
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -53,7 +53,7 @@ url:
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "/azimuth-1"
+baseurl: "/azimuth1-website"
 
 #
 # !! You don't need to change any of the configuration flags below !!
