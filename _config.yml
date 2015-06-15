@@ -21,7 +21,7 @@ twitter_username: azimuth1tech
 github_username:  Azimuth1
 linkedin_username: azimuth1
 paginate: 5
-paginate_path: "/azimuth1-website/blog/page:num/"
+paginate_path: "/blog/page:num/"
 destination: ./_site
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -64,7 +64,7 @@ baseurl: "/azimuth1-website"
 markdown: kramdown
 highlighter: pygments
 #permalink: /:year/
-permalink: azimuth-1/blog/:title.html
+permalink: /blog/:title.html
 # The release of Jekyll Now that you're using
 version: v1.1.0
 

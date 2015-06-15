@@ -22,8 +22,8 @@ The new contour lines are algorithmically generated from digital elevation data 
 
 <html>
 <div class="row row-centered mar2">
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster Contours</h4><img class="img-responsive" src="{{page.folder}}/USGS_old1.png"></div>
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector Contours</h4><img class="img-responsive" src="{{page.folder}}/USGS_new1.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster Contours</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/USGS_old1.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector Contours</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/USGS_new1.png"></div>
 </div>
 </html>
 
@@ -35,8 +35,8 @@ Utility lines, like trails, are often used by lost persons to travel.  They are 
 
 <html>
 <div class="row row-centered mar2">
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster utilities</h4><img class="img-responsive" src="{{page.folder}}/USGS_old2.png"></div>
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector maps without utilities</h4><img class="img-responsive" src="{{page.folder}}/USGS_new2.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster utilities</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/USGS_old2.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector maps without utilities</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/USGS_new2.png"></div>
 </div>
 </html>
 
@@ -47,8 +47,8 @@ Trails were removed from the new US Topo series - a critical feature to know abo
 
 <html>
 <div class="row row-centered mar2">
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster trails</h4><img class="img-responsive" src="{{page.folder}}/USGS_old3.png"></div>
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector maps without trails</h4><img class="img-responsive" src="{{page.folder}}/USGS_new3.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster trails</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/USGS_old3.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector maps without trails</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/USGS_new3.png"></div>
 </div>
 </html>
 
@@ -59,8 +59,8 @@ Buildings were removed from the new US Topo series.  They just change much faste
 
 <html>
 <div class="row row-centered mar2">
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster buildings</h4><img class="img-responsive" src="{{page.folder}}/usgs-bldg-old.png"></div>
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector maps without  buildings</h4><img class="img-responsive" src="{{page.folder}}/usgs-bldg-new.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster buildings</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/usgs-bldg-old.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector maps without  buildings</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/usgs-bldg-new.png"></div>
 </div>
 </html>
 
@@ -73,13 +73,13 @@ Azimuth1 is part of a team working on support tools for first responders formed 
 First, we added back the useful features that USGS had to remove [^2].  
 
 **Trails**  
-![]({{page.folder}}/sar-contour.png){: width="100%"}
+![]({{ site.baseurl }}/{{page.folder}}/sar-contour.png){: width="100%"}
 
 **Utilities**  
-![]({{page.folder}}/sar-utility.png){: width="100%"}
+![]({{ site.baseurl }}/{{page.folder}}/sar-utility.png){: width="100%"}
 
 **Buildings**  
-![]({{page.folder}}/sar-bldg.png){: width="100%"}
+![]({{ site.baseurl }}/{{page.folder}}/sar-bldg.png){: width="100%"}
 
 Since USGS strives for equal data coverage across the whole United States, it would not include a dataset of trails in a single state, even if it was very good. Our approach is just the opposite. If we can include only one item listed as 'culvert' and that culvert is useful to a particular missing person search then it's useful to put on our map.  In other words, we don't require that we show _every_ culvert before we show _any_ culvert.  The mapping of these detailed features varies widely across the country. But in places where volunteers have taken the time to map and verify detailed feature data, it is extremely valuable to searchers in that area.  This is exactly why OpenStreetMap is such a valuable dataset for custom mapping.
 
@@ -87,16 +87,16 @@ Since USGS strives for equal data coverage across the whole United States, it wo
 Second, we added map features that were specifically chosen to help searchers:
 
 **Medical** - local doctors, and other EMS - medical support in the event of an injury or when the lost person is found and needs medical attention.  Search dog handlers will now see any known veterinarian offices from their task map and planning maps.  
-![]({{page.folder}}/sar-hospital.png){: width="100%"}
+![]({{ site.baseurl }}/{{page.folder}}/sar-hospital.png){: width="100%"}
 
 **Churches** - often used as areas to set up base operations and staging areas for volunteers to rest and eat.   
-![]({{page.folder}}/sar-church.png){: width="100%"}
+![]({{ site.baseurl }}/{{page.folder}}/sar-church.png){: width="100%"}
 
 **Aquaducts** - feature where finds are often made.   
-![]({{page.folder}}/sar-aquaduct.png){: width="100%"}
+![]({{ site.baseurl }}/{{page.folder}}/sar-aquaduct.png){: width="100%"}
 
 **Shelters** - possible waiting area for overdue subjects, and navigation points.   
-![]({{page.folder}}/sar-shelter.png){: width="100%"}
+![]({{ site.baseurl }}/{{page.folder}}/sar-shelter.png){: width="100%"}
 
 
 
