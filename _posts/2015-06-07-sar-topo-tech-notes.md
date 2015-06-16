@@ -4,7 +4,7 @@ layout: post
 title: A technical overview of our SAR topo implementation
 date: 2015-06-07 12:00:00
 author: kara_mahoney
-folder: /blog/assets/2015-06-07-sar-topo-tech-notes
+folder: blog/assets/2015-06-07-sar-topo-tech-notes
 headerColor: '#fff'
 ---
 
