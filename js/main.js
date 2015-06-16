@@ -65,7 +65,7 @@
                                 console.log(window.location.origin + pathName + attr)
                                 window.location.href = window.location.origin + pathName + attr;
                             } else {
-                                alert('!')
+                                //alert('!')
                                     //e.preventDefault()
                                 $('html,body')
                                     .animate({
