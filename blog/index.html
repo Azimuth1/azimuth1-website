@@ -7,7 +7,7 @@ layout: template
 <div class="container bg-white pad4y">
     {% for post in paginator.posts %}
   
-    <div class="mar2y row" style="background-image: url('/blog/assets/{{post.path | replace:'_posts/','' | replace:'.md',''}}/header.png')">
+    <div class="mar2y row" style="background-image: url('{{ site.baseurl }}/blog/assets/{{post.path | replace:'_posts/','' | replace:'.md',''}}/header.png')">
    
         <div class="col-sm-5 pad4y" style="background:#eee">
             <div class="text-blue text-capitalize">
