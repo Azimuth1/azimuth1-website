@@ -8,7 +8,8 @@ jason_dalton:
   pronoun: him
   avatar: pics/bios/jason-dalton-photo.jpg
   twitter: jasonrdalton
-  github: Azimuth1
+  github: jasonrdalton
+  linkedin: jasondalton
 
 kyle_kalwarski:
   name: Kyle Kalwarski
@@ -19,6 +20,7 @@ kyle_kalwarski:
   avatar: pics/bios/kyle-kalwarski-photo.jpg
   twitter: KyleSkitol
   github: skitol
+  linkedin: https://www.linkedin.com/pub/kyle-kalwarski/2a/a22/62b
 
 kara_mahoney:
   name: Kara Mahoney
@@ -29,8 +31,7 @@ kara_mahoney:
   web: http://kara.link
   avatar: pics/bios/kara-mahoney-photo.jpg
   twitter: Ainulindale
-
-
+  linkedin: mahoneykara
 
 anna:
   name: Anna Milligan
@@ -41,4 +42,5 @@ anna:
   web: 
   avatar: pics/bios/anna-milligan-photo.jpg
   twitter: 
+  linkedin: https://www.linkedin.com/pub/anna-milligan/99/865/5ab
 
