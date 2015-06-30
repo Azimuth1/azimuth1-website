@@ -12,13 +12,13 @@
             var $this = $('.navbar-nav li[data-slide="' + relPath + '"]');
             setPageLoc($this);
         }
-        (function ($) {
-            $(document).ready(function () {
+        (function($) {
+            $(document).ready(function() {
                 // hide .navbar first
                 //      $(".navbar").hide();
                 // fade in .navbar
-                $(function () {
-                    $(window).scroll(function () {
+                $(function() {
+                    $(window).scroll(function() {
                         // set distance user needs to scroll before we fadeIn navbar
                         if ($(this).scrollTop() > 100) {
                             $('.navbar').fadeOut();
@@ -28,12 +28,12 @@
                     });
                     $('.gallery .item').hover(
 
-                        function () {
+                        function() {
                             $(this).find('.info').animate({
                                 opacity: 0.7
                             }, 300);
                         },
-                        function () {
+                        function() {
                             $(this).find('.info').animate({
                                 opacity: 0
                             }, 100);
@@ -51,7 +51,7 @@
                     $('[data-slide="' + relPath + '"]')
                         .addClass('active');
                     $('.navbar-nav li a')
-                        .click(function (e) {
+                        .click(function(e) {
                             //e.preventDefault()
                             var $this = $(this)
                                 .parent();
@@ -65,8 +65,6 @@
                                 console.log(window.location.origin + pathName + attr)
                                 window.location.href = window.location.origin + pathName + attr;
                             } else {
-                                //alert('!')
-                                    //e.preventDefault()
                                 $('html,body')
                                     .animate({
                                         scrollTop: ($(attr)
@@ -75,7 +73,7 @@
                                     }, 500);
                             }
                         });
-                    ! function (d, s, id) {
+                    ! function(d, s, id) {
                         var js, fjs = d.getElementsByTagName(s)[0],
                             p = /^http:/.test(d.location) ? 'http' : 'https';
                         if (!d.getElementById(id)) {
