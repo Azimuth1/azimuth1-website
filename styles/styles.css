@@ -141,6 +141,13 @@ a:hover {
     overflow: hidden;
 }
 
+.blogBgImage{
+    background: url(../pics/scenery/wa.jpg) center top no-repeat;
+    background-size: cover;
+    height: 350px;
+    overflow: hidden;
+}
+
 .bgImage {
     background: url(../pics/scenery/wa.jpg) center top no-repeat;
     background-size: cover;
