@@ -14,16 +14,16 @@ Bayesian statistics are useful for handling uncertainty of outcomes in many situ
 
 The table below is a calculator for computing the actual probability of a detected object from a sensor, accounting for multiple looks at an object, and for positive and negative results.  You can edit the values for the starting, or prior, probability, the sensor detection accuracy, and whether there was a detection or not [True or False]
 Click the "Calculate" button to generate probabilities updated through Bayesian reasoning after 10 simulated sensor observations. You can change the values of each observation's Sensor Accuracy and the resulting detection reading from the sensor.
-
+<html>
 <table id="assumptions" border="1">
 <tr>
 <td>Starting probability P[H]:</td>
 <td contentEditable="true">0.0001</td>
 </tr>
 </table>
-<p>
+
 <h3>Bayesian Sensor Fusion Calculator</h3>
-<div class="CSSTableGenerator" >
+
 <table id="dataTable" border="1">
 <tr>
 <th>Observation:</th>
@@ -146,6 +146,7 @@ Click the "Calculate" button to generate probabilities updated through Bayesian 
 <form>
 <input type="button" onclick="bayesUpdates()" value="Calculate">
 </form>
+</html>
 
 ## How to use the calculator
 
