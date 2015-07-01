@@ -159,6 +159,9 @@ This page calculates the updated probability of an anomaly or target by updating
 
 
 <script>
+      google.load('visualization', '1', {packages: ['corechart']});
+
+
 function bayesUpdates(){
 var P=document.getElementById('assumptions').rows[0].cells[1].innerHTML;
 var x=document.getElementById('dataTable');
