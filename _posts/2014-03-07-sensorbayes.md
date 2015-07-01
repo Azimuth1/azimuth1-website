@@ -142,7 +142,7 @@ Click the "Calculate" button to generate probabilities updated through Bayesian 
 <td>0</td>
 </tr>
 </table>
-</div>
+
 <form>
 <input type="button" onclick="bayesUpdates()" value="Calculate">
 </form>
