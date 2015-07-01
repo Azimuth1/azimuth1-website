@@ -147,8 +147,6 @@ Click the "Calculate" button to generate probabilities updated through Bayesian 
 <input type="button" onclick="bayesUpdates()" value="Calculate">
 </form>
 
-
-
 <div id="visualization" style="width: 600px; height: 400px;"></div>
 
 ## How to use the calculator
@@ -174,7 +172,7 @@ var x=document.getElementById('dataTable');
         pod = 1-pod;
     }
     var Pe = P*pod + (1-P)*(1-pod);
-    x.rows[i].cells[3].innerHTML=(P * pod / Pe);  //Baysian update
+    x.rows[i].cells[3].innerHTML=(P * pod / Pe).toFixed(7);  //Baysian update
     P = (P * pod / Pe);  //set Prior P to the newly calculated estimate
   }
 }
