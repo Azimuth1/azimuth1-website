@@ -147,16 +147,15 @@ Click the "Calculate" button to generate probabilities updated through Bayesian 
 <form>
 <input type="button" onclick="bayesUpdates()" value="Calculate">
 </form>
+
+<div id="visualization" style="width: 600px; height: 400px;"></div>
 </html>
 
 ## How to use the calculator
 
 This page calculates the updated probability of an anomaly or target by updating the probability to account for new evidence coming from a sensor. We have provided some example numbers for the Starting Probability and the Probability of Detection of your sensors - you will need to enter your own values for your work. The calculator will then provide updated probabilities for up to 10 observations from any sensor POD you provide. You can also specify when a sensor gives a reading of 'False' or 'Non-detect'. For sensors that provide a measurement or concentration, you should use a threshold and for all sensor readings above your threshold, indicate a reading of 'True'.
 
-<html><div id="visualization" style="width: 600px; height: 400px;"></div>
-
-
-
+<html>
 
 <script>
       google.load('visualization', '1', {packages: ['corechart']});
