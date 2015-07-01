@@ -17,10 +17,9 @@ The table below is a calculator for computing the actual probability of a detect
 The probablility updates come from Bayes Theorem, which allows us to update probabilities based on new evidence.
 
 $$
-\begin{align*}
-  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
   = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+  (x_1, \ldots, x_n) \left( \begin{array}{ccc}
       \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
       \vdots & \ddots & \vdots \\
       \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
