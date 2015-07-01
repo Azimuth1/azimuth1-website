@@ -27,7 +27,7 @@ var x=document.getElementById('dataTable');
 
 </script>
 
-Bayesian statistics are useful for handling uncertainty of outcomes in many situations.  In the course of teaching spatial statistics for GeoINT, it's useful to have a good grasp of the concept of probability of detection, false positives, and how to bring that information together mathematically to estimate the posterior probabilities for detecting things from space.  With the growth of small-sats, the latest generation of small and relatively cheap sensors for Earth imaging, the percision and resolution is far less than the best high-end commercial imaging, so there it becomes even more important to understand how to quantify and account for errors when detecting objects in these images.
+Bayesian statistics are useful for handling uncertainty of outcomes in many situations. With the growth of small-sats, the latest generation of small and relatively cheap sensors for Earth imaging, the precision <!-- MORE -->and resolution is far less than the best high-end commercial imaging, so there it becomes even more important to understand how to quantify and account for errors when detecting objects in these images. In the course of teaching spatial statistics for GeoINT, I've found that it's useful to have a good grasp of the concept of probability of detection, false positives, and how to bring that information together mathematically to estimate the posterior probabilities for detecting things from space.  
 
 ## Quick Start Guide
 
