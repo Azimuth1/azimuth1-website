@@ -14,6 +14,8 @@ Bayesian statistics are useful for handling uncertainty of outcomes in many situ
 
 The table below is a calculator for computing the actual probability of a detected object from a sensor, accounting for multiple looks at an object, and for positive and negative results.  You can edit the values for the starting, or prior, probability, the sensor detection accuracy, and whether there was a detection or not [True or False]
 
+inline math \\( \sin ^2{x} + \cos^2{x} = 1\\)
+
 The probablility updates come from Bayes Theorem, which allows us to update probabilities based on new evidence.
 
 $$
