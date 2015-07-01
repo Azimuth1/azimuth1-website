@@ -17,7 +17,7 @@ The table below is a calculator for computing the actual probability of a detect
 inline math \\( \sin ^2{x} + \cos^2{x} = 1\\)
 
 The probablility updates come from Bayes Theorem, which allows us to update probabilities based on new evidence.
-
+<html>
 $$
   \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
   = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
@@ -33,7 +33,7 @@ $$
     \end{array} \right)
 \end{align*}
 $$
-
+</html>
 Click the "Calculate" button to generate probabilities updated through Bayesian reasoning after 10 simulated sensor observations. You can change the values of each observation's Sensor Accuracy and the resulting detection reading from the sensor.
 <html>
 <script type="text/javascript" src="//www.google.com/jsapi"></script>
