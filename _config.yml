@@ -16,6 +16,7 @@ avatar: http://azimuth1.github.io/azimuth1-website/images/main_logo.png
 # Flags below are optional
 #
 
+math_engine: mathjax-node
 
 twitter_username: azimuth1tech
 github_username:  Azimuth1
