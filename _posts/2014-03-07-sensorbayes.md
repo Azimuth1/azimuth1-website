@@ -18,7 +18,7 @@ inline math \\( \sin ^2{x} + \cos^2{x} = 1\\)
 
 The probablility updates come from Bayes Theorem, which allows us to update probabilities based on new evidence.
 
-\\(  \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+\\[  \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
   = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
   (x_1, \ldots, x_n) \left( \begin{array}{ccc}
       \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
@@ -30,7 +30,7 @@ The probablility updates come from Bayes Theorem, which allows us to update prob
       \vdots \\
       y_n
     \end{array} \right)
-\\)
+\\]
 
 
 Click the "Calculate" button to generate probabilities updated through Bayesian reasoning after 10 simulated sensor observations. You can change the values of each observation's Sensor Accuracy and the resulting detection reading from the sensor.
