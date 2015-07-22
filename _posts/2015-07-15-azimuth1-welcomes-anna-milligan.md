@@ -14,4 +14,4 @@ Anna Milligan joined Azimuth1 this summer as an intern and we're happy to say sh
 
 ![]({{ site.baseurl }}/pics/bios/anna-milligan-photo.jpg){: width="100%"}
 
-Anna is a graduate of the University of Virginia, with a degree in Environmental Sciences, and is currently earning a Masters in Environmental Engineering from the University of Oklahoma.  Find her on [https://www.linkedin.com/pub/anna-milligan/99/865/5ab](LinkedIn) or at anna.milligan@azimuth1.com
+Anna is a graduate of the University of Virginia, with a degree in Environmental Sciences, and is currently earning a Masters in Environmental Engineering from the University of Oklahoma.  Find her on [LinkedIn]{https://www.linkedin.com/pub/anna-milligan/99/865/5ab) or at anna.milligan@azimuth1.com
