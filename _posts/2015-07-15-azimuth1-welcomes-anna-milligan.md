@@ -6,7 +6,7 @@ subtitle: Adding great talent
 date: 2015-07-16 12:00:00
 author: jason_dalton
 folder: blog/assets/2015-06-02-azimuth1-welcomes-anna-milligan
-headerColor: '#00D'
+headerColor: '#BBF'
 ---
  
 Anna Milligan joined Azimuth1 this summer as an intern and we're happy to say she'll be staying on wiht us as an Environmental Analyst.  At Azimuth1 Anna works with lab data and GIS to migrate our clients' historical remediation investigations into the SmartData Solutions platform that we offer wiht our partners Columbia Technologies.   Anna is also helping us design several new features for remediation planning that will be coming out later this year.  
