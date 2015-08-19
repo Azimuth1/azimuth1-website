@@ -18,12 +18,14 @@ These statistics come from data provided to ISRID, the International Search and 
 ## A complete records management system
 
 <img style="float: right" src="{{site.baseurl}}/{{page.folder}}/SARCAT_stats_screen.png">
+
 SARCAT is easy to set up, with just a single script to install and start the server.   Users access it through a browser, so there's nothing to install on user's desktops.  Our design goals were to make it simple and fast to use, install, and maintain.  We did this by creating a single step installer, a fast web based UI, and using web services to automaticaly pull in data that is normally collected on paper.    
 
 
 ## Entering mission data
 
 <img style="float: left" src="{{site.baseurl}}/{{page.folder}}/SARCAT_record_map_screen.png">
+
 It all starts with the map.  The user drops a point on a map to start the record and add details.    It also auto-populates the administrative details like the point of contact, team name, location, and address information.  Once SARCAT knows the coordinate and date of a mission, it automatically adds the terrain, elevation, land cover, eco-region, and weather data.
 <img style="float: right" src="{{site.baseurl}}/{{page.folder}}/SARCAT_record_weather_screen.png">
 
