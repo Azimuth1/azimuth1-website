@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Introducing SARCAT - search and rescue data catalog
-date: 2015-07-19 12:00:00
+date: 2015-08-19 12:00:00
 author: jason_dalton
 folder: blog/assets/2015-08-19-introducing-sarcat
 headerColor: '#fff'

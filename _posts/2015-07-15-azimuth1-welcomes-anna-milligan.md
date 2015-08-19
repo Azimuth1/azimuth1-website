@@ -9,7 +9,7 @@ folder: blog/assets/2015-06-02-azimuth1-welcomes-anna-milligan
 headerColor: '#BBF'
 ---
  
-Anna Milligan joined Azimuth1 this summer as an intern and we're happy to say she'll be staying on with us as an Environmental Analyst. <!--more --> At Azimuth1 Anna works with lab data and GIS to migrate our clients' historical remediation investigations into the SmartData Solutions platform that we offer with our partners, Columbia Technologies.  Anna is also helping us design several new features for remediation planning that will be coming out later this year.  
+Anna Milligan joined Azimuth1 this summer as an intern and we're happy to say she'll be staying on with us as an Environmental Analyst. <!--more--> At Azimuth1 Anna works with lab data and GIS to migrate our clients' historical remediation investigations into the SmartData Solutions platform that we offer with our partners, Columbia Technologies.  Anna is also helping us design several new features for remediation planning that will be coming out later this year.  
 
 
 ![]({{ site.baseurl }}/pics/bios/anna-milligan-photo.jpg){: width="70%"}
