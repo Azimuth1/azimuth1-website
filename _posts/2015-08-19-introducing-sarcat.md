@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Introducing SARCAT
-subtitle: Search and Rescue data catalog
+subtitle: The open-source Search and Rescue data management system
 date: 2015-08-19 12:00:00
 author: jason_dalton
 folder: blog/assets/2015-08-19-introducing-sarcat
