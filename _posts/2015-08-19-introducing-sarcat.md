@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Introducing SARCAT - search and rescue data catalog
 date: 2015-07-19 12:00:00
