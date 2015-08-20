@@ -3,7 +3,7 @@
         <span style="background:#E8E8E8">Latest Articles</span>
     </div>
     {% for post in site.posts limit: 3 %}
-    <div class="mar2 row" style="background-image: url('{{ site.baseurl }}/blog/assets/{{post.path | replace:'_posts/','' | replace:'.md',''}}/header.png')">
+    <div class="mar2 row" style="background-image: url('{{ site.baseurl }}/blog/assets/{{post.path | replace:'_posts/','' | replace:'.md',''}}/header.png'); background-position: right;">
         <div class="col-sm-5 pad2y" style="background:#eee">
             <a href="{{site.baseurl}}{{ post.url }}">
                 <div class="text-blue text-capitalize">
