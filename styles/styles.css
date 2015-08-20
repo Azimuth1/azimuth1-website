@@ -7,6 +7,24 @@ body {
     font-family: "Lato", Arial, sans-serif, Arial, sans-serif;
 }
 
+.flexCont {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flexItem {
+    flex: 0 1 auto;
+}
+
+.sarcatImg {
+    padding: 10px 0;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 a:focus,
 a:hover {
@@ -510,6 +528,7 @@ hr.small {
 
 .postPage p img {
     max-width: 400px;
+    _margin: 10px;
 }
 
 
