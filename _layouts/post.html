@@ -13,9 +13,9 @@ layout: template
 
 
 
-
     <div class="slide container-fluid bg-white postPage">
-        <div class="row blogBgImage" style="background-image: url('{{site.baseurl}}/blog/assets/{{page.date | date: "%Y-%m-%d"}}-{{page.id | replace:'/','-' | replace:'-blog-','' | }}/header.png')">
+        <div class="row blogBgImage" style="background-image: url('{{site.baseurl}}/blog/assets/{{page.date | date: "%Y-%m-%d"}}-{{page.id | replace:'/','-' | replace:'-blog-','' | }}/header.png'); ">
+        <div class="row blogBgImage" style="background-color: {{page.replaceHeaderImage}}">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12" style="padding-top:50px;">
                 <div style="color:{{page.headerColor}}">
                     <div class="page-header">
@@ -24,6 +24,7 @@ layout: template
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         <div class="row pad1">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 pad00 pad4y">

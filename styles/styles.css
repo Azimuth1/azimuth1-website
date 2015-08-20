@@ -7,6 +7,7 @@ body {
     font-family: "Lato", Arial, sans-serif, Arial, sans-serif;
 }
 
+
 a:focus,
 a:hover {
     color: #23527C;
@@ -33,16 +34,16 @@ a:hover {
     display: inline-block;
     float: none;
     /* reset the text-align */
-    
     text-align: left;
     /* inline-block space fix */
-    
     margin-right: -4px;
 }
 
 .fa-circle {
     color: #700;
 }
+
+
 /*
 .hrRed {
     border-width: 2px;
@@ -141,19 +142,21 @@ a:hover {
     overflow: hidden;
 }
 
-.blogBgImage{
-    background: url(../pics/scenery/wa.jpg) center top no-repeat;
+.blogBgImage {
+    /*background: url(../pics/scenery/wa.jpg) center top no-repeat;*/
     background-size: cover;
     height: 350px;
     overflow: hidden;
 }
 
 .bgImage {
-    background: url(../pics/scenery/wa.jpg) center top no-repeat;
+    /*background: url(../pics/scenery/wa.jpg) center top no-repeat;*/
     background-size: cover;
     height: 550px;
     overflow: hidden;
 }
+
+
 /*
 #home .headingTitle {
     left: 5%;
@@ -204,6 +207,8 @@ a:hover {
 .noBorder {
     border: none;
 }
+
+
 /* Margin
 ------------------------------------------------------- */
 
@@ -300,6 +305,8 @@ a:hover {
     margin-left: 80px;
     margin-right: 80px;
 }
+
+
 /* Padding
 ------------------------------------------------------- */
 
@@ -441,7 +448,6 @@ a:hover {
 .navbar {
     /* opacity: 0.8;*/
     /*background-color: #E2E2E2;*/
-    
     background-color: #000;
 }
 
@@ -462,6 +468,8 @@ a:hover {
     margin: 8px 3px;
     background-color: inherit;
 }
+
+
 /*
 .navbar-brand {
     padding: 0px 15px;
@@ -500,9 +508,11 @@ hr.small {
     border-color: white;
 }
 
-.postPage p img{
-    max-width:400px;
+.postPage p img {
+    max-width: 400px;
 }
+
+
 /*
 .intro-header {
     background: no-repeat center center;
@@ -645,6 +655,8 @@ hr.small {
     }
 }
 */
+
+
 /*
 .section-heading {
     font-size: 36px;
@@ -698,10 +710,14 @@ footer .list-inline {
     color: inherit;
     text-decoration: none;
 }
+
+
 /*
 .postPage ul {
    margin:-50px 0
 }*/
+
+
 /*
 .floating-label-form-group {
     font-size: 14px;
