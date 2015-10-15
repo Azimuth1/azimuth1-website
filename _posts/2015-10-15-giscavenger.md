@@ -6,6 +6,7 @@ subtitle: Accept the challenge!
 date: 2015-10-15 12:00:00
 author: jason_dalton
 folder: blog/assets/2015-10-15-giscavenger
+replaceHeaderImage: '#0b5394'
 ---
 
 
