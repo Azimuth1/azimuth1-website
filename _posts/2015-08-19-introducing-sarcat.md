@@ -2,11 +2,11 @@
 published: true
 layout: post
 title: A geo-game for the Virginia GIS Conference 
-subtitle: The open-source Search and Rescue data management system
+subtitle: Accept the challenge!
 date: 2015-10-15 12:00:00
 author: jason_dalton
 folder: blog/assets/2015-10-15-giscavenger
-headerColor: '#fff'
+headerColor: '#2e2'
 ---
 
 
