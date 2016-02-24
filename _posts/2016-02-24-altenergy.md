@@ -1,8 +1,8 @@
 ---
 published: true
 layout: post
-title: A look at alternative energy infrastructure in the United States 
-subtitle: New data released by US Dept of Energy
+title: Alternative fueling stations in the United States 
+subtitle: Data provided by the new HIFLD Open data set
 date: 2016-02-24 12:00:00
 author: jason_dalton
 folder: blog/assets/2016-02-24-altenergy
@@ -12,7 +12,7 @@ replaceHeaderImage: '#325271'
 
 Today at the ESRI Federal User Group Conference, they announced HIFLD Open, which is a subset of the HIFLD (formerly known as HSIP) data that is open, and with no release restrictions.  So we went lookng for data that might be relevent for our environmental and energy analytics work.  Here's are some maps of alternative fueling stations across the country.  Each shows the distribution of seven types of fueling stations.  
 
-From the HIFLD site:
+From the [https://hifld-dhs-gii.opendata.arcgis.com/]{HIFLD site}:
 This dataset represents the locations of non-gasoline alternative fueling stations which provide biodiesel, CNG, electric, ethanol, hydrogen, LNG, and/or propane.
 
 More than 250 million vehicles consume millions of barrels of petroleum every day in the United States. On-road passenger travel alone accounts for more than 2.5 trillion vehicle miles traveled 
