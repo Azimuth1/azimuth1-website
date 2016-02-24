@@ -19,28 +19,35 @@ More than 250 million vehicles consume millions of barrels of petroleum every da
 
 
 ### Biodiesel
+
 <img style="float: right" src="{{site.baseurl}}/{{page.folder}}/BD.png">
 
 
 ### Compressed Natural Gas
+
 <img style="float: right" src="{{site.baseurl}}/{{page.folder}}/CNG.png">
 
 
 ### E85 (85% Ethanol gas)
+
 <img style="float: right" src="{{site.baseurl}}/{{page.folder}}/E85.png">
 
 
 ### Electric vehicle charging stations
+
 <img style="float: right" src="{{site.baseurl}}/{{page.folder}}/ELEC.png">
 
 
 ### Hydrogen
+
 <img style="float: right" src="{{site.baseurl}}/{{page.folder}}/HY.png">
 
 
 ### Liquified Natural Gas
+
 <img style="float: right" src="{{site.baseurl}}/{{page.folder}}/LNG.png">
 
 
 ### Propane
+
 <img style="float: right" src="{{site.baseurl}}/{{page.folder}}/LPG.png">
