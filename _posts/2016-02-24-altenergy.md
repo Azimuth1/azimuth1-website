@@ -70,7 +70,7 @@ Liquified natural gas is primarily methane that has been converted to liquid for
 </div>
 <div class="flexItem col-md-8">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/LNG.png"> 
-
+</div>
 
 
 ### Propane
@@ -79,4 +79,5 @@ Liquified natural gas is primarily methane that has been converted to liquid for
 </div>
 <div class="flexItem col-md-8">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/LPG.png"> 
+</div>
 
