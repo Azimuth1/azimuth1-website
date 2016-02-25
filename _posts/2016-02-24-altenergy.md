@@ -18,8 +18,8 @@ This dataset represents the locations of non-gasoline alternative fueling statio
 More than 250 million vehicles consume millions of barrels of petroleum every day in the United States. On-road passenger travel alone accounts for more than 2.5 trillion vehicle miles traveled 
 
 
-### Biodiesel
 <div class="flexItem col-md-4">
+### Biodiesel
 Produced from vegetable oil or animal fats, the projected production of biodiesel in the US is nearly 12 billion gallons.
 </div>
 <div class="flexItem col-md-8">
@@ -28,8 +28,9 @@ Produced from vegetable oil or animal fats, the projected production of biodiese
 
 
 
-### Compressed Natural Gas
+
 <div class="flexItem col-md-4">
+### Compressed Natural Gas
 If you've seen a municipal bus that's powered by natural gas, it's using compresed methane.  With the highest popularity in oil rich nations outside of the US, it's seeing limited use domestically.
 </div>
 <div class="flexItem col-md-8">
