@@ -80,5 +80,4 @@ Liquified natural gas is primarily methane that has been converted to liquid for
 </div>
 
 
-<iframe src="https://hifld-dhs-gii.opendata.arcgis.com/datasets/13c68a8ccb4645b587e1b9d854c7f7cd_0?geometry=-81.617%2C38.258%2C-72.69%2C39.541&amp;uiTab=charts&amp;selectedAttributes%5B%5D=Fuel_Type&amp;chartType=bar&amp;chartEmbed=true" style="width: 600px; height: 350px;"></iframe>
 
