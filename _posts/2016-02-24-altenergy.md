@@ -10,10 +10,10 @@ headerColor: '#fff'
 replaceHeaderImage: '#325271'
 ---
 
-Today at the ESRI Federal User Group Conference, they announced HIFLD Open, which is a subset of the HIFLD (formerly known as HSIP) data that is open, and with no release restrictions.  So we went looking for data that might be relevent for our environmental and energy analytics work.  Here's are some maps of alternative fueling stations across the country. <!--more--> Each shows the distribution of seven types of fueling stations.  
+Today at the ESRI Federal User Group Conference, they announced HIFLD Open, which is a subset of the HIFLD (formerly known as HSIP) data that is open, and with no release restrictions.  So we went looking for data we could use for our environmental and energy analytics work.  Here's are some quick maps of alternative fueling stations across the country. <!--more--> Each shows the distribution of seven types of fueling stations.  
 
 From the [https://hifld-dhs-gii.opendata.arcgis.com/]{HIFLD site}:
-This dataset represents the locations of non-gasoline alternative fueling stations which provide biodiesel, CNG, electric, ethanol, hydrogen, LNG, and/or propane.
+*This dataset represents the locations of non-gasoline alternative fueling stations which provide biodiesel, CNG, electric, ethanol, hydrogen, LNG, and/or propane.*
 
 
 ### Biodiesel
