@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Alternative fueling stations in the United States 
+title: Maps of alternative fuel stations in the US 
 subtitle: Data provided by the new HIFLD Open data set
 date: 2016-02-24 12:00:00
 author: jason_dalton
@@ -10,7 +10,7 @@ headerColor: '#fff'
 replaceHeaderImage: '#325271'
 ---
 
-Today at the ESRI Federal User Group Conference, they announced HIFLD Open, which is a subset of the HIFLD (formerly known as HSIP) data that is open, and with no release restrictions.  So we went looking for data that might be relevent for our environmental and energy analytics work.  Here's are some maps of alternative fueling stations across the country.  Each shows the distribution of seven types of fueling stations.  
+Today at the ESRI Federal User Group Conference, they announced HIFLD Open, which is a subset of the HIFLD (formerly known as HSIP) data that is open, and with no release restrictions.  So we went looking for data that might be relevent for our environmental and energy analytics work.  Here's are some maps of alternative fueling stations across the country. <!--more--> Each shows the distribution of seven types of fueling stations.  
 
 From the [https://hifld-dhs-gii.opendata.arcgis.com/]{HIFLD site}:
 This dataset represents the locations of non-gasoline alternative fueling stations which provide biodiesel, CNG, electric, ethanol, hydrogen, LNG, and/or propane.
@@ -46,7 +46,7 @@ An ethanol fuel blend of 85% ethanol, 15% gasoline.  Flex fuel vehicles can use 
 
 ### Electric vehicle charging stations
 <div class="flexItem col-md-4">
-Heavy subsidies and the success of Tesla have increased the market viability and variety of all electric vehicles.  An increase in pay-as-you-go charging stations as show in this map make it feasible to travel for longer distances than previously possible.
+Heavy subsidies and the success of Tesla have increased the market viability and variety of all electric vehicles.  An increase in pay-as-you-go charging stations as shown in this map make it feasible to travel for longer distances than previously possible.
 </div>
 <div class="flexItem col-md-8">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/ELEC.png"> 
