@@ -18,7 +18,7 @@ From the [HIFLD site](https://hifld-dhs-gii.opendata.arcgis.com/)
 
 ### Biodiesel
 <div class="flexItem col-md-3">
-Produced from vegetable oil or animal fats, the projected production of biodiesel in the US is nearly 12 billion gallons.
+Produced from vegetable oil or animal fats, the projected production of biodiesel in the US is nearly 12 billion gallons. North Carolina seems to be leading the way in widespread availability of biodiesel.
 </div>
 <div class="flexItem col-md-9">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/BD.png"> 
