@@ -19,13 +19,18 @@ More than 250 million vehicles consume millions of barrels of petroleum every da
 
 
 ### Biodiesel
+<div class="flexItem col-md-6">
+Produced from vegetable oil or animal fats, the projected production of biodiesel in the US is nearly 12 billion gallons.
+</div>
+<div class="flexItem col-md-6">
+<img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/BD.png"> 
+</div>
 
-<img style="float: right" src="{{site.baseurl}}/{{page.folder}}/BD.png">
 
 
 ### Compressed Natural Gas
 
-<img style="float: right" src="{{site.baseurl}}/{{page.folder}}/CNG.png">
+<img src="{{site.baseurl}}/{{page.folder}}/CNG.png">
 
 
 ### E85 (85% Ethanol gas)
