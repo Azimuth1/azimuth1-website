@@ -15,8 +15,6 @@ Today at the ESRI Federal User Group Conference, they announced HIFLD Open, whic
 From the [https://hifld-dhs-gii.opendata.arcgis.com/]{HIFLD site}:
 This dataset represents the locations of non-gasoline alternative fueling stations which provide biodiesel, CNG, electric, ethanol, hydrogen, LNG, and/or propane.
 
-<iframe src="https://hifld-dhs-gii.opendata.arcgis.com/datasets/13c68a8ccb4645b587e1b9d854c7f7cd_0?geometry=-81.617%2C38.258%2C-72.69%2C39.541&amp;uiTab=charts&amp;selectedAttributes%5B%5D=Fuel_Type&amp;chartType=bar&amp;chartEmbed=true" style="width: 800px; height: 500px;"></iframe>
-
 
 ### Biodiesel
 <div class="flexItem col-md-3">
@@ -80,4 +78,7 @@ Liquified natural gas is primarily methane that has been converted to liquid for
 <div class="flexItem col-md-8">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/LPG.png"> 
 </div>
+
+
+<iframe src="https://hifld-dhs-gii.opendata.arcgis.com/datasets/13c68a8ccb4645b587e1b9d854c7f7cd_0?geometry=-81.617%2C38.258%2C-72.69%2C39.541&amp;uiTab=charts&amp;selectedAttributes%5B%5D=Fuel_Type&amp;chartType=bar&amp;chartEmbed=true" style="width: 600px; height: 350px;"></iframe>
 
