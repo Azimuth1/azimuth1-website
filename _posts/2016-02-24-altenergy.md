@@ -15,7 +15,7 @@ Today at the ESRI Federal User Group Conference, they announced HIFLD Open, whic
 From the [https://hifld-dhs-gii.opendata.arcgis.com/]{HIFLD site}:
 This dataset represents the locations of non-gasoline alternative fueling stations which provide biodiesel, CNG, electric, ethanol, hydrogen, LNG, and/or propane.
 
-More than 250 million vehicles consume millions of barrels of petroleum every day in the United States. On-road passenger travel alone accounts for more than 2.5 trillion vehicle miles traveled 
+<iframe src="https://hifld-dhs-gii.opendata.arcgis.com/datasets/13c68a8ccb4645b587e1b9d854c7f7cd_0?geometry=-81.617%2C38.258%2C-72.69%2C39.541&amp;uiTab=charts&amp;selectedAttributes%5B%5D=Fuel_Type&amp;chartType=bar&amp;chartEmbed=true" style="width: 800px; height: 500px;"></iframe>
 
 
 ### Biodiesel
@@ -27,7 +27,6 @@ Produced from vegetable oil or animal fats, the projected production of biodiese
 </div>
 
 
-
 ### Compressed Natural Gas
 <div class="flexItem col-md-3">
 If you've seen a municipal bus that's powered by natural gas, it's using compresed methane.  With the highest popularity in oil rich nations outside of the US, it's seeing limited use domestically.
@@ -35,7 +34,6 @@ If you've seen a municipal bus that's powered by natural gas, it's using compres
 <div class="flexItem col-md-9">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/CNG.png"> 
 </div>
-
 
 
 ### E85 (85% Ethanol gas)
