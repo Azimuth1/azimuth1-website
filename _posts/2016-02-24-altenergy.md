@@ -35,47 +35,47 @@ If you've seen a municipal bus that's powered by natural gas, it's using compres
 
 
 ### E85 (85% Ethanol gas)
-<div class="flexItem col-md-4">
+<div class="flexItem col-md-3">
 An ethanol fuel blend of 85% ethanol, 15% gasoline.  Flex fuel vehicles can use E85.  Popular in corn growing states where there are local and Federal subsidies.
 </div>
-<div class="flexItem col-md-8">
+<div class="flexItem col-md-9">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/E85.png"> 
 </div>
 
 
 
 ### Electric vehicle charging stations
-<div class="flexItem col-md-4">
+<div class="flexItem col-md-3">
 Heavy subsidies and the success of Tesla have increased the market viability and variety of all electric vehicles.  An increase in pay-as-you-go charging stations as shown in this map make it feasible to travel for longer distances than previously possible.
 </div>
-<div class="flexItem col-md-8">
+<div class="flexItem col-md-9">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/ELEC.png"> 
 </div>
 
 
 ### Hydrogen
-<div class="flexItem col-md-4">
+<div class="flexItem col-md-3">
 A *hydrogen highway* is a chain of hydrogen-equipped filling stations and other infrastructure along a road or highway. Italy and Germany are collaborating to build a hydrogen highway between Mantua in northern Italy and Munich in southern Germany. *Source: Wikipedia*
 </div>
-<div class="flexItem col-md-8">
+<div class="flexItem col-md-9">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/HY.png"> 
 </div>
 
 
 ### Liquified Natural Gas
-<div class="flexItem col-md-4">
+<div class="flexItem col-md-3">
 Liquified natural gas is primarily methane that has been converted to liquid for ease of storage or transport.
 </div>
-<div class="flexItem col-md-8">
+<div class="flexItem col-md-9">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/LNG.png"> 
 </div>
 
 
 ### Propane
-<div class="flexItem col-md-4">
+<div class="flexItem col-md-3">
 Liquified natural gas is primarily methane that has been converted to liquid for ease of storage or transport.
 </div>
-<div class="flexItem col-md-8">
+<div class="flexItem col-md-9">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/LPG.png"> 
 </div>
 
