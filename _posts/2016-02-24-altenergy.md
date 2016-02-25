@@ -73,7 +73,7 @@ Liquified natural gas is primarily methane that has been converted to liquid for
 
 ### Propane
 <div class="flexItem col-md-3">
-With propane's availability and lower maintenance costs, it's an attractive option for light duty industrial vehicles.
+With propane's wide availability and lower maintenance costs, it's an attractive option for light duty industrial vehicles.
 </div>
 <div class="flexItem col-md-9">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/LPG.png"> 
