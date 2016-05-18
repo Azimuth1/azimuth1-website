@@ -19,7 +19,7 @@ The FIND software was used to map lost person behavior statistics to discern the
 
 
 ### Briefing and Debriefing
-![Briefing]({{site.baseurl}}/{{page.folder}}/Briefing.png")
+![Briefing]({{site.baseurl}}/{{page.folder}}/Briefing.png)
 Briefing and debriefing of teams was mostly done manually, but we shadowed the process and duplicated all the steps in the flow so we could see what it would be like to run a search mission using FIND.  All teams in the field used maps that FIND generated and they were a big hit, as we could add features to the map and it had the most up to date data.
 
 
