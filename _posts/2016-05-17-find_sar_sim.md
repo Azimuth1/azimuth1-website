@@ -40,6 +40,8 @@ We had about a dozen people sit down with us during the SAREX, pop open their ow
 > "It's pretty easy to create tasks"
 
 > "It's great that it's not tied to the internet"
+We package an entire tiled map service along with the software.  It's a ton of work, but since SAR missions are commonly taking place outside of wireless or broadband connections, it's absolutely necessary to operate 'off-grid'
+
 
 <img style="float: right" src="{{site.baseurl}}/{{page.folder}}/nps_sign.jpg">
 
