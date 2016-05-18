@@ -37,7 +37,11 @@ We had about a dozen people sit down with us during the SAREX, pop open their ow
 
 > "You're my new best friend."
 
+This was right after the mission planner discovered that we had already generated all the tasks needed for the following operational period.
+
 > "It's pretty easy to create tasks"
+
+Drawing tasks is pretty simple in FIND, you just click to add pre-segmented areas and lines together.  You get a tally of the total length or area so you know how long the area shoudl take a search team to complete it.
 
 > "It's great that it's not tied to the internet"
 
