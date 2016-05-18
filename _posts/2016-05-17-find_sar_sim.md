@@ -9,7 +9,7 @@ folder: blog/assets/2016-05-17-find_sar_sim
 headerColor: '#fff'
 ---
 
-Over this past weekend, Azimuth1 supported search and rescue teams from across Virginia and North Carolina at the [Blue Ridge Parkway Search and Rescue Exercise (SAREX)](https://www.evensi.us/2016-blue-ridge-parkway-sarex-blue-ridge-music-center/170102646), a simulated search mission sponsored and run by the National Park Service. Read all about the experience in this account of the exercise by our team.  <!--more-->  
+Over this past weekend, Azimuth1 supported search and rescue teams from across Virginia and North Carolina at the [Blue Ridge Parkway Search and Rescue Exercise (SAREX)](https://www.evensi.us/2016-blue-ridge-parkway-sarex-blue-ridge-music-center/170102646), a simulated lost person search mission sponsored and run by the National Park Service. Read all about the experience in this account of the exercise by our team.  <!--more-->  
 
 ![FIND Software]({{site.baseurl}}/{{page.folder}}/SitStat.png)
 
