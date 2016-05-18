@@ -11,6 +11,7 @@ headerColor: '#fff'
 
 Over this past weekend, Azimuth1 supported search and rescue teams from across Virginia and North Carolina at the [Blue Ridge Parkway Search and Rescue Exercise (SAREX)](https://www.evensi.us/2016-blue-ridge-parkway-sarex-blue-ridge-music-center/170102646), a simulated search mission sponsored and run by the National Park Service. Search sims are good opportunities to practice searching and typically everyone moves "up a grade" in terms of their job on scene, so they can try out new skills and responsibiliites without lives ont eh line.  We were there to field test the new FIND software we developed under the guidance of Bob Koester at dbS Productions as part of a grant from the DHS Office Science and Technology, First Responder Group. Read all about the experience in this account of the exercise by our team. <!--more--> 
 <img style="float: left" src="{{site.baseurl}}/{{page.folder}}/SitStat.png">
+
 ---
 
 ### Mission Planning 
