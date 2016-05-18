@@ -9,9 +9,9 @@ folder: blog/assets/2016-05-17-find_sar_sim
 headerColor: '#fff'
 ---
 
-Over this past weekend, Azimuth1 supported search and rescue teams from across Virginia and North Carolina at the [Blue Ridge Parkway Search and Rescue Exercise (SAREX)](https://www.evensi.us/2016-blue-ridge-parkway-sarex-blue-ridge-music-center/170102646), a simulated lost person search mission sponsored and run by the National Park Service. Read all about the experience in this account of the exercise by our team.  <!--more-->  
+Over this past weekend, Azimuth1 supported search and rescue teams from across Virginia and North Carolina at the [Blue Ridge Parkway Search and Rescue Exercise (SAREX)](https://www.evensi.us/2016-blue-ridge-parkway-sarex-blue-ridge-music-center/170102646){:target="_blank"}, a simulated lost person search mission sponsored and run by the National Park Service. Read all about the experience in this account of the exercise by our team.  <!--more-->  
 
-![FIND Software]({{site.baseurl}}/{{page.folder}}/SitStat.png)
+![FIND Software]({{site.baseurl}}/{{page.folder}}/SitStat.png){:target="_blank"}
 
 Search sims are good opportunities to practice searching and typically everyone moves "up a grade" in terms of their job on scene, so they can try out new skills and responsibiliites without lives on the line.  We were there to field test the new FIND software we developed under the guidance of Robert Koester of [dbS SAR](http://www.dbs-sar.com) as part of a grant from the Department of Homeland Security
 Science and Technology Directorate, First Responder Group. It's an organization that sponsors research and development to create technologies that directly helps police, fire, rescue, and other first responder agencies.
