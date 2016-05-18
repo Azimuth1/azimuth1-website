@@ -71,6 +71,7 @@ Drawing tasks is pretty simple in FIND, you just click to add pre-segmented area
 We package an entire tiled map service along with the software.  It's a ton of work, but since SAR missions are commonly taking place outside of wireless or broadband connections, it's absolutely necessary to operate 'off-grid'.  
 
 The FIND software is part of a trio of tools developed for SAR use.
+
 1. A mobile app that is a handy reference for lost person behavior statistics and recommended early actions in the event of a lost person search.  It's designed for SAR agencies, and first responders who may be leading a search effort for the first time. The LPB App is on the Google Play store, and Apple App Store.
 2. the SARCAT records management system for agencies who need to track search incidents.  It has all the data entry needed to report to the International Search and Rescue Incident Database (ISRID).  SARCAT is free and open source.
 3. the FIND search management system.  Desktop server application that hosts a search management system for planning, tracking, and managing a lost person search.
