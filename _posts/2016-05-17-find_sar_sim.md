@@ -7,10 +7,9 @@ date: 2016-05-17 12:00:00
 author: jason_dalton
 folder: blog/assets/2016-05-17-find_sar_sim
 headerColor: '#fff'
-replaceHeaderImage: '#325271'
 ---
 
-Over this past weekend, Azimuth1 supported search and rescue teams from across Virginia and North Carolina at the Blue Ridge Parkway Search and Rescue Exercise (SAREX), a simulated search mission sponsored and run by the National Park Service. Search sims are good opportunities to practice searching and typically everyone moves "up a grade" in terms of their job on scene, so they can try out new skills and responsibiliites without lives ont eh line.  We were there to field test the new FIND software we developed under the guidance of Bob Koester at dbS Productions as part of a grant from the DHS Office Science and Technology, First Responder Group. Read all about the experience in this account of the exercise by our team. <!--more--> 
+Over this past weekend, Azimuth1 supported search and rescue teams from across Virginia and North Carolina at the [Blue Ridge Parkway Search and Rescue Exercise (SAREX)](https://www.evensi.us/2016-blue-ridge-parkway-sarex-blue-ridge-music-center/170102646), a simulated search mission sponsored and run by the National Park Service. Search sims are good opportunities to practice searching and typically everyone moves "up a grade" in terms of their job on scene, so they can try out new skills and responsibiliites without lives ont eh line.  We were there to field test the new FIND software we developed under the guidance of Bob Koester at dbS Productions as part of a grant from the DHS Office Science and Technology, First Responder Group. Read all about the experience in this account of the exercise by our team. <!--more--> 
 
 ### Mission Planning 
 The FIND software was used to map lost person behavior statistics to discern the regions of the search area in which the lost person is most likely to be found. Then FIND was used to generate search task maps and assignments, create planning maps of the area and collect photos of clues and footpronts that were found by teams in the field.  The two day exercise started with an evening planning session in which FIND was used to mirror and augment the tasks being drawn up in the manual way with printouts of maps and acetate overlays.  We gradually integrated more planners into the FIND unit and by the end of the planning session, we had five laptops with planners collaboratively generating tasks to be sent out on the next day.  
@@ -27,6 +26,10 @@ Technology has come and gone in the SAR community.  There are very advanced radi
 ### Feedback
 We had about a dozen people sit down with us during the SAREX, pop open their own laptop, and pull up the search planning interface from our local system that was running the FIND server on a laptop.  This made it easy for folks to pop in, take a look, generate some tasks, brief and debrief teams, and give us feedback all along the way.  Here are some of our favorites.
 
-You're my new best friend.
+> "You're my new best friend."
+
+> "It's pretty easy to create tasks"
+
+> "It's great that it's not tied to the internet"
 
 
