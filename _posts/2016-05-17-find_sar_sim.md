@@ -12,12 +12,15 @@ headerColor: '#fff'
 Over this past weekend, Azimuth1 supported search and rescue teams from across Virginia and North Carolina at the [Blue Ridge Parkway Search and Rescue Exercise (SAREX)](https://www.evensi.us/2016-blue-ridge-parkway-sarex-blue-ridge-music-center/170102646), a simulated search mission sponsored and run by the National Park Service. Search sims are good opportunities to practice searching and typically everyone moves "up a grade" in terms of their job on scene, so they can try out new skills and responsibiliites without lives ont eh line.  We were there to field test the new FIND software we developed under the guidance of Bob Koester at dbS Productions as part of a grant from the DHS Office Science and Technology, First Responder Group. Read all about the experience in this account of the exercise by our team. <!--more--> 
 
 ### Mission Planning 
+<img style="float: left" src="{{site.baseurl}}/{{page.folder}}/PlanningSegments.png">
 The FIND software was used to map lost person behavior statistics to discern the regions of the search area in which the lost person is most likely to be found. Then FIND was used to generate search task maps and assignments, create planning maps of the area and collect photos of clues and footpronts that were found by teams in the field.  The two day exercise started with an evening planning session in which FIND was used to mirror and augment the tasks being drawn up in the manual way with printouts of maps and acetate overlays.  We gradually integrated more planners into the FIND unit and by the end of the planning session, we had five laptops with planners collaboratively generating tasks to be sent out on the next day.  
 
 ### Briefing and Debriefing
+<img style="float: right" src="{{site.baseurl}}/{{page.folder}}/Briefing.jpg">
 Briefing and debriefing of teams was mostly done manually, but we shadowed the process and duplicated all the steps in the flow so we could see what it would be like to run a search mission using FIND.  All teams in the field used maps that FIND generated and they were a big hit, as we could add features to the map and it had the most up to date data.
 
 ### Communications and team tracking
+<img style="float: left" src="{{site.baseurl}}/{{page.folder}}/CommLog.jpg">
 The comm log in FIND was used to briefly track team location and status updates.  The concrete block building we were in caused communication static, but we were able to accurately track, update, and log communications with status.
 
 ### Tech
@@ -32,4 +35,5 @@ We had about a dozen people sit down with us during the SAREX, pop open their ow
 
 > "It's great that it's not tied to the internet"
 
+<img style="float: right" src="{{site.baseurl}}/{{page.folder}}/nps_sign.jpg">
 
