@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: FIND software tested at NPS SAR Exercise 
 subtitle: Building a field deployable system for search and rescue incident management
