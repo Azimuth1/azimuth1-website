@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: FIND software tested at NPS SAR Exercise 
+title: FIND software tested at NPS SAR Exercise
 subtitle: Building a field deployable system for search and rescue incident management
 date: 2016-05-31 12:00:00
 author: jason_dalton
@@ -22,8 +22,8 @@ Science and Technology Directorate First Responders Group. It's an organization 
 
 
 
-### Mission Planning 
-The FIND software was used to map lost person behavior statistics to discern the regions of the search area in which the lost person is most likely to be found. 
+### Mission Planning
+The FIND software was used to map lost person behavior statistics to discern the regions of the search area in which the lost person is most likely to be found.
 
 ![Planning]({{site.baseurl}}/{{page.folder}}/PlanningSegments.png)
 
@@ -60,7 +60,7 @@ Technology has come and gone in the SAR community.  There are very advanced radi
 
 > Our design goal all along was "Google Docs for Searches."
 
-I haven't been active in SAR in over a decade, but I have been active in creating tech to solve operational resource deployment problems, and there is an opportunity to help speed up search planning and management if it's done correctly. While a lost person search is a spatial problem, it's just as much a process problem, and getting that process running smoothly and quickly is the key to getting teams out in the right places in a very short amount of time.  That's the improvement that can help save lives, since we know that the longer lost persons stay missing, the less likely they will be found alive and well. We knew from the start we didn't want to create a GIS application.  Having users run ArcGIS or QGIS themselves would limit us technologically, and create a barrier to entry for new users who aren't familiar with GIS.  Our design goal all along was "Google Docs for Searches."  We wanted a familiar, simple interface, that was 'always on' in terms of getting updates from other users.  Since there is so much teamwork and collaboration on tasks in search planning, that's also central to our design.  One user's new task is immediately visible to all other users, and personnel signing into a search are immediately visible to the staffer briefing teams.  We may do a technology post about the software architecture, but in short we leverage a lot of web sockets, Meteor, and MongoDB.  
+I haven't been active in SAR in over a decade, but I have been active in creating tech to solve operational resource deployment problems, and there is an opportunity to help speed up search planning and management if it's done correctly. While a lost person search is a spatial problem, it's just as much a process problem, and getting that process running smoothly and quickly is the key to getting teams out in the right places in a very short amount of time.  That's the improvement that can help save lives, since we know that the longer lost persons stay missing, the less likely they will be found alive and well. We knew from the start we didn't want to create a GIS application.  Having users run ArcGIS or QGIS themselves would limit us technologically, and create a barrier to entry for new users who aren't familiar with GIS.  Our design goal all along was "Google Docs for Searches."  We wanted a familiar, simple interface, that was 'always on' in terms of getting updates from other users.  Since there is so much teamwork and collaboration on tasks in search planning, that's also central to our design.  One user's new task is immediately visible to all other users, and personnel signing into a search are immediately visible to the staffer briefing teams.  We may do a technology post about the software architecture, but in short we leverage a lot of GDAL, web sockets, Meteor, and MongoDB.  
 
 
 
@@ -86,5 +86,3 @@ The FIND software is part of a trio of tools developed for SAR use.
 3. The FIND search management system.  Desktop/laptop server application that hosts a search management system for planning, tracking, and managing a lost person search.
 
 <img style="float: right" src="{{site.baseurl}}/{{page.folder}}/nps_sign.jpg">
-
-
