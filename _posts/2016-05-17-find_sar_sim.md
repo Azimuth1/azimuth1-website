@@ -13,11 +13,11 @@ Two weeks ago, Azimuth1 supported search and rescue teams from across Virginia a
 
 ![SarSim]({{site.baseurl}}/{{page.folder}}/SarSim.jpg)
 
-![FIND Software]({{site.baseurl}}/{{page.folder}}/SitStat.png){:target="_blank"}
 
 Search simulations are good opportunities to practice searching and typically everyone moves "up a grade" in terms of their job on scene, so they can try out new skills and responsibilities without lives on the line.  We were there to field test the new FIND software we developed under the guidance of Robert Koester of [dbS SAR](http://www.dbs-sar.com) as part of a contract from the Department of Homeland Security
 Science and Technology Directorate First Responders Group. It's an organization that sponsors research and development to create technologies that directly help police, fire, rescue, and other first responder agencies.
 
+![FIND Software]({{site.baseurl}}/{{page.folder}}/SitStat.png){:target="_blank"}
 
 
 
