@@ -28,6 +28,7 @@ The FIND software was used to map lost person behavior statistics to discern the
 ![Planning]({{site.baseurl}}/{{page.folder}}/PlanningSegments.png)
 
 Then FIND was used to generate search task maps and assignments, create planning maps of the area and collect photos of clues and footprints that were found by teams in the field.  The two-day exercise started with an evening planning session in which FIND was used to mirror and augment the tasks being drawn up in the manual way with printouts of maps and acetate overlays.  We gradually integrated more planners into the FIND unit and by the end of the planning session we had five laptops with planners collaboratively generating tasks to be sent out on the next day.
+
 One of the nicest features of FIND is that it calculates and plots the latest lost person behavior statistics that have been collected and compiled buy Bob Koester at dbS SAR.  
 
 ![SarModels]({{site.baseurl}}/{{page.folder}}/SubjBehaviorModels.png)
