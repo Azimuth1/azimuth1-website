@@ -76,6 +76,7 @@ sass:
 # Use the following plug-ins
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed  # Create an Atom RSS feed
 
 # Exclude these files from your production _site
 exclude:
