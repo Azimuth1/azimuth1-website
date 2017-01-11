@@ -35,6 +35,39 @@ var x=document.getElementById('dataTable');
 }
 
 </script>
+<script>
+function drawVisualization() {
+  // Create and populate the data table.
+  var data = google.visualization.arrayToDataTable([
+    [' ', ' '],
+    ['1',   .0008989],
+    ['2',   .0080357],
+    ['3',   .0679530],
+    ['4',   .3961956],
+    ['5',   .8551877],
+    ['6',   .9815326],
+    ['7',   .9979138],
+    ['8',   .9997678],
+    ['9',   .9999742],
+    ['10',  .9999971]
+  ]);
+
+// Create and populate the data table.
+        var options = {
+          title: 'Updated probability',
+          curveType: "function",
+          width: 600,
+          height: 400,
+          vAxis: {maxValue: 1},
+          legend: {position: 'none'}
+        };
+
+  // Create and draw the visualization.
+      new google.visualization.LineChart(document.getElementById('visualization')).
+          draw(data, options);
+      };
+      google.setOnLoadCallback(drawVisualization);
+</script>
 
 <div class="container"> &nbsp; &nbsp;
 <table id="assumptions" border="1">
@@ -43,7 +76,7 @@ var x=document.getElementById('dataTable');
 <td contentEditable="true">0.0001</td>
 </tr>
 </table>
-<p>
+<p></p>
 <h3>Bayesian Sensor Fusion Calculator</h3>
 <div class="CSSTableGenerator" >
 <table id="dataTable" border="1">
@@ -169,39 +202,7 @@ var x=document.getElementById('dataTable');
 <input type="button" onclick="bayesUpdates()" value="Calculate">
 </form>
 
-<script>
-function drawVisualization() {
-  // Create and populate the data table.
-  var data = google.visualization.arrayToDataTable([
-    [' ', ' '],
-    ['1',   .0008989],
-    ['2',   .0080357],
-    ['3',   .0679530],
-    ['4',   .3961956],
-    ['5',   .8551877],
-    ['6',   .9815326],
-    ['7',   .9979138],
-    ['8',   .9997678],
-    ['9',   .9999742],
-    ['10',  .9999971]
-  ]);
-
-// Create and populate the data table.
-        var options = {
-          title: 'Updated probability',
-          curveType: "function",
-          width: 600,
-          height: 400,
-          vAxis: {maxValue: 1},
-          legend: {position: 'none'}
-        };
-
-  // Create and draw the visualization.
-      new google.visualization.LineChart(document.getElementById('visualization')).
-          draw(data, options);
-      };
-      google.setOnLoadCallback(drawVisualization);
-</script>
+</div>
 
 <div id="visualization" style="width: 600px; height: 400px;"></div>
 
