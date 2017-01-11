@@ -11,7 +11,7 @@ replaceHeaderImage: '#334d00'
 ---
 
 ### Quick Start Guide
-
+<script type="text/javascript" src="//www.google.com/jsapi"></script>
 Click the "Calculate" button to generate probabiilties updated through Bayesian reasoning after 10 simulated sensor observations. 
 
 You can change the <!--more--> values of each observation's Sensor Accuracy and the resulting detection reading from the sensor.
