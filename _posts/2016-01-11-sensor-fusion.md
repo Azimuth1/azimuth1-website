@@ -184,14 +184,17 @@ function drawVisualization() {
 </script>
 
 
-### How to use this calculator
+<h3> How to use this calculator</h3>
 
-This page calculates the updated probability of an anomaly or target by updating the probability to account for new evidence coming from a sensor.  We have provided some example numbers for the Starting Probability and the Probability of Detection of your sensors - you will need to enter your own values for your work.  The calculator will then provide updated probabilities for up to 10 observations from any sensor POD you provide.   You can also specify when a sensor gives a reading of 'False' or 'Non-detect'. For sensors that provide a measurement or concentration, you should use a threshold and for all sensor readings above your threshold, indicate a readong of 'True'. A more advanced approach would be to model the POD as a function of the sensor reading rather than a fixed threshold.   If there is enough interest, we'll add that function.
+<p>This page calculates the updated probability of an anomaly or target by updating the probability to account for new evidence coming from a sensor.  We have provided some example numbers for the Starting Probability and the Probability of Detection of your sensors - you will need to enter your own values for your work.  The calculator will then provide updated probabilities for up to 10 observations from any sensor POD you provide.   You can also specify when a sensor gives a reading of 'False' or 'Non-detect'. For sensors that provide a measurement or concentration, you should use a threshold and for all sensor readings above your threshold, indicate a readong of 'True'. A more advanced approach would be to model the POD as a function of the sensor reading rather than a fixed threshold.   If there is enough interest, we'll add that function.</p>
 
-### What's this all about?
+<h3> What's this all about?</h3>
 
-All sensors and detectors used in environmental site characterization have an inherent probability of detection that is based on the attributes of the sensor.  How sensitive it is, the internal electrical noise dampening, and environmental factors all lead to an uncertain result when a sensor indicates the presence of some target compound.  Of course, this can be generalized to any sensor or anomaly detection system.  There is some chance that the system will indicate the presense of an anomaly when it doesn't really exist.  That is called a false positive, or a Type I error.  This uncertainty in the results, plus the rarity of the target compounds means that even with a positive sensor response, the probability that the target is actually there can still be quite low.   Many people find this difficult to understand, and while there are many descriptions and explanations of Bayes Theorem online, we find this calculator lets you explore different settings of your sensors and results, leading to a better undersanding of how to apply Bayes Theorem.  Some good exercises to try:
 
-* Set a Sensor POD value of 0.5 and observe the effect this has on the Updated Probability.
-* Set a Sensor Reading to False and observe the effect this has on the Updated Probability.
+<p>All sensors and detectors used in environmental site characterization have an inherent probability of detection that is based on the attributes of the sensor.  How sensitive it is, the internal electrical noise dampening, and environmental factors all lead to an uncertain result when a sensor indicates the presence of some target compound.  Of course, this can be generalized to any sensor or anomaly detection system.  There is some chance that the system will indicate the presense of an anomaly when it doesn't really exist.  That is called a false positive, or a Type I error.  This uncertainty in the results, plus the rarity of the target compounds means that even with a positive sensor response, the probability that the target is actually there can still be quite low.   Many people find this difficult to understand, and while there are many descriptions and explanations of Bayes Theorem online, we find this calculator lets you explore different settings of your sensors and results, leading to a better undersanding of how to apply Bayes Theorem.  Some good exercises to try:
+
+<ul>
+<li>Set a Sensor POD value of 0.5 and observe the effect this has on the Updated Probability.</li>
+<li>Set a Sensor Reading to False and observe the effect this has on the Updated Probability.</li>
+</p>
 
