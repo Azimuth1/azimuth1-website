@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Updated Sensor Fusion calculator
 subtitle: The latest version that calculated Bayesian probablility updates for a combination of sensors.
-date: 2016-10-06 10:00:00
+date: 2017-01-11 10:00:00
 author: jason_dalton
 folder: blog/assets/2017-01-11-sensor-fusion
 headerColor: '#fff'
@@ -12,9 +12,9 @@ replaceHeaderImage: '#334d00'
 
 ### Quick Start Guide
 
-Click the "Calculate" button to generate probabiilties updated through Bayesian reasoning after 10 simulated sensor observations.
+Click the "Calculate" button to generate probabiilties updated through Bayesian reasoning after 10 simulated sensor observations. 
 
-You can change the values of each observation's Sensor Accuracy and the resulting detection reading from the sensor.
+You can change the <!--more--> values of each observation's Sensor Accuracy and the resulting detection reading from the sensor.
 
 <div class="container"> &nbsp; &nbsp;
 <table id="assumptions" border="1">
