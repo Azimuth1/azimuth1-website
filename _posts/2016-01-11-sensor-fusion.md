@@ -17,6 +17,25 @@ Click the "Calculate" button to generate probabiilties updated through Bayesian 
 You can change the <!--more--> values of each observation's Sensor Accuracy and the resulting detection reading from the sensor.
 
 <script type="text/javascript" src="//www.google.com/jsapi"></script>
+<script>
+function bayesUpdates(){
+var P=document.getElementById('assumptions').rows[0].cells[1].innerHTML;
+var x=document.getElementById('dataTable');
+
+  for (var i=1;i<11;i++){
+    var reading = x.rows[i].cells[2].children[0].selectedIndex;
+    var pod = x.rows[i].cells[1].innerHTML;
+    if (reading == 1) {
+        pod = 1-pod;
+    }
+    var Pe = P*pod + (1-P)*(1-pod);
+    x.rows[i].cells[3].innerHTML=(P * pod / Pe);  //Baysian update
+    P = (P * pod / Pe);  //set Prior P to the newly calculated estimate
+  }
+}
+
+</script>
+
 <div class="container"> &nbsp; &nbsp;
 <table id="assumptions" border="1">
 <tr>
