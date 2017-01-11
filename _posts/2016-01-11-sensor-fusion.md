@@ -217,5 +217,5 @@ function drawVisualization() {
 <ul>
 <li>Set a Sensor POD value of 0.5 and observe the effect this has on the Updated Probability.</li>
 <li>Set a Sensor Reading to False and observe the effect this has on the Updated Probability.</li>
-</p>
+
 
