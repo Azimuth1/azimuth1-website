@@ -203,6 +203,7 @@ function drawVisualization() {
       google.setOnLoadCallback(drawVisualization);
 </script>
 
+<div id="visualization" style="width: 600px; height: 400px;"></div>
 
 <h3> How to use this calculator</h3>
 
