@@ -26,6 +26,11 @@
                 </ul>
             </div>
         </div>
+
+    </nav>
+    {{ content }} 
+
+    {% include footer.html %}
         <!-- Start of Async HubSpot Analytics Code -->
   <script type="text/javascript">
     (function(d,s,i,r) {
@@ -36,11 +41,6 @@
     })(document,"script","hs-analytics",300000);
   </script>
 <!-- End of Async HubSpot Analytics Code -->
-
-    </nav>
-    {{ content }} 
-
-    {% include footer.html %}
 
 </body>
 {% include analytics.html %}
