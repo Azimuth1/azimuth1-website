@@ -730,7 +730,12 @@ footer .list-inline {
     text-decoration: none;
 }
 
-
+cta-head {
+    border: 2px solid #FFF;
+    padding: 5px 10px;
+    margin: 8px 3px;
+    background-color: inherit;
+}
 /*
 .postPage ul {
    margin:-50px 0
