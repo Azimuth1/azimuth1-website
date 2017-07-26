@@ -16,7 +16,9 @@ The US National Science Foundation selected Azimuth1 in a highly competitive rou
 
 As budgets for cleanup of hazardous chemicals grow more uncertain, and states look to focus their resources on efforts with the biggest payoff, EnviMetric will help guide the search for contaminant migration paths and quickly determine the most time and cost effective means of remedying the hazards.
 
-A link to the NSF award announcement is here as <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1721607&HistoricalAwards=false" target="_blank">NSF's site.</a>
+If you're familiar with the SBIR program, there's something a bit unique about NSF's program.  They're not a customer.  They're not interested in the technology other than its ability to create a positive impact on the US economy through jobs and sales.  The NSF also told us this was one of the most competitive rounds of proposals they've ever seen, so we're especially proud to be one of the 150 or so companies around the country who were selected.
+
+A link to the NSF award announcement is here at <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1721607&HistoricalAwards=false" target="_blank">NSF's site.</a>
 
 If you'd like to follow our progress and hear more about this innovation as we publish it, we'll send you updates directly before they go online.
 
