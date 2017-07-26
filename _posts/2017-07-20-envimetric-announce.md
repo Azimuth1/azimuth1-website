@@ -16,8 +16,8 @@ The US National Science Foundation selected Azimuth1 in a highly competitive rou
 
 As budgets for cleanup of hazardous chemicals grow more uncertain, and states look to focus their resources on efforts with the biggest payoff, EnviMetric will help guide the search for contaminant migration paths and quickly determine the most time and cost effective means of remedying the hazards.
 
-A link to the NSF award announcement is here:
+A link to the NSF award announcement is here as <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1721607&HistoricalAwards=false" target="_blank">NSF's site.</a>
 
 If you'd like to follow our progress and hear more about this innovation as we publish it, we'll send you updates directly before they go online.
 
-<insert mailing list code>
+<!-- TODO: insert mailing list code -->
