@@ -10,7 +10,7 @@ headerColor: '#fff'
 replaceHeaderImage: '#334d00'
 ---
 
-We're excited to welcome Robert Sellers to our team! Robert is a  data scientist based in NYC and will be focusing on our navigation and routing products as well as analyzing data for our NSF SBIR program <!--more --> called EnviMetric.
+We're excited to welcome Robert Sellers to our team! Robert is a  data scientist based in NYC and will be focusing on our navigation and routing products as well as analyzing data for our NSF SBIR program called EnviMetric. <!--more-->
 
 ![]({{ site.baseurl }}/pics/bios/robert_sellers_profile_pic.jpg){: width="40%"}
 
