@@ -13,7 +13,7 @@ replaceHeaderImage: '#334d00'
 We're excited to welcome Robert Sellers to our team! Robert is a  data scientist based in NYC and will be focusing on our navigation and routing products as well as analyzing data for our NSF SBIR program called EnviMetric.
 <!--more -->
 
-![]({{ site.baseurl }}/pics/bios/robert_sellers_profile_pic.jpg){: width="50%"}
+![]({{ site.baseurl }}/pics/bios/robert_sellers_profile_pic.jpg){: width="40%"}
 
 Before Azimuth1, Robert worked as a geographer and programmer in the financial services and environmental remediation industries. We learned from Valve to hire ['t-shaped' people](http://www.valvesoftware.com/company/Valve_Handbook_LowRes.pdf), meaning people who have a wide array of relevant knowledge with a particular area of expertise that they go deep in. We were all impressed with Robert's combination of GIS, data science, environmental remediation, and programming. That's us right down the line!  
 
