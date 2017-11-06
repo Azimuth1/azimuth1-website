@@ -34,16 +34,16 @@ kyle_kalwarski:
   github: skitol
   linkedin: pub/kyle-kalwarski/2a/a22/62b
 
-kara_mahoney:
-  name: Kara Mahoney
-  email: kara.mahoney@azimuth1.com
-  bio: "Kara creates tremendous software that wrangles massive spatial data using Python"
-  title: "Software developer (alum)"
-  pronoun: her
-  web: http://kara.link
-  avatar: pics/bios/kara-mahoney-photo.jpg
-  twitter: Ainulindale
-  linkedin: in/mahoneykara
+#kara_mahoney:
+#  name: Kara Mahoney
+#  email: kara.mahoney@azimuth1.com
+#  bio: "Kara creates tremendous software that wrangles massive spatial data using Python"
+#  title: "Software developer (alum)"
+#  pronoun: her
+#  web: http://kara.link
+#  avatar: pics/bios/kara-mahoney-photo.jpg
+#  twitter: Ainulindale
+#  linkedin: in/mahoneykara
 
 anna_milligan:
   name: Anna Milligan
