@@ -1,4 +1,16 @@
 
+azimuth1_team:
+  name: The Azimuth1 Team
+  web: http://www.azimuth1.com
+  email: contact@azimuth1.com
+  bio: "The Azimuth1 team - smart and dedicated to solving problems in business, science, and tech. "
+  title: " "
+  pronoun: them
+  avatar: pics/bios/team_oct2017.jpg
+  twitter: Azimuth1Tech
+  github: Azimuth1
+  linkedin: company/azimuth1
+
 jason_dalton:
   name: Jason Dalton
   web: http://about.me/JasonDalton

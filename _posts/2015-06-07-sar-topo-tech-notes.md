@@ -3,14 +3,14 @@ published: true
 layout: post
 title: A technical overview of our SAR topo implementation
 date: 2015-06-07 12:00:00
-author: kara_mahoney
+author: azimuth1_team
 folder: blog/assets/2015-06-07-sar-topo-tech-notes
 headerColor: '#fff'
 ---
 
 
 
-As you may have read in our [preceding post](http://www.azimuth1.com/a-new-topo-map-for-saving-lives/), the Search and Rescue (SAR) map we are building seeks to combine the vital features of USGS topographic maps with the ease of use, readability, and<!--more--> higher update frequency of a vector tile based map, in addition to providing supplemental data that may prove useful in SAR related work. This follow-up post is meant to further elaborate on the process behind the SAR map's creation and current status. 
+As you may have read in our [preceding post](http://www.azimuth1.com/a-new-topo-map-for-saving-lives/), the Search and Rescue (SAR) map we are building seeks to combine the vital features of USGS topographic maps with the ease of use, readability, and<!--more--> higher update frequency of a vector tile based map, in addition to providing supplemental data that may prove useful in SAR related work. This follow-up post is meant to further elaborate on the process behind the SAR map's creation and current status.
 
 ## A brief introduction
 
@@ -18,7 +18,7 @@ As you may have read in our [preceding post](http://www.azimuth1.com/a-new-topo-
 
 ## Picking a platform
 
-When we were first exploring possible platforms for this project, we'd started with <a href="https://www.mapbox.com/" target="_blank">Mapbox</a> and their new map design tool <a href="https://www.mapbox.com/mapbox-studio/#darwin" target="_blank">Mapbox Studio</a>. The initial prototype for the SAR map was inspired by the <a href="https://github.com/mapbox/mapbox-studio-outdoors.tm2" target="_blank">Mapbox Outdoors</a> style and source in Studio. However, we ran into two primary issues. 
+When we were first exploring possible platforms for this project, we'd started with <a href="https://www.mapbox.com/" target="_blank">Mapbox</a> and their new map design tool <a href="https://www.mapbox.com/mapbox-studio/#darwin" target="_blank">Mapbox Studio</a>. The initial prototype for the SAR map was inspired by the <a href="https://github.com/mapbox/mapbox-studio-outdoors.tm2" target="_blank">Mapbox Outdoors</a> style and source in Studio. However, we ran into two primary issues.
 
 1. The more data we wanted to incorporate into the map, the less Mapbox Studio seemed suited to our needs. With the wide variety of substantial datasets we're working with, this project just doesn't lend itself to efficient use of the Studio model, which is highly suited to rapid, lightweight web map development and styling.
 2. Mapbox does not currently support combining both remote and local data sources for vector tile source creation and styling via Studio, and for the purposes of this prototype we wanted to create something completely independent of sources that require internet access, to support use in the field by searchers.
