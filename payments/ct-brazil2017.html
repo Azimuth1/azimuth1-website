@@ -3,6 +3,8 @@
   <script src="https://checkout.stripe.com/checkout.js"></script>
 </head>
 <body>
+  <p><p><p>
+  <center>
 <button id="customButton">Make Payment</button>
 <script>
 var handler = StripeCheckout.configure({
@@ -19,8 +21,8 @@ document.getElementById('customButton').addEventListener('click', function(e) {
   // Open Checkout with further options:
   handler.open({
     name: 'Azimuth1, LLC',
-    description: '2017 SmartData software hosting and data transfer',
-    amount: 34000
+    description: '2017 SmartData software license',
+    amount: 3400000
   });
   e.preventDefault();
 });
