@@ -1,4 +1,8 @@
-<script src="https://checkout.stripe.com/checkout.js"></script>
+<html>
+<head>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+</head>
+<body>
 <button id="customButton">Make Payment</button>
 <script>
 var handler = StripeCheckout.configure({
@@ -26,3 +30,6 @@ window.addEventListener('popstate', function() {
   handler.close();
 });
 </script>
+
+</body>
+</html>
