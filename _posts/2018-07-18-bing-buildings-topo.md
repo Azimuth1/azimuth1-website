@@ -13,21 +13,19 @@ In our work with the Department of Homeland Security and dbS SAR, Azimuth1 is de
 
 We quickly integrated that data into the TotalTopo maps for search and rescue.  The difference is very significant and we're very happy that we'll be conducting our first SAR exercise in Coeur d'Alene ID this weekend using the new maps.  Here's a before and after look at difference it makes.  
 
-<div class="flexItem col-md-3">
+<div class="flexItem col-md-2">
 BEFORE:
 </div>
-<div class="flexItem col-md-9">
+<div class="flexItem col-md-10">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/buildings-before.png">
 </div>
 
-<div class="flexItem col-md-3">
+<div class="flexItem col-md-2">
 AFTER:
 </div>
-<div class="flexItem col-md-9">
+<div class="flexItem col-md-10">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/buildings-after.png">
 </div>
 
-
-![]({{ site.baseurl }}/blog/assets/2018-07-18-bing-buildings-topo/buildings-after.png){: width="25%"}
 
 Have to give credit to the Bing Maps team for providing this.  These buildings are drawn using computer vision techniques from aerial images, so even though the data aren't perfect (we've found a few building shapes that aren't out in the world)  They are easy to distinguish from the vast amounts of good data, and having a 99% correct nationwide set of buildings is terrific for SAR and public safety.  In particular the images can see sheds and out-buildings that lost persons may use for shelter or have gotten trapped.  We're making updates to the maps in our software all the time to make them better for public safety and other outdoor users.  Look for more info here as we improve.
