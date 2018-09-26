@@ -22,7 +22,7 @@ BEFORE:
 AFTER:
 </div>
 <div class="flexItem col-md-10">
-<img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/buildings-after.png">
+<img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/topo-USFS2.png">
 </div>
 
 
