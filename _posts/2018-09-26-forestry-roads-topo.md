@@ -13,12 +13,12 @@ Azimuth1 and dbS Productions produce the FIND software for managing search and r
 
 
 <div class="flexItem col-md-10">
-<img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/topo-USFS.png">
+<img src="{{site.baseurl}}/{{page.folder}}/topo-USFS.png">
 </div>
 
 
 <div class="flexItem col-md-10">
-<img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/topo-USFS2.png">
+<img src="{{site.baseurl}}/{{page.folder}}/topo-USFS2.png">
 </div>
 
 
