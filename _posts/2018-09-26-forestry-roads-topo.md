@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: US Forest Service road identifiers now in TotalTopo
-subtitle: FIND software integrates Bing buildings into topo maps for SAR.
+subtitle: Critical map update for Western States and users who frequently use US Forest Service roads for travel and navigation.
 date: 2018-09-26 10:00:00
 author: robert_sellers
 folder: blog/assets/2018-09-26-forestry-roads-topo
