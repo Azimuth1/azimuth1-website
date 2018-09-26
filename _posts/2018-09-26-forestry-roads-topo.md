@@ -22,4 +22,4 @@ Azimuth1 and dbS Productions produce the FIND software for managing search and r
 </div>
 
 
-Moving forward, additional 4x4 tracks, hiking trails, and other various wilderness points of interest will be evaluated and added from the USDA Forest Service data. These details will further assist our users in the identification of search targets as part of SAR investigations and users of TotalTopo. Additionally, labels will be refined to closely resemble Forest Service Topographic Mapping standards. User familiarity of symbols and patterns are key and can shave off a substantial amount of navigational time. We hope this speeds up rescue efforts.
+Moving forward, additional 4x4 tracks, hiking trails, and other various wilderness points of interest will be evaluated and added from the USDA Forest Service data. These details will further assist our users in the identification of search targets as part of SAR investigations and users of TotalTopo. This is a good example of how our team is continuously improving small details throughout the software by integrating and measuring user efficiency, training time, and feedback.
