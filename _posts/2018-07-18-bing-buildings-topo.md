@@ -13,12 +13,16 @@ In our work with the Department of Homeland Security and dbS SAR, Azimuth1 is de
 
 We quickly integrated that data into the TotalTopo maps for search and rescue.  The difference is very significant and we're very happy that we'll be conducting our first SAR exercise using the new maps in Coeur d'Alene ID this weekend.  Here's a before and after look at the difference it makes.  
 
-
+<div class="flexItem col-md-2">
+BEFORE:
+</div>
 <div class="flexItem col-md-10">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/buildings-before.png">
 </div>
 
-
+<div class="flexItem col-md-2">
+AFTER:
+</div>
 <div class="flexItem col-md-10">
 <img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/buildings-after.png">
 </div>
