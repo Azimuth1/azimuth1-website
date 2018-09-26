@@ -9,7 +9,7 @@ folder: blog/assets/2018-09-26-forestry-roads-topo
 headerColor: '#000'
 ---
 
-As an upgrade to our existing TotalTopo map, users will now be able to utilize additional information inside our National Forests, namely Forest Service Roads. The data, as accessed from the USDA Forest Service, provides details that will help further inform backcountry users and SAR teams. Forest Service Route Annotation is now available as supplementary navigation and location information.  Remote forests in the US are often navigable only by a maze of numbered utility roads and our map’s users need more information to fill in these vast spaces. Open Street Map Data excels at providing excellent coverage in most places, but it falls a bit short on remote public land.
+Azimuth1 and dbS Productions produce the FIND software for managing search and rescue missions.  As an upgrade to the embedded TotalTopo map.  In a recent exercise in Idaho, we discovered that the forest service access roads in many regions are marked on the ground using number identifiers even when a road name exists. Remote forests in the US are often navigable only by a maze of numbered utility roads and our map’s users need more information to fill in these vast spaces. Open Street Map Data excels at providing excellent coverage in most places, but it falls a bit short on remote public land. So we've added the USFS road identifiers to <!--more--> our maps in a similar style as the official USFS maps. These identifiers provide further details that will help inform backcountry users and SAR teams. 
 
 <div class="flexItem col-md-2">
 BEFORE:
