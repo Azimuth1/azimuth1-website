@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: US Forest Service road identifiers now in TotalTopo
-subtitle: Critical map update for users of US Forest Service roads for travel and navigation.
+subtitle: Important topo map update - US Forest Service roads.
 date: 2018-09-26 10:00:00
 author: robert_sellers
 folder: blog/assets/2018-09-26-forestry-roads-topo
