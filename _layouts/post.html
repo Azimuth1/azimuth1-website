@@ -11,9 +11,7 @@ layout: template
 {% endif %}
 
 
-    <script>
-    document.getElementsByTagName('head')[0].appendChild('<meta property="og:image" content=url('{{site.baseurl}}/blog/assets/{{page.date | date: "%Y-%m-%d"}}-{{page.id | replace:'/','-' | replace:'-blog-','' | }}/header.png);
-    </script>
+  
     <div class="slide container-fluid bg-white postPage">
         <div class="row blogBgImage" style="background-image: url('{{site.baseurl}}/blog/assets/{{page.date | date: "%Y-%m-%d"}}-{{page.id | replace:'/','-' | replace:'-blog-','' | }}/header.png'); ">
         <div class="row blogBgImage" style="background-color: {{page.replaceHeaderImage}}">
