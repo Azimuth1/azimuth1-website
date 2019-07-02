@@ -15,7 +15,7 @@ jason_dalton:
   name: Jason Dalton
   web: http://about.me/JasonDalton
   email: jason.dalton@azimuth1.com
-  bio: "Jason practices and teaches spatial analysis using statistics and data mining."
+  bio: "Runs the product and comapny strategy at Azimuth1."
   title: "Founder, CEO"
   pronoun: him
   avatar: pics/bios/jason-dalton-photo.jpg
@@ -67,12 +67,12 @@ robert_sellers:
   twitter: jasonrdalton
   github: robertsellers
   linkedin: in/robertwsellers
-  
+
 ryan_velazquez:
   name: Ryan Velazquez
   web:
   email: ryan.velazquez@azimuth1.com
-  bio: "Ryan combines spatial analysis, data science, and environmental analysis to do good deeds."
+  bio: "Ryan wrangles insight from data using GIS, Python, and web developement."
   title: "Data Scientist"
   pronoun: him
   avatar: pics/bios/ryan-velazquez-photo.jpg
