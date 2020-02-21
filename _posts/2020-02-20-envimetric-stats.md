@@ -4,7 +4,7 @@ layout: post
 title: EnviMetric Data Insights from Over 85,000 Remediation Sites Across the United States
 subtitle: Growing our unique specialty in environmental data science.
 date: 2020-02-20 10:00:00
-author: ryan_velazquez
+author: azimuth1_team
 folder: blog/assets/2020-02-20-envimetric-stats
 headerColor: '#030'
 excerpt: 'EnviMetric’s environmental remediation tool is a plume modeling software that analyzes data from over 85,000 sites across the United States to help Project Managers understand plume boundaries. We’ve compiled a snapshot of the types of data we’ve aggregated in this blog post.'
