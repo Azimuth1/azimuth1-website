@@ -40,7 +40,7 @@ If you’re investigating a plume boundary, odds are you’re somewhere in that 
 Whether your site has a plume the size of a putting green or the Superdome, having the context and insight gained from thousands of similar sites can provide more certainty and confidence as you delineate a conceptual site model and make recommendations for remediation.  Find out more about how EnviMetric can give you that confidence.
 
 
-!delineate
+----
 
 ##AEHS Presentation Poster
 
