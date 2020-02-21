@@ -20,13 +20,13 @@ As we compile this data and and continue to gain insights from site investigatio
 
 To get us started, below are just a few things we’ve learned from modeling groundwater plume sizes.
 
-##The US national average groundwater plume is about the size of a football field.
+## The US national average groundwater plume is about the size of a football field.
 
 ![modeling plume sizes using software]({{site.baseurl}}/{{page.folder}}/football_field.jpg){:class="img-responsive" width="100%"}
 
 But there’s more to the story than just averages.  There is a tremendous amount of variability in plume sizes with an especially long tail (a small number of extremely long plumes).  The longest plume we've seen so far was over 13 miles long (about as long as Manhattan). This means that when analyzing plume boundaries, you should note that there is a higher likelihood that you expect that the plume extends beyond that average size.
 
-##Are you a golfer?  About 80% of all contaminated groundwater plumes are larger than a putting green but smaller than a par 4.
+## Are you a golfer?  About 80% of all contaminated groundwater plumes are larger than a putting green but smaller than a par 4.
 
 ![plume modeling for remediation]({{site.baseurl}}/{{page.folder}}/golf_green.jpg){:class="img-responsive" width="80%"}
 
@@ -34,7 +34,7 @@ But there’s more to the story than just averages.  There is a tremendous amoun
 
 If you’re investigating a plume boundary, odds are you’re somewhere in that range, but narrowing the range within these boundaries can often be difficult. EnviMetric gives you the probability that your plume is contained within a specific range, and gives a specific confidence level calculated for your environmental site assessment.  So you know in quantitative terms the probability that the plume exceeds a set boundary.  This insight into risk and expected future cost of remediation is vital to the project plan.
 
-##About 10% of groundwater plumes are larger than the New Orleans Superdome.
+## About 10% of groundwater plumes are larger than the New Orleans Superdome.
 ![modeling plume sizes]({{site.baseurl}}/{{page.folder}}/superdome.jpg){:class="img-responsive" width="140%"}
 
 Whether your site has a plume the size of a putting green or the Superdome, having the context and insight gained from thousands of similar sites can provide more certainty and confidence as you delineate a conceptual site model and make recommendations for remediation.  Find out more about how EnviMetric can give you that confidence.
@@ -42,7 +42,7 @@ Whether your site has a plume the size of a putting green or the Superdome, havi
 
 ----
 
-##AEHS Presentation Poster
+## AEHS Presentation Poster
 
 We’ve been up to a few interesting things lately with a presentation at AEHS on machine learning and plume mapping. You can download our poster here.
 
