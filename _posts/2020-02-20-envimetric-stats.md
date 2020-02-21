@@ -22,7 +22,7 @@ To get us started, below are just a few things we’ve learned from modeling gro
 
 ##The US national average groundwater plume is about the size of a football field.
 
-![modeling plume sizes using software]({{site.baseurl}}/{{page.folder}}/footbal_field.jpg){:class="img-responsive" width="100%"}
+![modeling plume sizes using software]({{site.baseurl}}/{{page.folder}}/football_field.jpg){:class="img-responsive" width="100%"}
 
 But there’s more to the story than just averages.  There is a tremendous amount of variability in plume sizes with an especially long tail (a small number of extremely long plumes).  The longest plume we've seen so far was over 13 miles long (about as long as Manhattan). This means that when analyzing plume boundaries, you should note that there is a higher likelihood that you expect that the plume extends beyond that average size.
 
