@@ -46,9 +46,9 @@ Whether your site has a plume the size of a putting green or the Superdome, havi
 
 ## AEHS Presentation Poster
 
-We’ve been up to a few interesting things lately with a presentation at AEHS on machine learning and plume mapping. You can download our poster <a href="{{site.baseurl}}/{{page.folder}}/envimetric_poster.png">here.
+We’ve been up to a few interesting things lately with a presentation at AEHS on machine learning and plume mapping. You can download our poster <a href="{{site.baseurl}}/{{page.folder}}/envimetric_poster.png">here.</a>
 
-![modeling plume sizes]({{site.baseurl}}/{{page.folder}}/envimetric_poster.png){:class="img-responsive" width="100%"}</a>
+![modeling plume sizes]({{site.baseurl}}/{{page.folder}}/envimetric_poster.png){:class="img-responsive" width="100%"}
 
 We’ll be presenting at the Battelle Chlorinated Conference in Portland in May-June.  It’s session G5: Big Data, Data Mining, and Portfolio Optimization. <a href="https://www.battelle.org/docs/default-source/newsroom/chlorinated-conference/2020chlor_final-preliminary-program_12-18-19.pdf?sfvrsn=939cdaa1_8">Check out the entire program here (We’re on page 57).</a>  If you’ll be at Battelle, we’d love to schedule a short meetup so we can show you EnviMetric in more detail and talk about how it can be most useful to you.  
 <center><a href="http://calendar.azimuth1.com/anna.harrington"><button type="button" class="btn btn-success">Schedule a demo</button></a>
