@@ -37,7 +37,7 @@ But there’s more to the story than just averages.  There is a tremendous amoun
 If you’re investigating a plume boundary, odds are you’re somewhere in that range, but narrowing the range within these boundaries can often be difficult. EnviMetric gives you the probability that your plume is contained within a specific range, and gives a specific confidence level calculated for your environmental site assessment.  So you know in quantitative terms the probability that the plume exceeds a set boundary.  This insight into risk and expected future cost of remediation is vital to the project plan.
 
 ## About 10% of groundwater plumes are larger than the New Orleans Superdome.
-![modeling plume sizes]({{site.baseurl}}/{{page.folder}}/superdome.jpg){:class="img-responsive" width="140%"}
+![modeling plume sizes][{{site.baseurl}}/{{page.folder}}/envimetric_poster.png]({{site.baseurl}}/{{page.folder}}/superdome.jpg){:class="img-responsive" width="140%"}
 
 Whether your site has a plume the size of a putting green or the Superdome, having the context and insight gained from thousands of similar sites can provide more certainty and confidence as you delineate a conceptual site model and make recommendations for remediation.  Find out more about how EnviMetric can give you that confidence.
 
@@ -46,9 +46,9 @@ Whether your site has a plume the size of a putting green or the Superdome, havi
 
 ## AEHS Presentation Poster
 
-We’ve been up to a few interesting things lately with a presentation at AEHS on machine learning and plume mapping. You can download our poster <a href="{{site.baseurl}}/{{page.folder}}/envimetric_poster.png">here.</a>
+We’ve been up to a few interesting things lately with a presentation at AEHS on machine learning and plume mapping. You can download our poster [here]({{ {{site.baseurl}}/{{page.folder}}/envimetric_poster.png }}).
 
-![modeling plume sizes]({{site.baseurl}}/{{page.folder}}/envimetric_poster.png){:class="img-responsive" width="100%"}
+![poster]({{site.baseurl}}/{{page.folder}}/envimetric_poster.png){:class="img-responsive" width="100%"}
 
 We’ll be presenting at the Battelle Chlorinated Conference in Portland in May-June.  It’s session G5: Big Data, Data Mining, and Portfolio Optimization. <a href="https://www.battelle.org/docs/default-source/newsroom/chlorinated-conference/2020chlor_final-preliminary-program_12-18-19.pdf?sfvrsn=939cdaa1_8">Check out the entire program here (We’re on page 57).</a>  If you’ll be at Battelle, we’d love to schedule a short meetup so we can show you EnviMetric in more detail and talk about how it can be most useful to you.  
 <center><a href="http://calendar.azimuth1.com/anna.harrington"><button type="button" class="btn btn-success">Schedule a demo</button></a>
