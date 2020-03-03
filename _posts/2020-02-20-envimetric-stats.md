@@ -12,7 +12,7 @@ excerpt: 'EnviMetric’s environmental remediation tool is a plume modeling soft
 Our goal with EnviMetric™ is to build innovative products on top of a data repository for remediation sites that is unrivaled in the industry. Through our sponsorship from the National Science Foundation we’ve compiled what may be the largest detailed database of remediation sites in the world. In Q3 and Q4 of 2019 we were able to quadruple the amount of sites we use when doing comparative remediation site modeling, up to well over 75,000 across the United States.
 
 This data was compiled, normalized, and annotated by our team of data curators who take information from state DEQ databases, voluntary remediation programs, underground storage tank programs, PDF downloads, published EDDs, FOIA requests, and historical data.  Using this varied and specific data yields an accurate and precise measure of the estimated plume boundaries at any comparable site.
-<p><center><a href="http://info.azimuth1.com/envimetric"><button type="button" class="btn btn-info">LEARN MORE</button>
+<p><center><a href="http://info.azimuth1.com/envimetric"><button type="button" class="btn btn-info">LEARN MORE</button></a>
 </center></p>
 
 
@@ -46,8 +46,9 @@ Whether your site has a plume the size of a putting green or the Superdome, havi
 
 ## AEHS Presentation Poster
 
-We’ve been up to a few interesting things lately with a presentation at AEHS on machine learning and plume mapping. You can download our poster here.
+We’ve been up to a few interesting things lately with a presentation at AEHS on machine learning and plume mapping. You can download our poster <a href="{{site.baseurl}}/{{page.folder}}/envimetric_poster.png">here.
 
-![modeling plume sizes]({{site.baseurl}}/{{page.folder}}/envimetric_poster.png){:class="img-responsive" width="100%"}
+![modeling plume sizes]({{site.baseurl}}/{{page.folder}}/envimetric_poster.png){:class="img-responsive" width="100%"}</a>
 
-We’ll be presenting at the Battelle Chlorinated Conference in Portland in May-June.  It’s session G5: Big Data, Data Mining, and Portfolio Optimization. Check out the entire program here (We’re on page 57).  If you’ll be at Battelle, we’d love to schedule a short meetup so we can show you EnviMetric in more detail and talk about how it can be most useful to you.
+We’ll be presenting at the Battelle Chlorinated Conference in Portland in May-June.  It’s session G5: Big Data, Data Mining, and Portfolio Optimization. <a href="https://www.battelle.org/docs/default-source/newsroom/chlorinated-conference/2020chlor_final-preliminary-program_12-18-19.pdf?sfvrsn=939cdaa1_8">Check out the entire program here (We’re on page 57).</a>  If you’ll be at Battelle, we’d love to schedule a short meetup so we can show you EnviMetric in more detail and talk about how it can be most useful to you.  <p><center><a href="http://info.azimuth1.com/envimetric"><button type="button" class="btn btn-success">Schedule a demo</button></a>
+</center></p>
