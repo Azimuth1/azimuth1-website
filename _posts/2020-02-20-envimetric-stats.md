@@ -46,7 +46,7 @@ Whether your site has a plume the size of a putting green or the Superdome, havi
 
 ## AEHS Presentation Poster
 
-We’ve been up to a few interesting things lately with a presentation at AEHS on machine learning and plume mapping. You can download our poster [here]({{ {{site.baseurl}}/{{page.folder}}/envimetric_poster.png }}).
+We’ve been up to a few interesting things lately with a presentation at AEHS on machine learning and plume mapping. You can download our poster [here]({{site.baseurl}}/{{page.folder}}/envimetric_poster.png).
 
 ![poster]({{site.baseurl}}/{{page.folder}}/envimetric_poster.png){:class="img-responsive" width="100%"}
 
