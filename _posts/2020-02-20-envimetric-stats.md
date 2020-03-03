@@ -12,6 +12,8 @@ excerpt: 'EnviMetric’s environmental remediation tool is a plume modeling soft
 Our goal with EnviMetric™ is to build innovative products on top of a data repository for remediation sites that is unrivaled in the industry. Through our sponsorship from the National Science Foundation we’ve compiled what may be the largest detailed database of remediation sites in the world. In Q3 and Q4 of 2019 we were able to quadruple the amount of sites we use when doing comparative remediation site modeling, up to well over 75,000 across the United States.
 
 This data was compiled, normalized, and annotated by our team of data curators who take information from state DEQ databases, voluntary remediation programs, underground storage tank programs, PDF downloads, published EDDs, FOIA requests, and historical data.  Using this varied and specific data yields an accurate and precise measure of the estimated plume boundaries at any comparable site.
+<p><center><a href="http://info.azimuth1.com/envimetric"><button type="button" class="btn btn-info">LEARN MORE</button>
+</center></p>
 
 
 ![envimetric environmental remediation software]({{site.baseurl}}/{{page.folder}}/data_growth.png){:class="img-responsive" width="120%"}
