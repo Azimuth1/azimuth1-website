@@ -37,7 +37,7 @@ But there’s more to the story than just averages.  There is a tremendous amoun
 If you’re investigating a plume boundary, odds are you’re somewhere in that range, but narrowing the range within these boundaries can often be difficult. EnviMetric gives you the probability that your plume is contained within a specific range, and gives a specific confidence level calculated for your environmental site assessment.  So you know in quantitative terms the probability that the plume exceeds a set boundary.  This insight into risk and expected future cost of remediation is vital to the project plan.
 
 ## About 10% of groundwater plumes are larger than the New Orleans Superdome.
-![modeling plume sizes][{{site.baseurl}}/{{page.folder}}/envimetric_poster.png]({{site.baseurl}}/{{page.folder}}/superdome.jpg){:class="img-responsive" width="140%"}
+![modeling plume sizes]({{site.baseurl}}/{{page.folder}}/superdome.jpg){:class="img-responsive" width="140%"}
 
 Whether your site has a plume the size of a putting green or the Superdome, having the context and insight gained from thousands of similar sites can provide more certainty and confidence as you delineate a conceptual site model and make recommendations for remediation.  Find out more about how EnviMetric can give you that confidence.
 
