@@ -11,10 +11,10 @@ excerpt: 'Azimuth1 is set to launch a modified version of its MiniCarta team map
 support the needs of first responders and public safety officials collecting data on COVID-19 outbreak and
 response.'
 ---
-For the last year we have been working on a mobile app for collecting spatial data in the field.  Compared to other apps out there, we felt that collecting data fast, easily, and simply was our main goal.  While we were testing and setting up the app store pages for the app, the COVID-19 outbreak started to spread and many states found themselves under stay at home orders.
+<img style="float: right" src="{{site.baseurl}}/{{page.folder}}/minicarta-screen.png">For the last year we have been working on a mobile app for collecting spatial data in the field.  Compared to other apps out there, we felt that collecting data fast, easily, and simply was our main goal.  While we were testing the app and getting ready for launch, the COVID-19 outbreak started to spread and many states found themselves under stay at home orders.
 
 We had initially intended on releasing a basic version of the app with the option to upgrade to a Pro version to unlock more features like custom map icon packs, data download and conversion, and unlimited point collection.  
-<img style="float: right" src="{{site.baseurl}}/{{page.folder}}/minicarta-screen.png">
+
 Because of COVID-19 we have moved the icon packs for emergency services that mirror the National Public Safety and GIS Consortium <a href="https://www.napsgfoundation.org/all-resources/symbology-library/">specification</a> to the free version of the app, as well as making unlimited data collection and sharing free for now.  
 <p><center><a href="http://www.minicarta.com"><button type="button" class="btn btn-info">LEARN MORE</button></a>
 </center></p>
