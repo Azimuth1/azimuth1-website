@@ -5,8 +5,6 @@ title: How we incorporate existing site data when building the EnviMetric model
 subtitle: Modeling using previously collected data and the EnviMetric machine learning algorithm to garner new insights for contaminated properties.
 date: 2020-05-06 15:00:00
 author:
-- ryan_velazquez
-- anna_harrington
 folder: blog/assets/2020-06-07-envimetric-pfas
 headerColor: '#030'
 excerpt: 'Azimuth1 analyzes groundwater factors and correlation to plume dimensions in EnviMetric model.'
