@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: Azimuth1 schedules early launch for MiniCarta app to support COVID response
 subtitle: Public Health officials and first responders are primary users.
