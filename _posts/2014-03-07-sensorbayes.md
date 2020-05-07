@@ -182,7 +182,7 @@ var x=document.getElementById('dataTable');
         pod = 1-pod;
     }
     var Pe = P*pod + (1-P)*(1-pod);
-    x.rows[i].cells[3].innerHTML=(P * pod / Pe).toFixed(7);  //Baysian uƒpdate
+    x.rows[i].cells[3].innerHTML=(P * pod / Pe).toFixed(7);  //Baysian update
     P = (P * pod / Pe);  //set Prior P to the newly calculated estimate
   }
 }
@@ -235,4 +235,3 @@ All sensors and detectors used in environmental site characterization or GeoINT 
 
 * Set a Sensor POD value of 0.5 and observe the effect this has on the Updated Probability.
 * Set a Sensor Reading to False and observe the effect this has on the Updated Probability.
-
