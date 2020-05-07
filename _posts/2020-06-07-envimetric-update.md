@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: How we incorporate existing site data when building the EnviMetric model
+title: Incorporating site-specific analytical data and machine learning to predict environmental site conditions.
 subtitle: Modeling using previously collected data and the EnviMetric machine learning algorithm to garner new insights for contaminated properties.
 date: 2020-05-06 15:00:00
 author: ryan_velazquez
@@ -16,6 +16,7 @@ EnviMetric makes intelligent predictions about the extent of groundwater contami
 
 EnviMetric uses all this available information to make data-based predictions of contaminant extent providing estimates such as "there is a 95% chance that the groundwater plume at this site is between x feet and y feet long."
 
+***Our latest update:***
 For projects where the site investigation is further along and there are already multiple monitoring wells and groundwater samples EnviMetric can use this information to make more precise predictions of contaminant extent and it does this differently than traditional fate and transport modeling. Traditional fate and transport modeling often uses data from multiple locations at a site to "calibrate" theoretical models of contaminant transport. In layman's terms you could think of this "calibration" for a hypothetical example site as saying something like:
 
 ---
@@ -26,7 +27,7 @@ The modified (to account for attenuation and sorption) advection-dispersion equa
 
 EnviMetric is a machine learning model--- it doesn't rely on any particular theoretical model of fate and transport, rather it uses a solely data-based framework to predict what an unknown groundwater plume will look like based on how the site of the un-delineated plume relate to sites where the plume extent is already known.
 
-Concentrations at multiple locations at a site are fed into this model just as all the other variables are. We leave it up to the machine learning algorithms to weight each variable based on how predictive it has been during training on known sites. This allows the data to "speak for itself". Our dataset now includes over 1,500 sites with analytical data from multiple groundwater sample locations. Collectively, our database contains analytical results from over 17,000 monitor wells and groundwater grab points. This large quantity of data allows our model to better differentiate the signal from the noise and understand how to make predictions about unknown groundwater plume extents based on limited analytical data at a site.
+Concentrations at multiple locations at a site are fed into this model just as all the other variables are. We leave it up to the machine learning algorithms to weight each variable based on how predictive it has been during training on known sites. This allows the data to speak for itself. Our database now includes over 1,500 sites with analytical data from multiple groundwater sample locations. Collectively, our database contains analytical results from over 17,000 monitoring wells and groundwater grab points. This large quantity of data allows our model to better differentiate the signal from the noise and understand how to make predictions about unknown groundwater plume extents based on limited analytical data at a site.
 
 **The bottom line?**
 
