@@ -21,7 +21,7 @@ For projects where the site investigation is further along and there are already
 
 ---
 
-The modified (to account for attenuation and sorption) advection-dispersion equation predicts that the plume should be 1,000 feet long and the concentration of TCE 100 feet from the source should be 10 µg/L; TCE at monitoring well #1 located 100 feet from the source is greater than predicted (let's say it's actually 15 µg/L instead of 10 µg/L) therefore we predict the plume to be greater than 1,000 feet (maybe that observation modifies the prediction to 1,250 feet)
+> The modified (to account for attenuation and sorption) advection-dispersion equation predicts that the plume should be 1,000 feet long and the concentration of TCE 100 feet from the source should be 10 µg/L; TCE at monitoring well #1 located 100 feet from the source is greater than predicted (let's say it's actually 15 µg/L instead of 10 µg/L) therefore we predict the plume to be greater than 1,000 feet (maybe that observation modifies the prediction to 1,250 feet)
 
 ---
 
