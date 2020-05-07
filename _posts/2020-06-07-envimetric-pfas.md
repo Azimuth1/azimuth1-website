@@ -4,13 +4,13 @@ layout: post
 title: How we incorporate existing site data when building the EnviMetric model
 subtitle: Modeling using previously collected data and the EnviMetric machine learning algorithm to garner new insights for contaminated properties.
 date: 2020-05-06 15:00:00
-author:
+author: ryan_velazquez
 folder: blog/assets/2020-06-07-envimetric-pfas
 headerColor: '#030'
 excerpt: 'Azimuth1 analyzes groundwater factors and correlation to plume dimensions in EnviMetric model.'
 ---
 
-![plume1]({{site.baseurl}}/{{page.folder}}/plume.jpg){:class="img-responsive" width="100%"}
+![plume1]({{site.baseurl}}/{{page.folder}}/plume.jpg){:class="img-responsive" width="80%"}
 
 EnviMetric makes intelligent predictions about the extent of groundwater contamination even when there is no available analytical data regarding contaminant concentrations. Factors such as the site location, release type, property use, and geologic setting are very predictive of how large a groundwater plume will be.
 
@@ -20,7 +20,7 @@ For projects where the site investigation is further along and there are already
 
 ---
 
-The modified (to account for attenuation and sorption) advection-dispersion equation predicts that the plume should be 1,000 feet long and the concentration of TCE 100 feet from the source should be 10 ug/L; TCE at monitoring well #1 located 100 feet from the source is greater than predicted (let's say it's actually 15 ug/L instead of 10 ug/L) therefore we predict the plume to be greater than 1,000 feet (maybe that observation modifies the prediction to 1,250 feet)
+The modified (to account for attenuation and sorption) advection-dispersion equation predicts that the plume should be 1,000 feet long and the concentration of TCE 100 feet from the source should be 10 \mu g/L; TCE at monitoring well #1 located 100 feet from the source is greater than predicted (let's say it's actually 15 ug/L instead of 10 ug/L) therefore we predict the plume to be greater than 1,000 feet (maybe that observation modifies the prediction to 1,250 feet)
 
 ---
 
