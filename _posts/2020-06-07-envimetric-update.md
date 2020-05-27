@@ -38,6 +38,7 @@ Concentrations at multiple locations at a site are fed into this model just as a
 
 - **Applying the EnviMetric model once site investigation has already taken place can help with answering some of these tough questions**
 
-- For more information <a href="mailto:anna.harrington@azimuth1.com?subject=EnviMetric interest">Email Anna</a> or ...
+
+If you have a site that would be of interest or want to know more about the model <a href="mailto:anna.harrington@azimuth1.com?subject=EnviMetric interest">grab a time with our team!</a> or ...
 <p><center><a href="http://info.azimuth1.com/envimetric"><button type="button" class="btn btn-info">LEARN MORE</button></a>
 </center></p>
