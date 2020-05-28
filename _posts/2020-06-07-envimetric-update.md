@@ -5,7 +5,7 @@ title: Incorporating site-specific analytical data and machine learning to predi
 subtitle: Modeling using previously collected data and the EnviMetric machine learning algorithm to garner new insights for contaminated properties.
 date: 2020-05-06 15:00:00
 author: ryan_velazquez
-folder: blog/assets/2020-06-07-envimetric-update
+folder: blog/assets/2020-05-06-envimetric-update
 headerColor: '#030'
 excerpt: 'Azimuth1 analyzes groundwater factors and correlation to plume dimensions in EnviMetric model.'
 ---
