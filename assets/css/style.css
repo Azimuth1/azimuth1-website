@@ -496,9 +496,7 @@ a.footer:hover {
 .menu-icon i:hover{
 	color: #ff5e14;
 }
-.anchor:target {
-  padding-top: 120px;
-}
+
 #search-modal {
 	background-color: rgba(23,26,33,.95);
 }
