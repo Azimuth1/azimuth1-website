@@ -1,40 +1,119 @@
-<div class="slide container-fluid red">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <ul class="list-inline text-center">
-                {% if site.twitter_username %}
-                <li>
-                    <a href="https://twitter.com/{{ site.twitter_username }}">
-                        <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                    </a>
-                </li>
-                {% endif %} {% if site.linkedin_username %}
-                <li>
-                    <a href="https://www.linkedin.com/{{ site.linkedin_username }}">
-                        <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                            </span>
-                    </a>
-                </li>
-                {% endif %} {% if site.github_username %}
-                <li>
-                    <a href="https://github.com/{{ site.github_username }}">
-                        <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                    </a>
-                </li>
-                {% endif %}
-            </ul>
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-80 pb-20">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span><a class="footer" href="https://www.google.com/maps/place/1751+Pinnacle+Dr,+Tysons,+VA+22102/@38.9210906,-77.2307382,17z/data=!3m1!4b1!4m5!3m4!1s0x89b64aee3cceba8d:0xfc2c5b11c7ce05d8!8m2!3d38.9210906!4d-77.2285495">1751 Pinnacle Dr, McLean, VA 22102</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span><a class="footer" href="tel:7036188866">703-618-8866</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span><a class="footer" href="mailto:contact@azimuth1.com">contact@azimuth1.com</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-50 pb-30">
+            <div class="footer-pattern">
+                <img src="{{site.baseurl}}/assets/img/footer/footer_map.png" alt="">
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="{{site.url}}"><img src="{{site.baseurl}}/assets/img/logo/footer_logo.png" class="img-fluid mw-100" alt="{{site.title}}"></a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Azimuth1 is a fast moving team of geospatial, data analytics, and computer science experts on a mission to bring specialty data analysis applications to environmental, national security, and public safety challenges.</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="{{site.facebook_url}}"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="{{site.twitter_url}}"><i class="fab fa-twitter twitter-bg"></i></a>
+                            <a href="{{site.linkedin_url}}"><i class="fab fa-linkedin linkedin-bg"></i></a>
+                            <a href="{{site.instagram_url}}"><i class="fab fa-instagram instagram-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            {% for link in site.data.navigation %}
+                            {% assign active = nil %}
+
+                            {% for sublink in link.submenu %}
+                                {% if page.url contains sublink.url %}
+                                    {% assign active = 'active' %}
+                                {% endif %}
+                            {% endfor %}
+
+                            {% if page.url contains link.url %}
+                                {% assign active = 'active' %}
+                            {% endif %}
+
+                            <li>
+                                <a href="{{link.url}}">{{link.text}}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Subscribe for the latest news on our products and R&D</p>
+                        </div>
+                        {% include subscribe.html %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12 small text-center pad0y">Copyright&copy; 2019 - Azimuth1 - <a href="https://map.what3words.com/hero.hype.parade"><i class="fa fa-map-marker" style="color:#700" aria-hidden="true"></i>
-        </a></div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; 2020, All Right Reserved <a href="#">Azimuth1, Inc</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Policy</a></li>
+                            <li><a href="/pages/contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</footer>

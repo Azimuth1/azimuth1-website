@@ -1,0 +1,23 @@
+#Please use the main menu items under the "text"
+
+- text: Solutions
+  submenu:
+    - text: Environmental Sciences
+      url: /environmental-sciences
+    - text: Public Safety
+      url: /public-safety
+    - text: National Security
+      url: /national-security
+- text: Company
+  url: /about
+  submenu:
+    - text: About
+      url: /about
+    #- text: Our Team
+    #  url: /team
+    - text: Careers
+      url: /careers
+- text: Blog
+  url: /blog
+- text: Contact
+  url: /contact

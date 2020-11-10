@@ -2,15 +2,17 @@
 published: true
 layout: post
 title: A technical overview of our SAR topo implementation
-date: 2015-06-07 12:00:00
+date: 2015-06-07
 author: azimuth1_team
 folder: blog/assets/2015-06-07-sar-topo-tech-notes
 headerColor: '#fff'
+headerImage: header.png
+tags: SAR geospatial
 ---
 
 
 
-As you may have read in our [preceding post](http://www.azimuth1.com/a-new-topo-map-for-saving-lives/), the Search and Rescue (SAR) map we are building seeks to combine the vital features of USGS topographic maps with the ease of use, readability, and<!--more--> higher update frequency of a vector tile based map, in addition to providing supplemental data that may prove useful in SAR related work. This follow-up post is meant to further elaborate on the process behind the SAR map's creation and current status.
+As you may have read in our [preceding post](http://www.azimuth1.com/a-new-topo-map-for-saving-lives/), the Search and Rescue (SAR) map we are building seeks to combine the vital features of USGS topographic maps with the ease of use, readability, and higher update frequency of a vector tile based map, in addition to providing supplemental data that may prove useful in SAR related work. This follow-up post is meant to further elaborate on the process behind the SAR map's creation and current status.
 
 ## A brief introduction
 
@@ -70,9 +72,9 @@ That being said, Mapbox Studio is a very powerful, and actively evolving design 
     - Query includes all features `natural=peak`.
     - Elevation from OSM is included in label.
 
-You can view the map below and <a href="http://sandlot.azimuth1.net/FIND/" target="blank">here</a>.
+You can view the map below and <a href="http://totaltopo.findsar.com/services/totaltopo/map" target="blank">here</a>.
 
-<iframe class='mapfembed rofw cofntainer' width="100%" height="380" src="http://sandlot.azimuth1.net/" frameborder="0" allodwfullscreen></iframe>
+<iframe class='mapfembed rofw cofntainer' width="100%" height="380" src="http://totaltopo.findsar.com/services/totaltopo/map" frameborder="0" allodwfullscreen></iframe>
 
 
 

@@ -3,17 +3,19 @@ published: true
 layout: post
 title: Introducing SARCAT
 subtitle: The open-source Search and Rescue data management system
-date: 2015-08-19 12:00:00
+date: 2015-08-19
 author: jason_dalton
 folder: blog/assets/2015-08-19-introducing-sarcat
 headerColor: '#fff'
 replaceHeaderImage: '#325271'
+headerImage: header.png
+tags: SAR
 ---
 
 <div class="pad1y"></div>
-Understanding lost person behavior is essential to making better decisions in how you allocate trained search resources like field search teams, search dogs, helicopters, and drones.  For several years now <!--more--> we at Azimuth1 have been working with the leading researcher in lost person behavior, Robert Koester.  Robert started cataloging search mission records back in the 90's and published one of the first studies on the wandering patterns of those disoriented due to Alzheimers and dementia.  Bob's work has expanded to several dozen lost person types including children, hunters, hikers, those with severe autism, and accounts for differences in climate and terrain and their impact on lost person behavior.  Earlier this year we worked with Bob to put out a mobile app called Lost Person Behavior that includes summary descriptions, statistics, and checklists to help manage a search mission.  It's useful for first responders to quickly get their hands on best practices in search management when they might find themselves in charge of a search for the first time.
+Understanding lost person behavior is essential to making better decisions in how you allocate trained search resources like field search teams, search dogs, helicopters, and drones.  For several years now we at Azimuth1 have been working with the leading researcher in lost person behavior, Robert Koester.  Robert started cataloging search mission records back in the 90's and published one of the first studies on the wandering patterns of those disoriented due to Alzheimers and dementia.  Bob's work has expanded to several dozen lost person types including children, hunters, hikers, those with severe autism, and accounts for differences in climate and terrain and their impact on lost person behavior.  Earlier this year we worked with Bob to put out a mobile app called Lost Person Behavior that includes summary descriptions, statistics, and checklists to help manage a search mission.  It's useful for first responders to quickly get their hands on best practices in search management when they might find themselves in charge of a search for the first time.
 
-These statistics come from data provided to ISRID, the International Search and Rescue Incident Database.  One of the difficulties of getting new data into ISRID is the wide variation of data structures, formats, and category codes used by agencies around the globe.  To give search teams a way to more easily catalog their data, and a way to very easily contribute data back to ISRID, we've created SARCAT, a records management system for search and rescue missions.  SARCAT is open source, so you can set up a DIY instance, or use our hosted system either for free without support, or a paid subscription for support. 
+These statistics come from data provided to ISRID, the International Search and Rescue Incident Database.  One of the difficulties of getting new data into ISRID is the wide variation of data structures, formats, and category codes used by agencies around the globe.  To give search teams a way to more easily catalog their data, and a way to very easily contribute data back to ISRID, we've created SARCAT, a records management system for search and rescue missions.  SARCAT is open source, so you can set up a DIY instance, or use our hosted system either for free without support, or a paid subscription for support.
 
 <div class="pad1y"></div>
 <hr>
@@ -28,7 +30,7 @@ These statistics come from data provided to ISRID, the International Search and 
 SARCAT is easy to set up, with just a single script to install and start the server.   Users access it through a browser, so there's nothing to install on user's desktops.  Our design goals were to make it simple and fast to use, install, and maintain.  We did this by creating a single step installer, a fast web based UI, and using web services to automatically pull in data that is normally collected on paper.   
 </div>
 <div class="flexItem col-md-6">
-<img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/SARCAT_stats_screen.png"> 
+<img class="img-fluid sarcatImg" src="{{site.baseurl}}/{{page.folder}}/SARCAT_stats_screen.png">
 </div>
 
 </div>
@@ -43,7 +45,7 @@ SARCAT is easy to set up, with just a single script to install and start the ser
 
 
 <div class="flexItem col-md-12">
-<img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/SARCAT_record_map_screen.png">
+<img class="img-fluid sarcatImg" src="{{site.baseurl}}/{{page.folder}}/SARCAT_record_map_screen.png">
 </div>
 
 
@@ -56,7 +58,7 @@ It all starts with the map.  The user drops a point on a map to start the record
 
 
 <div class="flexItem col-md-6">
-<img class="img-responsive sarcatImg" src="{{site.baseurl}}/{{page.folder}}/SARCAT_record_weather_screen.png">
+<img class="img-fluid sarcatImg" src="{{site.baseurl}}/{{page.folder}}/SARCAT_record_weather_screen.png">
 </div>
 
 </div>

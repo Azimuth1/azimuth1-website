@@ -3,17 +3,19 @@ published: true
 layout: post
 title: Designing a topo map for search and rescue
 subtitle: Using open map data to help save lives outdoors
-date: 2015-06-02 12:00:00
+date: 2015-06-02
 author: jason_dalton
 folder: blog/assets/2015-06-02-a-new-topo-map-for-saving-lives
 headerColor: '#000'
+headerImage: header.png
+tags: SAR geospatial
 ---
- 
-A child is lost in the forest.  An elderly dementia patient wanders away from home.  A hiker is overdue from a weekend outing.  These scenarios happen daily around the world and wilderness search and rescue teams are called in to find<!--more--> that missing person.  Wilderness SAR teams are specially trained to travel in small groups over varying terrain in all weather, day and night. The lives saved by SAR each year owe their safe return to the training, dedication, and compassion of a largely volunteer SAR response across the globe.  The mission of finding lost individuals often starts on a map.  Maps are used to find likely places where the lost person may have stopped, lost their way, or tried to reach, and so are used to prioritize search tasks for a search mission.  The same map is used in the field as team leaders navigate their way through the task, delineating which areas they have searched and where they have not.  A good map is critical to this accurate accounting of the search effort to ensure that the entire area is being covered appropriately. In the United States, the map most often used for search missions is the US Geological Survey (USGS) <a href="http://en.wikipedia.org/wiki/Quadrangle_%28geography%29" target="_blank">7.5 minute series topographic map</a>.  These maps have a long history of exhaustive work and meticulous detail that went into each map revision.    
+
+A child is lost in the forest.  An elderly dementia patient wanders away from home.  A hiker is overdue from a weekend outing.  These scenarios happen daily around the world and wilderness search and rescue teams are called in to find that missing person.  Wilderness SAR teams are specially trained to travel in small groups over varying terrain in all weather, day and night. The lives saved by SAR each year owe their safe return to the training, dedication, and compassion of a largely volunteer SAR response across the globe.  The mission of finding lost individuals often starts on a map.  Maps are used to find likely places where the lost person may have stopped, lost their way, or tried to reach, and so are used to prioritize search tasks for a search mission.  The same map is used in the field as team leaders navigate their way through the task, delineating which areas they have searched and where they have not.  A good map is critical to this accurate accounting of the search effort to ensure that the entire area is being covered appropriately. In the United States, the map most often used for search missions is the US Geological Survey (USGS) <a href="http://en.wikipedia.org/wiki/Quadrangle_%28geography%29" target="_blank">7.5 minute series topographic map</a>.  These maps have a long history of exhaustive work and meticulous detail that went into each map revision.    
 
 ## Then USGS updated their maps
 
-In 2009, the USGS began changing the style and delivery of their topo maps under the new <a href="http://nationalmap.gov/ustopo/" target="_blank">US Topo</a> program.  As changes in our environment appeared more rapidly, the USGS sought to streamline their map production process to increase production, save time, money, and labor. Several tradeoffs were made that impacted the usefullness of these maps for SAR purposes. The new US Topo map style has several cartographic improvements for readability on digital devices, and they are delivered in more flexible layered PDF files rather than fixed raster images.  However, many important features were removed or degraded that can impact the ability of SAR teams to accurately navigate and ensure that they have covered an area.
+In 2009, the USGS began changing the style and delivery of their topo maps under the new <a href="http://nationalmap.gov/ustopo/" target="_blank">US Topo</a> program.  As changes in our environment appeared more rapidly, the USGS sought to streamline their map production process to increase production, save time, money, and labor. Several tradeoffs were made that impacted the usefulness of these maps for SAR purposes. The new US Topo map style has several cartographic improvements for readability on digital devices, and they are delivered in more flexible layered PDF files rather than fixed raster images.  However, many important features were removed or degraded that can impact the ability of SAR teams to accurately navigate and ensure that they have covered an area.
 
 The new contour lines are algorithmically generated from digital elevation data rather than from manual photogrammetry.  Faster, cheaper, but lacks details for precise navigation in microterrain [^1].
 
@@ -22,8 +24,8 @@ The new contour lines are algorithmically generated from digital elevation data 
 
 <html>
 <div class="row row-centered mar2">
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster Contours</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/USGS_old1.png"></div>
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector Contours</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/USGS_new1.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster Contours</h4><img src="{{ site.baseurl }}/{{page.folder}}/USGS_old1.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector Contours</h4><img src="{{ site.baseurl }}/{{page.folder}}/USGS_new1.png"></div>
 </div>
 </html>
 
@@ -35,20 +37,20 @@ Utility lines, like trails, are often used by lost persons to travel.  They are 
 
 <html>
 <div class="row row-centered mar2">
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster utilities</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/USGS_old2.png"></div>
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector maps without utilities</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/USGS_new2.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster utilities</h4><img src="{{ site.baseurl }}/{{page.folder}}/USGS_old2.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector maps without utilities</h4><img src="{{ site.baseurl }}/{{page.folder}}/USGS_new2.png"></div>
 </div>
 </html>
 
-   
+
 
 Trails were removed from the new US Topo series - a critical feature to know about for search and rescue.
 
 
 <html>
 <div class="row row-centered mar2">
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster trails</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/USGS_old3.png"></div>
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector maps without trails</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/USGS_new3.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster trails</h4><img class="img-fluid" src="{{ site.baseurl }}/{{page.folder}}/USGS_old3.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector maps without trails</h4><img class="img-fluid" src="{{ site.baseurl }}/{{page.folder}}/USGS_new3.png"></div>
 </div>
 </html>
 
@@ -59,8 +61,8 @@ Buildings were removed from the new US Topo series.  They just change much faste
 
 <html>
 <div class="row row-centered mar2">
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster buildings</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/usgs-bldg-old.png"></div>
-<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector maps without  buildings</h4><img class="img-responsive" src="{{ site.baseurl }}/{{page.folder}}/usgs-bldg-new.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Pre-2009 Raster buildings</h4><img class="img-fluid" src="{{ site.baseurl }}/{{page.folder}}/usgs-bldg-old.png"></div>
+<div class="col-xs-6 col-centered pad0"><h4 class="text-center">Current Vector maps without  buildings</h4><img class="img-fluid" src="{{ site.baseurl }}/{{page.folder}}/usgs-bldg-new.png"></div>
 </div>
 </html>
 
@@ -105,7 +107,7 @@ You can access the new SAR map below and at <a href="http://sandlot.azimuth1.net
 SAR folks! Please give us your feedback and ideas to make this map more helpful in saving lives outdoors.   And look for our next post in this series where we detail the data, technology, and processing used to create these maps.
 
 #### Test drive our topo for the state of Virginia
-<iframe class='mapembed' width="800" height="380" src="http://sandlot.azimuth1.net/" frameborder="0" allowfullscreen></iframe>
+<iframe class='mapembed' width="800" height="380" src="http://totaltopo.findsar.com/services/totaltopo/map" frameborder="0" allowfullscreen></iframe>
 
 
 See [part 2]({% post_url 2015-06-07-sar-topo-tech-notes %}) of this article where we detail the tech approach to creating the SAR map.
@@ -121,4 +123,3 @@ See [part 2]({% post_url 2015-06-07-sar-topo-tech-notes %}) of this article wher
 [^1]: To which everyone says "So use GPS and you get that precision back."  Which is partly true, but even with the growth of GPS and GIS in SAR operations, there are still some real deficiencies.  Getting high quality maps onto GPS units is difficult.  Handheld units typically require expensive map upgrades or a complex series of steps to update your own map data.  Mobile phone GPS apps have the ability to display high quality maps, but require precaching of maps before going in the field since mobile coverage isn't usually available.  Then there's the issue of battery life.  Constant navigation over a 6-10 hour task would deplete most phone batteries.  Extra capacity battery cases, rechargers, solar chargers, etc just add to the already significant weight of gear carried by most field searchers.   Then there's the logistics of getting GPS track data back onto a central map at search base.  Without wifi, compliant software, etc, there are just too many possible devices and connections for a thinly staffed search base to accommodate most possibilities.  The future of mobile mapping in SAR is coming, but right now it stands on the weak shoulders of battery life and interoperability.  Then there's the issue of training.  If a team leader loses or breaks a GPS unit, we don't want them to be out of commission until a new one can be found.  The essential skills of precise land navigation with map and compass will be in our forseeable future, so we want to provide a map that searchers deserve.
 
 [^2]: There aren't any up to date sources of the high precision contour lines available to our knowledge, so we haven't been able to replace the contour lines.  The new <a href="http://www.geo-airbusds.com/worlddem/" target="_blank">WorldDEM</a> high resolution elevation data for the globe from Airbus that is coming available now might make the high resolution contours possible again.
-

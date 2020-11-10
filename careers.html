@@ -1,6 +1,72 @@
 ---
-layout: template
+layout: page
+title: Careers
 ---
+<!-- about-info -->
+<section class="about-info pt-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="about-info-text">
+                    <h2>Working at Azimuth1</h2>
+                    <p>Headquartered just outside our Nation's Capital, but working
+                      from across the globe, Azimuth1 has a great mix of challenging
+                      work and flexible lifestyle that can fit almost any situation.
+                      We are very family friendly, supporting adjusted schedules
+                      for childcare and pickup times.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+  {% include benefits.html %}
+</section>
+<section class="about-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="about-info-text">
+                    <p>We appreciate the benefits that can come from working from home
+                    like having no commute, fewer expenses for travel and business
+                    attire, plus the comfort and convenience.  Being a remote
+                    organization does come with challenges - you need to be self
+                    motivated, eager to communicate with your team in multiple
+                    channels to keep everyone
+                    aligned and working together to achive our goals.  If you are
+                    a top performer in your field, and would like to create amazing
+                    new tech with others who speak your language, this may be the
+                    place for you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about-area -->
+<section>
+  {% include travelflags.html %}
+</section>
+<section class="about-area grey-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 mb-40 mt-20">
+                <div class="section-title">
+                    <h2>Current Openings</h2>
+                </div>
+            </div>
+        </div>
 
-
-{% include careers.html %}
+        {% for job in site.data.jobposts %}
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 mb-40">
+                <div>
+                    </hr>
+                    <h3>{{ job.name }}</h3>
+                    <span>{{ job.description }}</span>
+                    <p><a href="{{ job.url }}">Learn more...</a></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

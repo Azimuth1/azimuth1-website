@@ -1,0 +1,14 @@
+- datascientist:
+  name: Senior Data Scientist
+  description: Using the skills, knowledge, and tools of data science, you will lead efforts to discover patterns in data that can directly be used to make better decisions for resource allocation, preventing fraud, and other improvemnts for our customers.
+  url: https://docs.google.com/document/d/135hWiisbvqNOkktuyXPp8wPc3i9TJmEQ2j6RcRzzzU8
+
+- mobiledev:
+  name: Mobile Developer
+  description: Use your knowledge of native app development for iOS and Android, design and implement interfaces for mapping and navigation.  Interface with our backend databases to deliver powerful tools right into our customers' hands.
+  url: https://docs.google.com/document/d/1iHQQDBXLTQx1yug-429h7H-MHbw8lFnljylXQUEPXzE
+
+- javascriptdev:
+  name: Full Stack JS Developer
+  description: Leverage the latest platforms for web application development to create fast, secure, and powerful data analytics applications online. Support our existing products and join a team developing new ones.
+  url: https://docs.google.com/document/d/1A-8nR98NqgLNPHjWHdabrBRnOU4QU7oxC3LeiSuJG0E

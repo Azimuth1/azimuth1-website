@@ -1,18 +1,16 @@
 ---
-layout: template
+layout: default
 ---
 
-
-
-
-
-{% include home.html %}
-{% include portfolio.html %}
-{% assign posts = site.posts %}
-{% include post_detail.html %}
-{% include affiliations.html %}
-
-<div class="pad2 bg-white small em text-center">
-    <p class="mar00"> We aim to see the world more clearly through advanced analytics.
-    <em>That's what we're passionate about, and that's what we're here to help you accomplish.</em> </p>
-</div>
+<main>
+    {% include slider.html %}
+    {% include about.html %}
+    {% include services.html %}
+    {% include countdown.html %}
+    {% include portfolios.html %}
+    {% include testimonials.html %}
+    {% include team_members.html %}
+    {% include call_to_action.html %}
+    {% include blog_area.html %}
+    {% include clients.html %}
+</main>

@@ -2,13 +2,15 @@
 published: true
 layout: post
 title: Bayesian updating for sensor fusion
-date: 2014-03-07 12:00:00
+date: 2014-03-07
 author: jason_dalton
 folder: blog/assets/2014-03-07-sensorbayes
 headerColor: '#fff'
+headerImage: header.png
+tags: data_science sensor_fusion
 ---
 
-Bayesian statistics are useful for handling uncertainty of outcomes in many situations. With the growth of small-sats, the latest generation of small and relatively cheap sensors for Earth imaging, the precision <!--more-->and resolution is far less than the best high-end commercial imaging, so there it becomes even more important to understand how to quantify and account for errors when detecting objects in these images. In the course of teaching spatial statistics for GeoINT, I've found that it's useful to have a good grasp of the concept of probability of detection, false positives, and how to bring that information together mathematically to estimate the posterior probabilities for detecting things from space.  
+Bayesian statistics are useful for handling uncertainty of outcomes in many situations. With the growth of small-sats, the latest generation of small and relatively cheap sensors for Earth imaging, the precision and resolution is far less than the best high-end commercial imaging, so there it becomes even more important to understand how to quantify and account for errors when detecting objects in these images. In the course of teaching spatial statistics for GeoINT, I've found that it's useful to have a good grasp of the concept of probability of detection, false positives, and how to bring that information together mathematically to estimate the posterior probabilities for detecting things from space.  
 
 ## Quick Start Guide
 
@@ -231,7 +233,7 @@ function drawVisualization() {
 
 ## What's this all about?
 
-All sensors and detectors used in environmental site characterization or GeoINT have an inherent probability of detection that is based on the attributes of the sensor. How sensitive it is, the internal electrical noise dampening, environmental factors, and operator proficiency all lead to an uncertain result when a sensor indicates the presence of some target of interest. This can be generalized to any sensor or anomaly detection system, whether automated, or human driven. There is some chance that the system will indicate the presense of an anomaly when it doesn't really exist. That is called a false positive, or a Type I error. This uncertainty in the results, plus the rarity of the target compounds means that even with a positive sensor response, the probability that the target is actually there can still be quite low. Many people find this difficult to understand, and while there are many descriptions and explanations of Bayes Theorem online, I find this calculator lets you explore different settings of your sensors and results, leading to a better undersanding of how to apply Bayes Theorem. Some good exercises to try:
+All sensors and detectors used in environmental site characterization or GeoINT have an inherent probability of detection that is based on the attributes of the sensor. How sensitive it is, the internal electrical noise dampening, environmental factors, and operator proficiency all lead to an uncertain result when a sensor indicates the presence of some target of interest. This can be generalized to any sensor or anomaly detection system, whether automated, or human driven. There is some chance that the system will indicate the presence of an anomaly when it doesn't really exist. That is called a false positive, or a Type I error. This uncertainty in the results, plus the rarity of the target compounds means that even with a positive sensor response, the probability that the target is actually there can still be quite low. Many people find this difficult to understand, and while there are many descriptions and explanations of Bayes Theorem online, I find this calculator lets you explore different settings of your sensors and results, leading to a better understanding of how to apply Bayes Theorem. Some good exercises to try:
 
 * Set a Sensor POD value of 0.5 and observe the effect this has on the Updated Probability.
 * Set a Sensor Reading to False and observe the effect this has on the Updated Probability.

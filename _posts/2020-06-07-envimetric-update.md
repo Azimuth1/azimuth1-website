@@ -3,14 +3,16 @@ published: true
 layout: post
 title: Incorporating site-specific analytical data and machine learning to predict environmental site conditions.
 subtitle: Modeling using previously collected data and the EnviMetric machine learning algorithm to garner new insights for contaminated properties.
-date: 2020-05-06 15:00:00
+date: 2020-05-06
 author: ryan_velazquez
 folder: blog/assets/2020-05-06-envimetric-update
 headerColor: '#FFFFFF'
+headerImage: header.png
 excerpt: 'Azimuth1 analyzes groundwater factors and correlation to plume dimensions in EnviMetric model.'
+tags: environment data_science
 ---
 
-![plume1]({{site.baseurl}}/{{page.folder}}/plume.jpg){:class="img-responsive" width="80%"}
+![plume1]({{site.baseurl}}/{{page.folder}}/plume.jpg){:class="img-fluid" max-width="80%"}
 
 EnviMetric makes intelligent predictions about the extent of groundwater contamination even when there is no available analytical data regarding contaminant concentrations. Factors such as the site location, release type, property use, and geologic setting are very predictive of how large a groundwater plume will be.
 

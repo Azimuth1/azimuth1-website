@@ -1,4 +1,3 @@
-
 azimuth1_team:
   name: The Azimuth1 Team
   web: http://www.azimuth1.com
@@ -6,7 +5,7 @@ azimuth1_team:
   bio: "The Azimuth1 team - smart and dedicated to solving problems in business, science, and tech. "
   title: " "
   pronoun: them
-  avatar: pics/bios/team_oct2017.jpg
+  image: pics/bios/team_oct2017.jpg
   twitter: Azimuth1Tech
   github: Azimuth1
   linkedin: company/azimuth1
@@ -18,7 +17,7 @@ jason_dalton:
   bio: "Runs the product and company strategy at Azimuth1."
   title: "Founder, CEO"
   pronoun: him
-  avatar: pics/bios/jason-dalton-photo.jpg
+  image: pics/bios/jason-dalton-photo.jpg
   twitter: jasonrdalton
   github: jasonrdalton
   linkedin: in/jasondalton
@@ -29,7 +28,7 @@ kyle_kalwarski:
   bio: "Kyle develops seriously wonderful software for geospatial mobile and web."
   title: "Sr Software Developer"
   pronoun: him
-  avatar: pics/bios/kyle-kalwarski-photo.jpg
+  image: pics/bios/kyle-kalwarski-photo.jpg
   twitter: KyleSkitol
   github: skitol
   linkedin: pub/kyle-kalwarski/2a/a22/62b
@@ -52,7 +51,7 @@ anna_milligan:
   title: "Environmental Analyst"
   pronoun: her
   web:
-  avatar: pics/bios/anna-milligan-photo.jpg
+  image: pics/bios/anna-milligan-photo.jpg
   twitter:
   linkedin: in/anna-harrington-5ab86599
 
@@ -63,7 +62,7 @@ robert_sellers:
   bio: "Robert combines spatial analysis, data science, and environmental analysis to do good deeds."
   title: "Data Scientist"
   pronoun: him
-  avatar: pics/bios/robert_profile_pic.jpg
+  image: pics/bios/robert_profile_pic.jpg
   twitter: jasonrdalton
   github: robertsellers
   linkedin: in/robertwsellers
@@ -75,6 +74,56 @@ ryan_velazquez:
   bio: "Ryan wrangles insight from data using GIS, Python, and web developement."
   title: "Data Scientist"
   pronoun: him
-  avatar: pics/bios/ryan-velazquez-photo.jpg
+  image: pics/bios/ryan-velazquez-photo.jpg
   github: rdvelazquez
   linkedin: in/ryan-velazquez
+
+monica_powell:
+    name: Monica Powell
+    email: monica@aboutmonica.com
+    facebook: http://facebook.com/monica_powell
+    twitter: http://twitter.com/monica_powell
+    instagram: http://instagram.com/monica_powell
+    reddit: http://reddit.com/monica_powell
+    bio: Monica Powell is a web technologist that cares about increasing the visiblity of underestimated individuals in technology.
+    image: /assets/images/author-img1.jpg
+
+themeix:
+    name: Themeix
+    email: themeix@gmail.com
+    facebook: http://facebook.com/themeix
+    twitter: http://twitter.com/themeix
+    instagram: http://instagram.com/themeix
+    reddit: http://reddit.com/themeix
+    bio: Themeix received the &#35;GIRLBOSS award from Sophia Amoruso’s Girl Boss Foundation. She’s currently focusing on making tech more.
+    image: /assets/images/author-img11.jpg
+
+waltor_gottera:
+    name: Waltor Gottera
+    email: waltorgottera@gmail.com
+    facebook: http://facebook.com/waltorgottera
+    twitter: http://twitter.com/waltorgottera
+    instagram: http://instagram.com/waltorgottera
+    reddit: http://reddit.com/waltorgottera
+    bio: Waltor Gottera received the &#35;GIRLBOSS award from Sophia Amoruso’s Girl Boss Foundation. She’s currently focusing on making tech more.
+    image: /assets/images/author-img6.jpg
+
+ecuelass_chapman:
+    name: Ecuelass Chapman
+    email: ecuelasschapman@gmail.com
+    facebook: http://facebook.com/wcuelass
+    twitter: http://twitter.com/wcuelass
+    instagram: http://instagram.com/wcuelass
+    reddit: http://reddit.com/wcuelass
+    bio: ecuelass_chapman received the &#35;GIRLBOSS award from Sophia Amoruso’s Girl Boss Foundation. She’s currently focusing on making tech more.
+    image: /assets/images/author-img7.jpg
+
+aaron_potts:
+    name: Aaron Potts
+    email: aaron_potts@gmail.com
+    facebook: http://facebook.com/aaronpotts
+    twitter: http://twitter.com/aaronpotts
+    instagram: http://instagram.com/aaronpotts
+    reddit: http://reddit.com/aaronpotts
+    bio: Aaron Potts received the &#35;GIRLBOSS award from Sophia Amoruso’s Girl Boss Foundation. She’s currently focusing on making tech more.
+    image: /assets/images/author-img2.jpg

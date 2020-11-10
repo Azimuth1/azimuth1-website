@@ -3,14 +3,16 @@ published: true
 layout: post
 title: FIND software tested at NPS SAR Exercise
 subtitle: Building a field deployable system for search and rescue incident management
-date: 2016-05-31 12:00:00
+date: 2016-05-31
 author: jason_dalton
 folder: blog/assets/2016-05-17-find_sar_sim
 headerColor: '#fff'
 replaceHeaderImage: '#334d00'
+headerImage: header.png
+tags: SAR events
 ---
 
-Two weeks ago, Azimuth1 supported search and rescue teams from across Virginia and North Carolina at the [Blue Ridge Parkway Search and Rescue Exercise (SAREX)](https://www.evensi.us/2016-blue-ridge-parkway-sarex-blue-ridge-music-center/170102646){:target="_blank"}, a simulated lost person search mission sponsored and run by the National Park Service. Read all about the experience in this account of the exercise by our team.  <!--more-->  
+Two weeks ago, Azimuth1 supported search and rescue teams from across Virginia and North Carolina at the [Blue Ridge Parkway Search and Rescue Exercise (SAREX)](https://www.evensi.us/2016-blue-ridge-parkway-sarex-blue-ridge-music-center/170102646){:target="_blank"}, a simulated lost person search mission sponsored and run by the National Park Service. Read all about the experience in this account of the exercise by our team.
 
 ![SarSim]({{site.baseurl}}/{{page.folder}}/SarSim.jpg)
 
@@ -85,4 +87,4 @@ The FIND software is part of a trio of tools developed for SAR use.
 2. The SARCAT records management system for agencies who need to track search incidents.  It has all the data entry needed to report to the International Search and Rescue Incident Database (ISRID).  SARCAT is free and open source.
 3. The FIND search management system.  Desktop/laptop server application that hosts a search management system for planning, tracking, and managing a lost person search.
 
-<img style="float: right" src="{{site.baseurl}}/{{page.folder}}/nps_sign.jpg">
+<img style="img-fluid float: right" src="{{site.baseurl}}/{{page.folder}}/nps_sign.jpg">
