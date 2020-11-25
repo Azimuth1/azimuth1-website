@@ -1,9 +1,9 @@
 ---
 layout: featured
-title: Product Design
+title: Partnerships
 icon: /assets/img/icons/design.svg
 image: /assets/img/services/02.jpg
-description: Condimentum consectetur quaerat parturient denouncing pleasure and praising pain was born and I will give you a complete.
+description: We work with companies who need extra technology expertise to reach their business goals.  We are providing product design, development, operations, and maintenance for several commercial products in the environmental and national security space.
 ---
 
 <div class="row">
