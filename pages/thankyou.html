@@ -9,30 +9,19 @@ title: Thank you!
 <div class="basic-blog-area gray-bg pt-100 pb-100">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 blog-post-items">
-              {% for post in site.posts %}
-                <div class="blog-wrapper mb-40">
-                    <div class="blog-thumb">
-                        <a href="{{post.url}}">
-                            <img class="img-fluid" src="{{site.baseurl}}/{{post.folder}}/{{post.headerImage}}" alt="{{post.title}}"/>
-                        </a>
-                    </div>
-                    <div class="meta-info">
-                        <ul>
-                            <li class="posts-time">{{post.date | date_to_long_string}}</li>
-                        </ul>
-                    </div>
-                    <div class="blog-content">
-                        <h2 class="blog-title">
-                            <a href="{{post.url}}">{{post.title}}</a>
-                        </h2>
-                        <p>{{post.excerpt | strip_html | truncatewords:"30"}}</p>
-                    </div>
-                    <div class="link-box">
-                        <a href="{{post.url}}">Read More</a>
-                    </div>
-                </div>
-              {% endfor %}
+            <div class="col-lg-8">
+              <p>Thank you for learning more about Azimuth1 and how we help you work
+                smarter using AI and a systems approach to problem solving.</p>
+              <p>Here are some other things you shoudl check out
+                * Our whitepaper on data driven environmental modeling
+                * Our video on how EnviMetric can save you time and money
+                * Our portfolio of products by industry:
+                    *  [Environment]({% link /environmental-sciences.html %})
+                    *  [Public Safety]({% link /public-safety.html %})
+                    *  [National Security]({% link /nation-security.html %})
+              </p>
+
+
              {% include pagination.html %}
             </div>
             <div class="col-lg-4 sm-mt sidebar-blog right-side">
