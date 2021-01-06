@@ -13,8 +13,8 @@
   submenu:
     - text: About
       url: /about
-    #- text: Our Team
-    #  url: /team
+    - text: Our Team
+      url: /team
     - text: Careers
       url: /careers
 - text: Blog
