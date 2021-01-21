@@ -1,0 +1,53 @@
+---
+layout: page
+title: People come first
+---
+<!-- about-info -->
+<section class="about-info pt-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="about-info-text">
+                    <h2>Our Team</h2>
+                    <p>Something about our team.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about-area -->
+<section class="about-area grey-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div>
+                    <img src="{{site.baseurl}}/assets/img/team/team-collage.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about-area grey-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 mb-40 mt-20">
+                <div class="section-title">
+                    <h2>Current Openings</h2>
+                </div>
+            </div>
+        </div>
+
+        {% for job in site.data.jobposts %}
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 mb-40">
+                <div>
+                    </hr>
+                    <h3>{{ job.name }}</h3>
+                    <span>{{ job.description }}</span>
+                    <p><a href="{{ job.url }}">Learn more...</a></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
