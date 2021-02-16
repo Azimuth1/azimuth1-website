@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: Azimuth1 announces new Advisory Board
 subtitle: Top leaders from geospatial, environmental, and public safety to serve as advisory board for Azimuth1.
