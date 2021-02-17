@@ -69,7 +69,7 @@ Our Advisory Board reflects our values and areas of expertise as well as bringin
 </section>
 
 
-On behalf of the company, I want to thank each Board member and say how excited we are to have you on our corner!
+On behalf of the company, I want to thank each Board member and say how excited we are to have you in our corner!
 
 Jason Dalton
 President, CEO
