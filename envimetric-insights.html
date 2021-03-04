@@ -3,24 +3,25 @@ layout: landing
 title: Data driven insights with EnviMetric
 ---
 <!-- services-area -->
-<script>// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-  'use strict';
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (() => {
+    'use strict';
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation');
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation');
 
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms).forEach((form) => {
-    form.addEventListener('submit', (event) => {
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-    }, false);
-  });
-})();
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms).forEach((form) => {
+      form.addEventListener('submit', (event) => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  })();
 </script>
 <div class="container-fluid h-100">
   <div class="row">
@@ -67,7 +68,16 @@ title: Data driven insights with EnviMetric
             <button class="btn btn-success" type="submit">Submit form</button>
           </div>
         </form>
-
+        <ol>
+          <li>We'll send you a one page template to prepare the site info
+            you'll need for the test drive. It's basic info like coordinates of
+            the source zone, contamininant type, soil profile, etc.</li>
+          <li>We'll schedule a video call with you so we can walk you through
+          entering the site data into the secure portal.</li>
+          <li>We'll run the model right in that call, and display the results
+          on a map.  You'll be able to see and compare the output with your own
+          field assessment.</li>
+        </ol>
       </div>
     </div>
     <div class="col-md-6">
@@ -81,7 +91,8 @@ title: Data driven insights with EnviMetric
           how deep does it go. By using this machine learning approach, you can leverage
           all of the millions of bits of information gained from years of site investigation,
           and fit it to your target site. Try out the app by filling out the form to set up a test run.</p>
-          <p><strong>The secure portal lets you run your own advanced modeling right from your browser</strong><p>
+        <p><strong>The secure portal lets you run your own advanced modeling right from your browser</strong>
+        <p>
           <img src="{{site.baseurl}}/assets/img/services/envimetric-screenshot.png" class="img-fluid rounded border border-warning shadow p-3 mb-5 bg-white rounded" alt="Screenshot of EnviMetric application">
       </div>
     </div>
