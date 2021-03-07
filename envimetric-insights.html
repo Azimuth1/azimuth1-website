@@ -23,10 +23,24 @@ title: Data driven insights with EnviMetric
     });
   })();
 </script>
+<script>
+  $('#mc-embedded-subscribe-form').submit(function (event) {
+    event.preventDefault();
+    var form = $(this);
+    $.ajax({
+      type: 'POST',
+      url: 'https://hooks.zapier.com/hooks/catch/4625493/onxan7f/',
+      data: form.serialize(),
+      success: function (data) {
+        window.open('/thankyou','_blank')
+      },
+    });
+  });
+</script>
 <div class="container-fluid h-100">
   <div class="row">
     <div class="col-md-6 bg-secondary">
-      <div class="servicee-sidebar m-3 mx-auto">
+      <div id="mc-embedded-envimetric-form" class="servicee-sidebar m-3 mx-auto">
         <h3 class="mb-3">Contact us to get started today</h3>
         <form class="row g-3 mb-3 needs-validation">
           <div class="col-md-12 position-relative">
