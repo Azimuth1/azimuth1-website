@@ -43,7 +43,7 @@ Our Advisory Board reflects our values and areas of expertise as well as bringin
         spent a career in public service at the US Geological Survey, the Nation's largest natural resource and civilian mapping agency.
         As Associate Director of Geography at USGS, Ms Ryan was responsible for making the global Landsat satellite imagery program and
         millions of satellite images available to the public, spurring an entire industry of public and commercial imagery analysis and
-        providing a global perspective to policy making.  Her work addresses critical isuses in agriculture, climate change, disaster
+        providing a global perspective to policy making.  Her work addresses critical issues in agriculture, climate change, disaster
         planning, energy, health, and water resources.
       </div>
       <div class="col-sm">
