@@ -1,53 +1,37 @@
 <html>
-  <!-- Load Stripe.js on your website. -->
-  <script src="https://js.stripe.com/v3"></script>
+<head>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+</head>
+<body>
+  <p><p><p>
+  <center>
+<button id="customButton">Make Payment</button>
+<script>
+var handler = StripeCheckout.configure({
+  key: 'pk_live_6ugwDfhOUnEOXYeZKb2eaazB',
+  image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+  locale: 'auto',
+  token: function(token) {
+    // You can access the token ID with `token.id`.
+    // Get the token ID to your server-side code for use.
+  }
+});
 
-  <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-  <button
-    style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-    id="checkout-button-price_1IZEsCDwu9VRL3WQl9EcPTYz"
-    role="link"
-    type="button"
-  >
-    Checkout
-  </button>
+document.getElementById('customButton').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'Azimuth1, LLC',
+    description: 'EnviMetric software license - Single Project',
+    amount: 250000
+  });
+  e.preventDefault();
+});
 
-  <div id="error-message"></div>
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+  handler.close();
+});
+</script>
 
-  <script>
-  (function() {
-    var stripe = Stripe('pk_live_6ugwDfhOUnEOXYeZKb2eaazB');
-
-    var checkoutButton = document.getElementById('checkout-button-price_1IZEsCDwu9VRL3WQl9EcPTYz');
-    checkoutButton.addEventListener('click', function () {
-      /*
-       * When the customer clicks on the button, redirect
-       * them to Checkout.
-       */
-      stripe.redirectToCheckout({
-        lineItems: [{price: 'price_1IZEsCDwu9VRL3WQl9EcPTYz', quantity: 1}],
-        mode: 'payment',
-        /*
-         * Do not rely on the redirect to the successUrl for fulfilling
-         * purchases, customers may not always reach the success_url after
-         * a successful payment.
-         * Instead use one of the strategies described in
-         * https://stripe.com/docs/payments/checkout/fulfill-orders
-         */
-        successUrl: window.location.protocol + '//azimuth1.com/success',
-        cancelUrl: window.location.protocol + '//azimuth1.com/canceled',
-      })
-      .then(function (result) {
-        if (result.error) {
-          /*
-           * If `redirectToCheckout` fails due to a browser or network
-           * error, display the localized error message to your customer.
-           */
-          var displayError = document.getElementById('error-message');
-          displayError.textContent = result.error.message;
-        }
-      });
-    });
-  })();
-  </script>
+</body>
 </html>
