@@ -1,12 +1,119 @@
-<html>
-<head>
-  <script src="https://checkout.stripe.com/checkout.js"></script>
-</head>
-<body>
-  <p><p><p>
-  <center>
-<button id="customButton">Make Payment</button>
+---
+layout: landing
+title: EnviMetric sign up and purchase single project license
+---
+<!-- services-area -->
+<script src="{{site.baseurl}}/assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+<div class="container-fluid h-100">
+  <div class="row">
+    <div class="col-md-6 bg-secondary">
+      <div class="servicee-sidebar m-3 mx-auto justify-content-center">
+        <h3 class="mb-3 justify-content-center">Purchase a single project software license</h3>
+        <form id="mc-embedded-envimetric-form" name="mc-embedded-envimetric-form" class="row g-3 mb-3 needs-validation">
+          <div class="col-md-12 position-relative">
+            <div class="form-outline">
+              <input type="text" class="form-control" name="FirstName" id="FirstName" value="" required />
+              <label for="FirstName" class="form-label text-light">First name</label>
+              <div class="invalid-tooltip">Please provide your first name</div>
+            </div>
+          </div>
+          <div class="col-md-12 position-relative">
+            <div class="form-outline">
+              <input type="text" class="form-control" name="LastName" id="LastName" value="" required />
+              <label for="LastName" class="form-label text-light">Last name</label>
+              <div class="invalid-tooltip">Please provide your last name</div>
+            </div>
+          </div>
+          <div class="col-md-12 position-relative">
+            <div class="form-outline">
+              <input type="text" class="form-control" name="Phone" id="Phone" required />
+              <label for="Phone" class="form-label text-light">Phone number</label>
+              <div class="invalid-tooltip">Please provide a valid phone number.</div>
+            </div>
+          </div>
+          <div class="col-md-12 position-relative">
+            <div class="form-outline">
+              <input type="text" class="form-control" name="Email" id="Email" required />
+              <label for="Email" class="form-label text-light">Work Email</label>
+              <div class="invalid-tooltip">Please provide a valid business email address.</div>
+            </div>
+          </div>
+          <div class="col-md-12 position-relative">
+            <div class="form-outline">
+              <input type="text" class="form-control" name="Company" id="Company" required />
+              <label for="Company" class="form-label text-light">Company</label>
+              <div class="invalid-tooltip">Please provide your company name.</div>
+            </div>
+          </div>
+          <div class="col-12 pt-2">
+            <button class="btn btn-green" type="submit">Submit form</button>
+          </div>
+        </form>
+        <h4 class="text-light">How it works</h4>
+        <ul class="mt-3 list-unstyled">
+          <li class="flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <b class="text-white">Step1: Get the one page template</b>
+            </div>
+            <p class="mb-1 text-light">This will allow you to easily prepare the site info
+              you'll need for the test drive. It's basic info like coordinates of
+              the source zone, contamininant type, soil profile, etc.</p>
+          </li>
+          <li href="#" class="flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <b class="text-white">Step 2: Join a scheduled video call</b>
+            </div>
+            <p class="mb-1 text-light">This is so we can walk you through
+              entering the site data into the secure portal.</p>
+          </li>
+          <li href="#" class="flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <b class="mb-1 text-white">Step 3: Run the model with us</b>
+            </div>
+            <p class="mb-1 text-light">This happens right in the first call. We'll display your results
+              on a map and you'll be able to see and compare the output with your own
+              field assessment.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="service-details mt-3 mb-40">
+        <h4 class="mb-4">Test Drive EnviMetric on a Complimentary Completed Site</h4>
+        <p class="text-dark">EnviMetric is the premier site investigation tool
+          that allows you to perform a rapid computerized study of an area to
+          compare to sampling and create what-if scenarios. It takes a data driven
+          approach that compiles all of the discoveries and learning from thousands
+          of prior sites into a single model that describes where the affected
+          area is - how far from the origin, how widely is it dispersed, and how
+          deep does it go. The secure portal lets you run your own advanced modeling
+          right from your browser, with minimal inputs required.
+        </p>
+
+        <p>
+          <button id="customButton">Make Payment</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
+  $('#mc-embedded-envimetric-form').submit(function (event) {
+    event.preventDefault();
+    var form = $(this);
+    $.ajax({
+      type: 'POST',
+      url: 'https://hooks.zapier.com/hooks/catch/4625493/onxan7f/',
+      data: form.serialize(),
+      success: function (data) {
+        //window.open('/thankyou')
+        window.location = '/thankyou'
+      },
+    });
+  });
+
 var handler = StripeCheckout.configure({
   key: 'pk_live_6ugwDfhOUnEOXYeZKb2eaazB',
   image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
@@ -32,6 +139,3 @@ window.addEventListener('popstate', function() {
   handler.close();
 });
 </script>
-
-</body>
-</html>
