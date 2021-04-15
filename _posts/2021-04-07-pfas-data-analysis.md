@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: How data science provides a new view into PFAS contaminated sites 
+title: How data science provides a new view into PFAS contaminated sites
 subtitle: Azimuth1 adds hundreds of PFAS sites' data to the EnviMetric database.
 date: 2021-04-07
 author: anna_harrington
@@ -11,7 +11,7 @@ headerImage: 'header.png'
 ---
 
 
-Per- and polyfluoroalkyl substances (PFAS) are a suite of chemicals that have been emerging contaminants of concern in recent years.  PFAS chemicals have historically been used in non-stick and protective coatings, waterproofing fabrics, fire-fighting foams, and other industrial settings.  These chemicals are persistent in the environment (they don’t break down and can accumulate over time) and in 2016 the USEPA issued guidance for two of the most common PFAS chemicals (PFOA and PFOS). 
+Per- and polyfluoroalkyl substances (PFAS) are a suite of chemicals that have been emerging contaminants of concern in recent years.  PFAS chemicals have historically been used in non-stick and protective coatings, waterproofing fabrics, fire-fighting foams, and other industrial settings.  These chemicals are persistent in the environment (they don’t break down and can accumulate over time) and in 2016 the USEPA issued guidance for two of the most common PFAS chemicals (PFOA and PFOS).
 
 As PFAS are relatively new contaminants on the scene in the environmental remediation industry, Azimuth1 was interested in learning how the behavior of PFAS at groundwater impacted sites differs from more traditional contaminants of concern.  To answer this question, we examined data from more than 500 groundwater sites across the country which have PFAS contamination.  We looked at data from 48 states and at contaminated sites ranging from airports to fire stations to a NASA facility.  To understand  how PFAS contaminant plumes compare to other contaminant site data from across the country, we referenced our EnviMetric database, which contains information from more than 86,000 contaminated sites.  We developed this database with support from the National Science Foundation and use it to make predictions about contaminant behavior at sites currently involved in investigation efforts.
 
@@ -28,7 +28,7 @@ As PFAS are relatively new contaminants on the scene in the environmental remedi
 
 ![I1]({{site.baseurl}}/{{page.folder}}/image1.jpg){:class="img-fluid" width="80%"}
 
-This figure shows the relationship between mode plume dimensions of different contaminant types (scale 1:2072). 
+This figure shows the relationship between mode plume dimensions of different contaminant types (scale 1:2072).
 
 #### PFAS by physiographic region:
 
@@ -38,7 +38,7 @@ The three physiographic regions of note for the largest plume dimensions are Bas
 
 Green regions indicate the largest PFAS plume dimensions occur in these physiographic regions.
 
-#### PFAS by soil type: 
+#### PFAS by soil type:
 
 The largest PFAS plume dimensions are found at sites with sand or gravel in the subsurface.  No surprise there!
 
@@ -227,9 +227,5 @@ We’ve quantitatively confirmed from this analysis that standard practices from
 
 **How does this data analysis compare to your experience with PFAS contamination?
 Are there other questions you wished we had answered?
-Do you have a site with PFAS contamination where machine learning could help understand the scope of contamination? 
+Do you have a site with PFAS contamination where machine learning could help understand the scope of contamination?
 Let us know! Email us at contact@azimuth1.com**
-
-
-
-
