@@ -180,16 +180,16 @@ Sites were broken down by the type of release event/site description.
 
 |Site Description|Mean Plume Length (ft)|Mean Plume Width (ft)|
 |--|--|--|
-|WasteWater Treatment Plant|882.2559|338.5547|
-|Plane Crash Site|1972.997|882.1639|
-|Industrial/Commercial|1065.153|292.0525|
-|Firefighting Foam Application- Military Installment|1418.512|743.5545|
-|Firefighting Foam Application- Military and Airport|866.8721|512.5722|
-|Firefighting Foam Application- Airport|1451.36|974.5373|
-|Fire Fighting Training Location|4218.342|2183.166|
-|Chemical Storage|735.9799|348.4342|
-|Drainage Pond|878.9827|368.9509|
-|Unknown|90.55088|56.85872|
+|WasteWater Treatment Plant|882|338|
+|Plane Crash Site|1972|882|
+|Industrial/Commercial|1065|292|
+|Firefighting Foam Application- Military Installment|1418|743|
+|Firefighting Foam Application- Military and Airport|866|512|
+|Firefighting Foam Application- Airport|1451|974|
+|Fire Fighting Training Location|4218|2183|
+|Chemical Storage|735|348|
+|Drainage Pond|878|368|
+|Unknown|90|56|
 
 Table 7
 
