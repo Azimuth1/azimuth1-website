@@ -11,7 +11,7 @@ headerImage: header.png
 ---
 
 We're excited to welcome Amanda West to the Azimuth1 team! Amanda is a data scientist working out of
-Boulder, Colorado and will be focusing on our public health and safety projects detectign fraud in
+Boulder, Colorado and will be focusing on our public health and safety projects detecting fraud in
 medical device imports and registrations.
 
 In addition to data science, Amanda brings a background in international affairs, technical writing, and programming.
