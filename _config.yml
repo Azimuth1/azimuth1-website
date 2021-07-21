@@ -2,7 +2,7 @@ title: "Azimuth1 -  Geospatial Analytics | See your world more clearly"
 email: "contact@azimuth1.com"
 description: >- # this means to ignore newlines until "baseurl:"
  Azimuth1 - See your world more clearly
- baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.azimuth1.com" # the base hostname & protocol for your site, e.g. http://example.com or  https://tradejk.netlify.com
 facebook_url: https://www.facebook.com/Azimuth1Tech
 twitter_url: https://twitter.com/Azimuth1Tech
