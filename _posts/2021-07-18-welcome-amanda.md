@@ -5,7 +5,7 @@ title: Amanda West joins the Azimuth1 team
 subtitle: Amanda is a data scientist with experience in visualization, economics, and deep learning.
 date: 2021-07-18
 author: jason_dalton
-folder: blog/assets/2019-07-01-welcome-ryan
+folder: blog/assets/2021-07-17-welcome-amanda
 headerColor: '#FFFFFF'
 headerImage: header.png
 ---
