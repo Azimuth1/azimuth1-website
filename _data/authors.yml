@@ -77,3 +77,14 @@ ryan_velazquez:
   image: pics/bios/ryan-velazquez-photo.jpg
   github: rdvelazquez
   linkedin: in/ryan-velazquez
+
+amanda_west:
+  name: Amanda West
+  web:
+  email: amanda.west@azimuth1.com
+  bio: "Amanda uses data as a guide to understanding how the world works."
+  title: "Data Scientist"
+  pronoun: her
+  image: pics/bios/amanda_west_profile_pic.jpg
+  github: amawest
+  linkedin: in/amawest
