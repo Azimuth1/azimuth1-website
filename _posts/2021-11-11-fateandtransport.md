@@ -42,29 +42,31 @@ The EnviMetric model can output two results- an unknown source model and an unkn
 ## Machine learning vs fate and transport: pros and cons
 
 ![I6]({{site.baseurl}}/{{page.folder}}/procon.png){:class="img-fluid" width="80%"}
+ 
+ 
 **Interested in trying out EnviMetric?** [**Get started today!**](https://www.azimuth1.com/envimetric-insights.html)
 
-## Our suggested resources
+## Some resources to check out
 ### Fate and transport software options:
 
-[Groundwater Modeling System (GMS)](https://www.aquaveo.com/software/gms-groundwater-modeling-system-introduction): a groundwater modeling interface based upon MODFLOW]
-[MODFLOW and MODPATH](https://www.usgs.gov/mission-areas/water-resources/science/modflow-and-related-programs?qt-science_center_objects=0#qt-science_center_objects): USGS’s modular hydrologic modeling tool for predicting groundwater conditions
-[BIOSCREEN](https://www.epa.gov/water-research/bioscreen-natural-attenuation-decision-support-system): for simulating natural attenuation remediation of dissolved hydrocarbons
-[BIOCHLOR](https://www.epa.gov/water-research/biochlor-natural-attenuation-decision-support-system): for simulating natural attenuation remediation of dissolved solvents
+* [Groundwater Modeling System (GMS)](https://www.aquaveo.com/software/gms-groundwater-modeling-system-introduction): a groundwater modeling interface based upon MODFLOW]
+* [MODFLOW and MODPATH](https://www.usgs.gov/mission-areas/water-resources/science/modflow-and-related-programs?qt-science_center_objects=0#qt-science_center_objects): USGS’s modular hydrologic modeling tool for predicting groundwater conditions
+* [BIOSCREEN](https://www.epa.gov/water-research/bioscreen-natural-attenuation-decision-support-system): for simulating natural attenuation remediation of dissolved hydrocarbons
+* [BIOCHLOR](https://www.epa.gov/water-research/biochlor-natural-attenuation-decision-support-system): for simulating natural attenuation remediation of dissolved solvents
 
 
 ### For more info on ML:
  
-[Wild ML Blog](http://www.wildml.com/)
-[AWS Machine Learning blog](https://aws.amazon.com/blogs/machine-learning/)
-[Github machine learning repositories](https://github.com/search?o=desc&q=topic%3Amachine-learning+&s=stars&type=Repositories&utf8=%E2%9C%93)
+* [Wild ML Blog](http://www.wildml.com/)
+* [AWS Machine Learning blog](https://aws.amazon.com/blogs/machine-learning/)
+* [Github machine learning repositories](https://github.com/search?o=desc&q=topic%3Amachine-learning+&s=stars&type=Repositories&utf8=%E2%9C%93)
 
 
 ### For more info on fate and transport:
 
-[Colorado School of Mines Integrated Groundwater Modeling Center](https://igwmc.mines.edu/)
-[Ohio EPA Ground Water Flow and Fate and Transport Modeling Guidance Doc](https://www.epa.state.oh.us/portals/28/documents/TGM-14_final1107W.pdf)
-[USGS Modeling Software homepage](https://water.usgs.gov/software/)
+* [Colorado School of Mines Integrated Groundwater Modeling Center](https://igwmc.mines.edu/)
+* [Ohio EPA Ground Water Flow and Fate and Transport Modeling Guidance Doc](https://www.epa.state.oh.us/portals/28/documents/TGM-14_final1107W.pdf)
+* [USGS Modeling Software homepage](https://water.usgs.gov/software/)
 
 
 
