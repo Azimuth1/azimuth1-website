@@ -30,7 +30,6 @@ Machine learning is a branch of artificial intelligence which focuses on the use
 
 To develop EnviMetric, we compiled and augmented a database containing the findings from thousands of contaminated site investigations and then applied a machine learning model.  By applying machine learning to the knowledge gained from thousands of previous site investigations, we can leverage thousands of observations to then predict contaminant dispersion at uncharacterized sites.
 
-![I4]({{site.baseurl}}/{{page.folder}}/ml2.png){:class="img-fluid" width="80%"}
 
 The machine learning algorithm is trained using subsets of the database containing similar sites; the algorithm then produces a statistical prior probability model automatically.    The algorithm’s purpose is not to predict exactly the resulting contaminated zone, but to provide the weight of evidence from many previously observed cases, and serve as a starting point for further refinement, reducing uncertainty and providing confidence bounds on the extent or source of a known contaminant.  Using many observations serves to filter out variation and determine there are consistent migration patterns that can be used to guide a site investigation.
 
@@ -49,24 +48,24 @@ The EnviMetric model can output two results- an unknown source model and an unkn
 ## Some resources to check out
 ### Fate and transport software options:
 
-* [Groundwater Modeling System (GMS)](https://www.aquaveo.com/software/gms-groundwater-modeling-system-introduction): a groundwater modeling interface based upon MODFLOW]
-* [MODFLOW and MODPATH](https://www.usgs.gov/mission-areas/water-resources/science/modflow-and-related-programs?qt-science_center_objects=0#qt-science_center_objects): USGS’s modular hydrologic modeling tool for predicting groundwater conditions
-* [BIOSCREEN](https://www.epa.gov/water-research/bioscreen-natural-attenuation-decision-support-system): for simulating natural attenuation remediation of dissolved hydrocarbons
-* [BIOCHLOR](https://www.epa.gov/water-research/biochlor-natural-attenuation-decision-support-system): for simulating natural attenuation remediation of dissolved solvents
+- [Groundwater Modeling System (GMS)](https://www.aquaveo.com/software/gms-groundwater-modeling-system-introduction): a groundwater modeling interface based upon MODFLOW]
+- [MODFLOW and MODPATH](https://www.usgs.gov/mission-areas/water-resources/science/modflow-and-related-programs?qt-science_center_objects=0#qt-science_center_objects): USGS’s modular hydrologic modeling tool for predicting groundwater conditions
+- [BIOSCREEN](https://www.epa.gov/water-research/bioscreen-natural-attenuation-decision-support-system): for simulating natural attenuation remediation of dissolved hydrocarbons
+- [BIOCHLOR](https://www.epa.gov/water-research/biochlor-natural-attenuation-decision-support-system): for simulating natural attenuation remediation of dissolved solvents
 
 
 ### For more info on ML:
  
-* [Wild ML Blog](http://www.wildml.com/)
-* [AWS Machine Learning blog](https://aws.amazon.com/blogs/machine-learning/)
-* [Github machine learning repositories](https://github.com/search?o=desc&q=topic%3Amachine-learning+&s=stars&type=Repositories&utf8=%E2%9C%93)
+- [Wild ML Blog](http://www.wildml.com/)
+- [AWS Machine Learning blog](https://aws.amazon.com/blogs/machine-learning/)
+- [Github machine learning repositories](https://github.com/search?o=desc&q=topic%3Amachine-learning+&s=stars&type=Repositories&utf8=%E2%9C%93)
 
 
 ### For more info on fate and transport:
 
-* [Colorado School of Mines Integrated Groundwater Modeling Center](https://igwmc.mines.edu/)
-* [Ohio EPA Ground Water Flow and Fate and Transport Modeling Guidance Doc](https://www.epa.state.oh.us/portals/28/documents/TGM-14_final1107W.pdf)
-* [USGS Modeling Software homepage](https://water.usgs.gov/software/)
+- [Colorado School of Mines Integrated Groundwater Modeling Center](https://igwmc.mines.edu/)
+- [Ohio EPA Ground Water Flow and Fate and Transport Modeling Guidance Doc](https://www.epa.state.oh.us/portals/28/documents/TGM-14_final1107W.pdf)
+- [USGS Modeling Software homepage](https://water.usgs.gov/software/)
 
 
 
