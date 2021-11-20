@@ -57,7 +57,7 @@ The EnviMetric model can output two results- an unknown source model and an unkn
 
 ### For more info on ML:
 
-- [Wild ML Blog](http://www.wildml.com/)
+- [KD Nuggets Blog](https://www.kdnuggets.com/)
 
 - [AWS Machine Learning blog](https://aws.amazon.com/blogs/machine-learning/)
 
