@@ -83,7 +83,7 @@ We post anonymized information about all law enforcement requests in our transpa
 If we have a good faith belief that there is an emergency involving the danger of death or severe physical injury, we may disclose limited information necessary to prevent that harm.‍
 ‍
 - Account Information, Hosted Data, Store Data and Payment Information: We require a subpoena or court order to provide information about your account, such as the name associated with the account, means of payment, and length of service. If we are ever forced to share identifiable information about you, we'll notify you with the full details of the request before we disclose it unless we are legally prohibited from doing so by law or court order.‍
--Website Logs, Cookies, APIs and Mobile SDKs: We will only disclose information collected through our Services, including maps and associated data and location information, in response to a subpoena or court order.
+- Website Logs, Cookies, APIs and Mobile SDKs: We will only disclose information collected through our Services, including maps and associated data and location information, in response to a subpoena or court order.
 
 ## Security
 We take steps to ensure that your information is treated securely and in accordance with this Privacy Policy, as described on our Security page. Unfortunately, no system is 100% secure, and we cannot ensure or warrant the security of any information you provide to us. We have taken appropriate safeguards to require that your personal information will remain protected and require our third-party service providers and partners to have appropriate safeguards as well. To the fullest extent permitted by applicable law, we do not accept liability for unauthorized disclosure.
