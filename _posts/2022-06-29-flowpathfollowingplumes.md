@@ -5,7 +5,7 @@ title: EnviMetric's New Feature - Flow Path Following Plumes
 subtitle: How we're using digital elevation models to make our groundwater plume models more representative of non-linear flow path conditions.
 date: 2022-06-29
 author: anna_harrington
-folder: blog/assets/2022-06-29-curvedplumes
+folder: blog/assets/2022-06-29-flowpathfollowingplumes
 headerColor: '#FFFFFF'
 headerImage: 'header.png'
 ---
