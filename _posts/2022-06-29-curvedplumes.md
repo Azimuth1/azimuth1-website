@@ -19,15 +19,15 @@ Our basic approach for converting linear plume geometries into non-linear or cur
 
 Step 1
 
-![I1]({{site.baseurl}}/{{page.folder}}/step1.png){:class="img-fluid" width="80%"}
+![I1]({{site.baseurl}}/{{page.folder}}/step1.png){:class="img-fluid" width="30%"}
 
 Step 2
 
-![I2]({{site.baseurl}}/{{page.folder}}/step2.png){:class="img-fluid" width="80%"}
+![I2]({{site.baseurl}}/{{page.folder}}/step2.png){:class="img-fluid" width="30%"}
 
 Step 3
 
-![I3]({{site.baseurl}}/{{page.folder}}/step3.png){:class="img-fluid" width="80%"}
+![I3]({{site.baseurl}}/{{page.folder}}/step3.png){:class="img-fluid" width="30%"}
 
 To be able to do this, we needed to find the predominant flow path using the topography of the contaminated site–this way we can incorporate plume curvature by having the plume’s major axis direction mirror what would be the flow path from the source of the site’s topography.
 
