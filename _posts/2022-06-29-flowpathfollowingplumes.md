@@ -9,7 +9,7 @@ folder: blog/assets/2022-06-29-flowpathfollowingplumes
 headerColor: '#FFFFFF'
 headerImage: 'header.png'
 ---
-Since 2017, Daybreak (previously Azimuth1) has been funded by the National Science Foundation to build a machine learning technology to be used during site investigation of contaminated groundwater sites.  During the course of this [technology](https://www.azimuth1.com/envimetric)'s development, we’ve spoken with hundreds of environmental engineers, geologists, project managers and property owners in the environmental site investigation and remediation space.
+Since 2017, Daybreak (previously Azimuth1) has been funded by the National Science Foundation to build a machine learning technology to be used during site investigation of contaminated groundwater sites.  During the course of this [technology]([[https://testazimuth1site.com/products/envimetric/])'s development, we’ve spoken with hundreds of environmental engineers, geologists, project managers and property owners in the environmental site investigation and remediation space.
           
 When discussing many contaminated sites across the country, we learned that many professionals work at sites with non-linear predominant groundwater flow direction.  Because so many of our customers wished to be able to ‘warp’ our linear modeling output to better fit their non-linear groundwater flow direction, we decided to build that functionality into our modeling output to streamline their workflow and provide better value.
 
