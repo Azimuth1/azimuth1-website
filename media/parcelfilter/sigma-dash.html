@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sigma Opportunity Atlas</title>
+    <meta property="og:description" content="Explore opportunity zones and parcel data." />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@5.2.0/dist/maplibre-gl.css' />
+    <script src='https://unpkg.com/maplibre-gl@5.2.0/dist/maplibre-gl.js'></script>
+    
+    <!-- PMTiles library -->
+    <script src="https://unpkg.com/pmtiles@4.3.0/dist/pmtiles.js"></script>
+    
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        html, body { height: 100%; }
+        
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+        
+        .logo {
+            height: 40px;
+            margin-right: 15px;
+        }
+        
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+        }
+        
+        #map {
+            flex: 1;
+            width: 100%;
+        }
+        
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 5;
+            font-family: Arial, sans-serif;
+        }
+        
+        .map-legend {
+            position: absolute;
+            bottom: 30px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            z-index: 1;
+            max-width: 200px;
+        }
+        
+        .legend-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .legend-scale {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+        
+        /* Filter panel styles */
+        .filter-overlay {
+            font: 12px/20px 'Arial', sans-serif;
+            position: absolute;
+            width: 250px;
+            top: 140px;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            pointer-events: none; /* Allow clicks to pass through to the map */
+        }
+
+        .filter-overlay .filter-inner {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px 0 0 5px;
+            padding: 15px;
+            margin-bottom: 0;
+            max-height: 100%;
+            overflow-y: auto; /* Add scrollbar when content overflows */
+            pointer-events: auto; /* Capture clicks on the filter panel */
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .filter-overlay .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            z-index: 2;
+        }
+
+        .filter-overlay .filter-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .filter-overlay .filter-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #2c3e50;
+            font-size: 18px;
+            padding: 0;
+        }
+
+        .filter-overlay .filter-content {
+            overflow-y: auto;
+            flex: 1;
+            padding-right: 5px;
+        }
+
+        .filter-overlay.collapsed .filter-inner {
+            width: 40px;
+            padding: 10px;
+        }
+
+        .filter-overlay.collapsed .filter-content,
+        .filter-overlay.collapsed .filter-title {
+            display: none;
+        }
+
+        .filter-overlay fieldset {
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .filter-overlay legend {
+            font-weight: bold;
+            font-size: 14px;
+            padding: 0 5px;
+        }
+
+        .filter-overlay input[type=range] {
+            width: 100%;
+            margin: 10px 0;
+        }
+        
+        .filter-overlay .range-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+        
+        .filter-overlay .value-display {
+            font-weight: bold;
+            text-align: center;
+            margin: 5px 0;
+        }
+        
+        .filter-overlay button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .filter-overlay button:hover {
+            background-color: #1a252f;
+        }
+
+        /* Adjust map controls to not overlap with sidebar */
+        .maplibregl-ctrl-top-left {
+            left: 10px;
+        }
+        
+        .maplibregl-ctrl-top-right {
+            right: 260px;
+        }
+        
+        /* Parcel details popup styles */
+        .parcel-popup {
+            position: absolute;
+            bottom: 30px;
+            right: 260px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            z-index: 2;
+            max-width: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+        }
+        
+        .parcel-popup h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        
+        .parcel-popup table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .parcel-popup th, .parcel-popup td {
+            padding: 5px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .parcel-popup th {
+            font-weight: bold;
+            width: 40%;
+        }
+        
+        .parcel-popup .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .parcel-popup .close-button:hover {
+            color: #000;
+        }
+
+        /* Color selector styles */
+        .color-selector {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 5px 0 0 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            z-index: 11;
+            width: 250px;
+            pointer-events: auto;
+        }
+        
+        .color-selector label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .color-selector select {
+            width: 100%;
+            padding: 5px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+<!-- Header banner with logo and title -->
+<div class="header">
+    <img src="assets/logo.png" alt="Sigma Logo" class="logo">
+    <h1 class="title">Sigma Opportunity Atlas</h1>
+</div>
+
+<!-- Loading indicator -->
+<div id="loading" class="loading">Loading map data...</div>
+
+<!-- Color attribute selector - positioned above filters -->
+<div class="color-selector">
+    <label for="color-attribute">Color parcels by:</label>
+    <select id="color-attribute">
+        <option value="Revenue">Revenue</option>
+        <option value="ll_gisacre">Acreage</option>
+        <option value="price_mean">Price</option>
+        <option value="Cost">Cost</option>
+        <option value="distance_mean">Distance</option>
+        <option value="production_mean">Production</option>
+        <option value="slope_mean">Slope</option>
+        <option value="Value">IRR</option>
+    </select>
+</div>
+
+<!-- Filter panel -->
+<div class="filter-overlay">
+    <div class="filter-inner">
+        <div class="filter-header">
+            <h3 class="filter-title">Filter Parcels</h3>
+            <button class="filter-toggle" id="filter-toggle">▶</button>
+        </div>
+        <div class="filter-content">
+            <fieldset>
+                <legend>💰 Revenue Filter</legend>
+                <div>
+                    <input id="revenue-filter-toggle" type="checkbox" />
+                    <label for="revenue-filter-toggle">Apply Revenue Filter</label>
+                    
+                    <div>
+                        <div class="value-display">
+                            Revenue: $<span id="revenue-value">0</span>
+                        </div>
+                        
+                        <input 
+                            type="range" 
+                            id="revenue-slider" 
+                            min="0" 
+                            max="10000000" 
+                            step="100000" 
+                            value="0" 
+                        />
+                        
+                        <div class="range-labels">
+                            <span>$0</span>
+                            <span>$10M+</span>
+                        </div>
+                        
+                        <div>
+                            <label for="revenue-operator">Operator:</label>
+                            <select name="operator" id="revenue-operator">
+                                <option value=">" selected>Greater than</option>
+                                <option value="==">Equal to</option>
+                                <option value="<">Less than</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- New filter for Acreage -->
+            <fieldset>
+                <legend>🌳 Acreage Filter</legend>
+                <div>
+                    <input id="acreage-filter-toggle" type="checkbox" />
+                    <label for="acreage-filter-toggle">Apply Acreage Filter</label>
+                    
+                    <div>
+                        <div class="value-display">
+                            Acreage: <span id="acreage-value">0</span>
+                        </div>
+                        
+                        <input 
+                            type="range" 
+                            id="acreage-slider" 
+                            min="0" 
+                            max="1000" 
+                            step="10" 
+                            value="0" 
+                        />
+                        
+                        <div class="range-labels">
+                            <span>0</span>
+                            <span>1000+</span>
+                        </div>
+                        
+                        <div>
+                            <label for="acreage-operator">Operator:</label>
+                            <select name="operator" id="acreage-operator">
+                                <option value=">" selected>Greater than</option>
+                                <option value="==">Equal to</option>
+                                <option value="<">Less than</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- New filter for Price -->
+            <fieldset>
+                <legend>💲 Energy Price Filter</legend>
+                <div>
+                    <input id="price-filter-toggle" type="checkbox" />
+                    <label for="price-filter-toggle">Apply Energy Price Filter</label>
+                    
+                    <div>
+                        <div class="value-display">
+                            Energy Price: $<span id="price-value">0</span>/kWh
+                        </div>
+                        
+                        <input 
+                            type="range" 
+                            id="price-slider" 
+                            min="0" 
+                            max="5000000" 
+                            step="50000" 
+                            value="0" 
+                        />
+                        
+                        <div class="range-labels">
+                            <span>$0/kWh</span>
+                            <span>$5M+/kWh</span>
+                        </div>
+                        
+                        <div>
+                            <label for="price-operator">Operator:</label>
+                            <select name="operator" id="price-operator">
+                                <option value=">" selected>Greater than</option>
+                                <option value="==">Equal to</option>
+                                <option value="<">Less than</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- New filter for Cost -->
+            <fieldset>
+                <legend>💵 Cost Filter</legend>
+                <div>
+                    <input id="cost-filter-toggle" type="checkbox" />
+                    <label for="cost-filter-toggle">Apply Cost Filter</label>
+                    
+                    <div>
+                        <div class="value-display">
+                            Cost: $<span id="cost-value">0</span>
+                        </div>
+                        
+                        <input 
+                            type="range" 
+                            id="cost-slider" 
+                            min="0" 
+                            max="1000000" 
+                            step="10000" 
+                            value="0" 
+                        />
+                        
+                        <div class="range-labels">
+                            <span>$0</span>
+                            <span>$1M+</span>
+                        </div>
+                        
+                        <div>
+                            <label for="cost-operator">Operator:</label>
+                            <select name="operator" id="cost-operator">
+                                <option value=">" selected>Greater than</option>
+                                <option value="==">Equal to</option>
+                                <option value="<">Less than</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- New filter for Distance -->
+            <fieldset>
+                <legend>📏 Distance Filter</legend>
+                <div>
+                    <input id="distance-filter-toggle" type="checkbox" />
+                    <label for="distance-filter-toggle">Apply Distance Filter</label>
+                    
+                    <div>
+                        <div class="value-display">
+                            Distance: <span id="distance-value">0</span> meters
+                        </div>
+                        
+                        <input 
+                            type="range" 
+                            id="distance-slider" 
+                            min="0" 
+                            max="100000" 
+                            step="1000" 
+                            value="0" 
+                        />
+                        
+                        <div class="range-labels">
+                            <span>0</span>
+                            <span>100,000+ meters</span>
+                        </div>
+                        
+                        <div>
+                            <label for="distance-operator">Operator:</label>
+                            <select name="operator" id="distance-operator">
+                                <option value=">" selected>Greater than</option>
+                                <option value="==">Equal to</option>
+                                <option value="<" selected>Less than</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- New filter for Production -->
+            <fieldset>
+                <legend>🏭 Production Filter</legend>
+                <div>
+                    <input id="production-filter-toggle" type="checkbox" />
+                    <label for="production-filter-toggle">Apply Production Filter</label>
+                    
+                    <div>
+                        <div class="value-display">
+                            Production: <span id="production-value">0</span> units
+                        </div>
+                        
+                        <input 
+                            type="range" 
+                            id="production-slider" 
+                            min="0" 
+                            max="10000" 
+                            step="100" 
+                            value="0" 
+                        />
+                        
+                        <div class="range-labels">
+                            <span>0</span>
+                            <span>10,000+ units</span>
+                        </div>
+                        
+                        <div>
+                            <label for="production-operator">Operator:</label>
+                            <select name="operator" id="production-operator">
+                                <option value=">" selected>Greater than</option>
+                                <option value="==">Equal to</option>
+                                <option value="<">Less than</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- New filter for Slope -->
+            <fieldset>
+                <legend>⛰️ Slope Filter</legend>
+                <div>
+                    <input id="slope-filter-toggle" type="checkbox" />
+                    <label for="slope-filter-toggle">Apply Slope Filter</label>
+                    
+                    <div>
+                        <div class="value-display">
+                            Slope: <span id="slope-value">0</span>%
+                        </div>
+                        
+                        <input 
+                            type="range" 
+                            id="slope-slider" 
+                            min="0" 
+                            max="45" 
+                            step="1" 
+                            value="0" 
+                        />
+                        
+                        <div class="range-labels">
+                            <span>0%</span>
+                            <span>45%+</span>
+                        </div>
+                        
+                        <div>
+                            <label for="slope-operator">Operator:</label>
+                            <select name="operator" id="slope-operator">
+                                <option value=">" selected>Greater than</option>
+                                <option value="==">Equal to</option>
+                                <option value="<">Less than</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            
+            <!-- Example of additional filter sections that could be added later -->
+            <fieldset>
+                <legend>🏢 Property Type</legend>
+                <div>
+                    <p><em>Coming soon...</em></p>
+                </div>
+            </fieldset>
+            
+            <button id="reset-filter">Reset Filter</button>
+        </div>
+    </div>
+</div>
+
+<!-- Parcel details popup -->
+<div id="parcel-popup" class="parcel-popup">
+    <span class="close-button" id="close-popup">×</span>
+    <h3>Parcel Details</h3>
+    <div id="parcel-details-content"></div>
+</div>
+
+<!-- Load the `maplibre-gl-geocoder` plugin. -->
+<script src="https://unpkg.com/@maplibre/maplibre-gl-geocoder@1.5.0/dist/maplibre-gl-geocoder.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/@maplibre/maplibre-gl-geocoder@1.5.0/dist/maplibre-gl-geocoder.css"
+/>
+<div id="map"></div>
+<script>
+    // Initialize PMTiles protocol
+    const protocol = new pmtiles.Protocol();
+    
+    // Add custom fetch function with error handling
+    protocol.fetchFunction = function(url) {
+        console.log("Fetching PMTiles from:", url);
+        return fetch(url)
+            .then(response => {
+                console.log("PMTiles fetch response:", response.status, response.statusText);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response;
+            })
+            .catch(error => {
+                console.error(`Error fetching PMTiles: ${error.message}`);
+                document.getElementById('loading').innerHTML = 
+                    `<p>Error loading PMTiles: ${error.message}</p>
+                    <p>URL: ${url}</p>`;
+                document.getElementById('loading').style.display = 'block';
+                return Promise.reject(error);
+            });
+    };
+    
+    // Test direct fetch to the PMTiles file
+    fetch('https://azm1-maptiles.s3.us-west-1.amazonaws.com/LargeParcels2.pmtiles', { method: 'HEAD' })
+        .then(response => {
+            console.log("Direct PMTiles fetch test:", response.status, response.statusText);
+            console.log("Content-Type:", response.headers.get('Content-Type'));
+            console.log("Content-Length:", response.headers.get('Content-Length'));
+        })
+        .catch(error => {
+            console.error("Direct PMTiles fetch test failed:", error);
+        });
+    
+    maplibregl.addProtocol("pmtiles", protocol.tile);
+    
+    const map = new maplibregl.Map({
+        container: 'map',
+        // Use a minimalist raster style
+        style: {
+            'version': 8,
+            'name': 'Blank',
+            'center': [0, 0],
+            'zoom': 0,
+            'sources': {
+                'raster-tiles': {
+                    'type': 'raster',
+                    'tiles': ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+                    'tileSize': 256,
+                    'minzoom': 0,
+                    'maxzoom': 19
+                },
+                // Add PMTiles source
+                'parcels': {
+                    'type': 'vector',
+                    'url': 'pmtiles://https://azm1-maptiles.s3.us-west-1.amazonaws.com/LargeParcels2.pmtiles',
+                    'promoteId': 'id'
+                }
+            },
+            'layers': [
+                {
+                    'id': 'background',
+                    'type': 'background',
+                    'paint': {
+                        'background-color': '#e0dfdf'
+                    }
+                },
+                {
+                    'id': 'simple-tiles',
+                    'type': 'raster',
+                    'source': 'raster-tiles'
+                },
+                // Add parcel polygon layer - try without specifying source-layer first
+                {
+                    'id': 'parcels-fill',
+                    'type': 'fill',
+                    'source': 'parcels',
+                    'source-layer': 'allParcels',
+                    'paint': {
+                        'fill-color': [
+                            'interpolate',
+                            ['linear'],
+                            ['get', 'Revenue'],
+                            0, '#440154', // Viridis color scale - dark purple (low)
+                            100000, '#414487', // blue-purple
+                            500000, '#2a788e', // blue-green
+                            1000000, '#22a884', // green
+                            5000000, '#7ad151', // lime green
+                            10000000, '#fde725' // yellow (high)
+                        ],
+                        'fill-opacity': 0.7
+                    }
+                },
+                // Add parcel outline layer - try without specifying source-layer first
+                {
+                    'id': 'parcels-outline',
+                    'type': 'line',
+                    'source': 'parcels',
+                    'source-layer': 'allParcels',
+                    'paint': {
+                        'line-color': '#2c3e50',
+                        'line-width': 1,
+                        'line-opacity': [
+                            'step',
+                            ['zoom'],
+                            0, // Opacity 0 (invisible) below zoom level 9
+                            9, 0.8 // Opacity 0.8 at zoom level 9 or greater
+                        ]
+                    }
+                }
+            ],
+            'id': 'blank'
+        },
+        center: [-79.8467, 38.9237], // Center on PJM
+        zoom: 6, // Changed from 10 to 6 for a wider regional view
+        pitch: 0,
+        bearing: 0,
+        canvasContextAttributes: {antialias: true}
+    });
+
+    // Hide loading indicator when map is loaded
+    map.on('load', function() {
+        console.log("Map loaded");
+        
+        // Check if the PMTiles source was loaded correctly
+        try {
+            const source = map.getSource('parcels');
+            if (source) {
+                console.log("PMTiles source loaded successfully");
+                console.log("Source details:", source);
+                
+                // Try to inspect the source to get layer information
+                if (source._tileJSONRequest) {
+                    source._tileJSONRequest.then(tileJSON => {
+                        console.log("TileJSON:", tileJSON);
+                        if (tileJSON.vector_layers) {
+                            console.log("Vector layers:", tileJSON.vector_layers);
+                            
+                            // Update layers with correct source-layer if needed
+                            if (tileJSON.vector_layers.length > 0) {
+                                const sourceLayer = tileJSON.vector_layers[0].id;
+                                console.log("First source layer:", sourceLayer);
+                                
+                                // Log if the detected source layer is different from what we specified
+                                if (sourceLayer !== 'LargeParcels') {
+                                    console.warn(`Detected source layer "${sourceLayer}" differs from specified "LargeParcels"`);
+                                }
+                                
+                                // No need to update the layers as we've already specified the source-layer
+                                console.log("Using source-layer: LargeParcels");
+                            }
+                        }
+                    }).catch(err => {
+                        console.error("Error getting TileJSON:", err);
+                    });
+                }
+                
+                document.getElementById('loading').style.display = 'none';
+                
+                // Find global min and max values for all filters
+                findGlobalMinMaxValues();
+            } else {
+                console.error("PMTiles source not found");
+                document.getElementById('loading').innerHTML = "<p>Error: PMTiles source not found</p>";
+            }
+        } catch (error) {
+            console.error("Error checking PMTiles source:", error);
+            document.getElementById('loading').innerHTML = `<p>Error checking PMTiles source: ${error.message}</p>`;
+        }
+        
+        // Add click event to show parcel details
+        map.on('click', 'parcels-fill', function(e) {
+            // Get the clicked feature
+            const feature = e.features[0];
+            const properties = feature.properties;
+            
+            // Format the properties for display
+            let detailsHTML = '<table>';
+            
+            // Define the order and labels for important properties
+            const priorityProps = {
+                'Revenue': 'Revenue',
+                'll_gisacre': 'Acreage',
+                'Value': 'Price',
+                'Cost': 'Cost',
+                'distance_mean': 'Distance',
+                'production_mean': 'Production',
+                'slope_mean': 'Slope'
+            };
+            
+            // First add the priority properties in the specified order
+            for (const [key, label] of Object.entries(priorityProps)) {
+                if (properties[key] !== undefined) {
+                    let value = properties[key];
+                    
+                    // Format numbers with commas and add $ for monetary values
+                    if (!isNaN(parseFloat(value))) {
+                        if (key === 'Revenue' || key === 'Value' || key === 'Cost') {
+                            value = '$' + parseFloat(value).toLocaleString();
+                        } else if (key === 'slope_mean') {
+                            value = parseFloat(value).toLocaleString() + '%';
+                        } else if (key === 'distance_mean') {
+                            value = parseFloat(value).toLocaleString() + ' meters';
+                        } else if (key === 'production_mean') {
+                            value = parseFloat(value).toLocaleString() + ' units';
+                        } else {
+                            value = parseFloat(value).toLocaleString();
+                        }
+                    }
+                    
+                    detailsHTML += `
+                        <tr>
+                            <th>${label}</th>
+                            <td>${value}</td>
+                        </tr>
+                    `;
+                }
+            }
+            
+            // Then add any remaining properties
+            for (const key in properties) {
+                if (!priorityProps[key] && key !== 'id') {
+                    detailsHTML += `
+                        <tr>
+                            <th>${key}</th>
+                            <td>${properties[key]}</td>
+                        </tr>
+                    `;
+                }
+            }
+            
+            detailsHTML += '</table>';
+            
+            // Update and show the popup
+            document.getElementById('parcel-details-content').innerHTML = detailsHTML;
+            document.getElementById('parcel-popup').style.display = 'block';
+            
+            // Change cursor to indicate the feature is clickable
+            map.getCanvas().style.cursor = 'pointer';
+        });
+        
+        // Change cursor back when leaving features
+        map.on('mouseleave', 'parcels-fill', function() {
+            map.getCanvas().style.cursor = '';
+        });
+        
+        // Add close button functionality for the popup
+        document.getElementById('close-popup').addEventListener('click', function() {
+            document.getElementById('parcel-popup').style.display = 'none';
+        });
+        
+        // Add a button to show layer information
+        const debugButton = document.createElement('button');
+        debugButton.textContent = 'Debug Layers';
+        debugButton.style.position = 'absolute';
+        debugButton.style.bottom = '10px';
+        debugButton.style.left = '10px';
+        debugButton.style.zIndex = '10';
+        debugButton.style.padding = '8px 12px';
+        debugButton.style.backgroundColor = '#2c3e50';
+        debugButton.style.color = 'white';
+        debugButton.style.border = 'none';
+        debugButton.style.borderRadius = '4px';
+        debugButton.style.cursor = 'pointer';
+        
+        debugButton.addEventListener('click', function() {
+            const sources = map.getStyle().sources;
+            console.log("All sources:", sources);
+            
+            const layers = map.getStyle().layers;
+            console.log("All layers:", layers);
+            
+            // Try to get features at the center of the viewport
+            const center = map.getCenter();
+            const features = map.queryRenderedFeatures(
+                map.project(center),
+                { layers: ['parcels-fill'] }
+            );
+            console.log("Features at center:", features);
+            
+            // Show debug info on screen
+            const debugInfo = document.createElement('div');
+            debugInfo.style.position = 'absolute';
+            debugInfo.style.top = '50%';
+            debugInfo.style.left = '50%';
+            debugInfo.style.transform = 'translate(-50%, -50%)';
+            debugInfo.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+            debugInfo.style.padding = '20px';
+            debugInfo.style.borderRadius = '5px';
+            debugInfo.style.maxWidth = '80%';
+            debugInfo.style.maxHeight = '80%';
+            debugInfo.style.overflow = 'auto';
+            debugInfo.style.zIndex = '20';
+            debugInfo.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)';
+            
+            debugInfo.innerHTML = `
+                <h3>Debug Information</h3>
+                <p><strong>Sources:</strong> ${Object.keys(sources).join(', ')}</p>
+                <p><strong>Layers:</strong> ${layers.map(l => l.id).join(', ')}</p>
+                <p><strong>Features at center:</strong> ${features.length}</p>
+                <p><strong>Center:</strong> ${center.lng.toFixed(4)}, ${center.lat.toFixed(4)}</p>
+                <p><strong>Zoom:</strong> ${map.getZoom().toFixed(2)}</p>
+                <button id="close-debug">Close</button>
+            `;
+            
+            document.body.appendChild(debugInfo);
+            
+            document.getElementById('close-debug').addEventListener('click', function() {
+                document.body.removeChild(debugInfo);
+            });
+        });
+        
+        document.body.appendChild(debugButton);
+        
+        // Create and add the legend
+        const legend = document.createElement('div');
+        legend.className = 'map-legend';
+        
+        // Initial legend with default values - will be updated when we have real data
+        let legendHTML = `
+            <div class="legend-title">Revenue</div>
+            <div class="legend-scale">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #440154;"></div>
+                    <span>$0</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #414487;"></div>
+                    <span>$100,000</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #2a788e;"></div>
+                    <span>$500,000</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #22a884;"></div>
+                    <span>$1,000,000</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #7ad151;"></div>
+                    <span>$5,000,000</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #fde725;"></div>
+                    <span>$10,000,000+</span>
+                </div>
+            </div>
+        `;
+        
+        legend.innerHTML = legendHTML;
+        document.body.appendChild(legend);
+        
+        // Add event listener for color attribute selector
+        document.getElementById('color-attribute').addEventListener('change', function() {
+            currentColorAttribute = this.value;
+            updateColorScale();
+            updateLegend();
+        });
+        
+        // Initialize filter functionality
+        const filterData = {};
+        
+        // Add filter panel toggle functionality
+        document.getElementById('filter-toggle').addEventListener('click', function() {
+            const filterOverlay = document.querySelector('.filter-overlay');
+            filterOverlay.classList.toggle('collapsed');
+            
+            // Update the toggle button text
+            if (filterOverlay.classList.contains('collapsed')) {
+                this.textContent = '◀';
+            } else {
+                this.textContent = '▶';
+            }
+            
+            // Adjust the map controls position
+            setTimeout(() => {
+                map.resize();
+            }, 300);
+        });
+        
+        // Update the displayed value when the slider changes
+        const revenueSlider = document.getElementById('revenue-slider');
+        const revenueValue = document.getElementById('revenue-value');
+        
+        revenueSlider.addEventListener('input', function() {
+            // Format the value with commas for thousands
+            const formattedValue = parseInt(this.value).toLocaleString();
+            revenueValue.textContent = formattedValue;
+        });
+        
+        // Handle filter changes
+        document.getElementById('revenue-filter-toggle').addEventListener('change', function(e) {
+            const revenueOperator = document.getElementById('revenue-operator');
+            const operator = revenueOperator.value;
+            
+            if (e.target.checked) {
+                filterData.Revenue = Number(revenueSlider.value);
+                applyFilter(operator);
+            } else {
+                delete filterData.Revenue;
+                // Reset filter if unchecked
+                map.setFilter('parcels-fill', null);
+                map.setFilter('parcels-outline', null);
+            }
+        });
+        
+        // Update filter when operator changes
+        document.getElementById('revenue-operator').addEventListener('change', function() {
+            if (document.getElementById('revenue-filter-toggle').checked) {
+                applyFilter(this.value);
+            }
+        });
+        
+        // Update filter when slider value changes
+        revenueSlider.addEventListener('change', function() {
+            if (document.getElementById('revenue-filter-toggle').checked) {
+                filterData.Revenue = Number(this.value);
+                const operator = document.getElementById('revenue-operator').value;
+                applyFilter(operator);
+            }
+        });
+        
+        // Initialize the new filter sliders
+        const acreageSlider = document.getElementById('acreage-slider');
+        const acreageValue = document.getElementById('acreage-value');
+        const priceSlider = document.getElementById('price-slider');
+        const priceValue = document.getElementById('price-value');
+        const costSlider = document.getElementById('cost-slider');
+        const costValue = document.getElementById('cost-value');
+        const distanceSlider = document.getElementById('distance-slider');
+        const distanceValue = document.getElementById('distance-value');
+        const productionSlider = document.getElementById('production-slider');
+        const productionValue = document.getElementById('production-value');
+        const slopeSlider = document.getElementById('slope-slider');
+        const slopeValue = document.getElementById('slope-value');
+        
+        // Update displayed values when sliders change
+        acreageSlider.addEventListener('input', function() {
+            acreageValue.textContent = parseInt(this.value).toLocaleString();
+        });
+        
+        priceSlider.addEventListener('input', function() {
+            priceValue.textContent = parseInt(this.value).toLocaleString();
+        });
+        
+        costSlider.addEventListener('input', function() {
+            costValue.textContent = parseInt(this.value).toLocaleString();
+        });
+        
+        distanceSlider.addEventListener('input', function() {
+            distanceValue.textContent = parseInt(this.value).toLocaleString();
+        });
+        
+        productionSlider.addEventListener('input', function() {
+            productionValue.textContent = parseInt(this.value).toLocaleString();
+        });
+        
+        slopeSlider.addEventListener('input', function() {
+            slopeValue.textContent = parseInt(this.value).toLocaleString();
+        });
+        
+        // Handle filter toggles for new filters
+        document.getElementById('acreage-filter-toggle').addEventListener('change', function(e) {
+            if (e.target.checked) {
+                filterData.ll_gisacre = Number(acreageSlider.value);
+                const operator = document.getElementById('acreage-operator').value;
+                applyFilter(operator);
+            } else {
+                delete filterData.ll_gisacre;
+                applyFilter();
+            }
+        });
+        
+        document.getElementById('price-filter-toggle').addEventListener('change', function(e) {
+            if (e.target.checked) {
+                filterData.price_mean = Number(priceSlider.value);
+                const operator = document.getElementById('price-operator').value;
+                applyFilter(operator);
+            } else {
+                delete filterData.price_mean;
+                applyFilter();
+            }
+        });
+        
+        document.getElementById('cost-filter-toggle').addEventListener('change', function(e) {
+            if (e.target.checked) {
+                filterData.Cost = Number(costSlider.value);
+                const operator = document.getElementById('cost-operator').value;
+                applyFilter(operator);
+            } else {
+                delete filterData.Cost;
+                applyFilter();
+            }
+        });
+        
+        document.getElementById('distance-filter-toggle').addEventListener('change', function(e) {
+            if (e.target.checked) {
+                filterData.distance_mean = Number(distanceSlider.value);
+                const operator = document.getElementById('distance-operator').value;
+                applyFilter(operator);
+            } else {
+                delete filterData.distance_mean;
+                applyFilter();
+            }
+        });
+        
+        document.getElementById('production-filter-toggle').addEventListener('change', function(e) {
+            if (e.target.checked) {
+                filterData.production_mean = Number(productionSlider.value);
+                const operator = document.getElementById('production-operator').value;
+                applyFilter(operator);
+            } else {
+                delete filterData.production_mean;
+                applyFilter();
+            }
+        });
+        
+        document.getElementById('slope-filter-toggle').addEventListener('change', function(e) {
+            if (e.target.checked) {
+                filterData.slope_mean = Number(slopeSlider.value);
+                const operator = document.getElementById('slope-operator').value;
+                applyFilter(operator);
+            } else {
+                delete filterData.slope_mean;
+                applyFilter();
+            }
+        });
+        
+        // Update filters when operators change
+        document.getElementById('acreage-operator').addEventListener('change', function() {
+            if (document.getElementById('acreage-filter-toggle').checked) {
+                applyFilter();
+            }
+        });
+        
+        document.getElementById('price-operator').addEventListener('change', function() {
+            if (document.getElementById('price-filter-toggle').checked) {
+                applyFilter();
+            }
+        });
+        
+        document.getElementById('cost-operator').addEventListener('change', function() {
+            if (document.getElementById('cost-filter-toggle').checked) {
+                applyFilter();
+            }
+        });
+        
+        document.getElementById('distance-operator').addEventListener('change', function() {
+            if (document.getElementById('distance-filter-toggle').checked) {
+                applyFilter();
+            }
+        });
+        
+        document.getElementById('production-operator').addEventListener('change', function() {
+            if (document.getElementById('production-filter-toggle').checked) {
+                applyFilter();
+            }
+        });
+        
+        document.getElementById('slope-operator').addEventListener('change', function() {
+            if (document.getElementById('slope-filter-toggle').checked) {
+                applyFilter();
+            }
+        });
+        
+        // Update filters when slider values change
+        acreageSlider.addEventListener('change', function() {
+            if (document.getElementById('acreage-filter-toggle').checked) {
+                filterData.ll_gisacre = Number(this.value);
+                applyFilter();
+            }
+        });
+        
+        priceSlider.addEventListener('change', function() {
+            if (document.getElementById('price-filter-toggle').checked) {
+                filterData.price_mean = Number(this.value);
+                applyFilter();
+            }
+        });
+        
+        costSlider.addEventListener('change', function() {
+            if (document.getElementById('cost-filter-toggle').checked) {
+                filterData.Cost = Number(this.value);
+                applyFilter();
+            }
+        });
+        
+        distanceSlider.addEventListener('change', function() {
+            if (document.getElementById('distance-filter-toggle').checked) {
+                filterData.distance_mean = Number(this.value);
+                applyFilter();
+            }
+        });
+        
+        productionSlider.addEventListener('change', function() {
+            if (document.getElementById('production-filter-toggle').checked) {
+                filterData.production_mean = Number(this.value);
+                applyFilter();
+            }
+        });
+        
+        slopeSlider.addEventListener('change', function() {
+            if (document.getElementById('slope-filter-toggle').checked) {
+                // Try both property names
+                if (map.queryRenderedFeatures({ layers: ['parcels-fill'] }).some(f => f.properties['slope_mean'] !== undefined)) {
+                    filterData['slope_mean'] = Number(this.value);
+                } else {
+                    filterData['slope-mean'] = Number(this.value);
+                }
+                applyFilter();
+            }
+        });
+        
+        // Reset filter button
+        document.getElementById('reset-filter').addEventListener('click', function() {
+            // Reset the UI for all filters
+            document.getElementById('revenue-filter-toggle').checked = false;
+            revenueSlider.value = 0;
+            revenueValue.textContent = '0';
+            
+            document.getElementById('acreage-filter-toggle').checked = false;
+            acreageSlider.value = 0;
+            acreageValue.textContent = '0';
+            
+            document.getElementById('price-filter-toggle').checked = false;
+            priceSlider.value = 0;
+            priceValue.textContent = '0';
+            
+            document.getElementById('cost-filter-toggle').checked = false;
+            costSlider.value = 0;
+            costValue.textContent = '0';
+            
+            document.getElementById('distance-filter-toggle').checked = false;
+            distanceSlider.value = 0;
+            distanceValue.textContent = '0';
+            
+            document.getElementById('production-filter-toggle').checked = false;
+            productionSlider.value = 0;
+            productionValue.textContent = '0';
+            
+            document.getElementById('slope-filter-toggle').checked = false;
+            slopeSlider.value = 0;
+            slopeValue.textContent = '0';
+            
+            // Clear the filter data
+            Object.keys(filterData).forEach(key => delete filterData[key]);
+            
+            // Remove filters from layers
+            map.setFilter('parcels-fill', null);
+            map.setFilter('parcels-outline', null);
+        });
+        
+        // Function to apply the filter
+        function applyFilter() {
+            const filterExpressions = Object.entries(filterData).map(([key, value]) => {
+                // Get the operator for this specific filter
+                const operatorElement = document.getElementById(`${key.toLowerCase()}-operator`);
+                const op = operatorElement ? operatorElement.value : '>';
+                console.log(`Filter ${key} using operator: ${op}`);
+                return [op, ['to-number', ['get', key]], value];
+            });
+
+            const finalFilter = filterExpressions.length > 0 ? ['all', ...filterExpressions] : null;
+            console.log('Final Filter:', finalFilter);
+            map.setFilter('parcels-fill', finalFilter);
+        }
+        
+        // Global variables to store min/max values
+        let globalMinRevenue = 0;
+        let globalMaxRevenue = 10000000;
+        let revenueDeciles = []; // Array to store decile values
+        
+        // Global variables for other filter min/max values
+        let globalMinAcreage = 0;
+        let globalMaxAcreage = 1000;
+        let globalMinValue = 0;
+        let globalMaxValue = 5000000;
+        let globalMinCost = 0;
+        let globalMaxCost = 1000000;
+        let globalMinDistance = 0;
+        let globalMaxDistance = 100000;
+        let globalMinProduction = 0;
+        let globalMaxProduction = 10000;
+        let globalMinSlope = 0;
+        let globalMaxSlope = 45;
+        
+        // Store deciles for each attribute
+        let attributeDeciles = {
+            'Revenue': [],
+            'll_gisacre': [],
+            'Value': [],
+            'Cost': [],
+            'distance_mean': [],
+            'production_mean': [],
+            'slope_mean': []
+        };
+        
+        // Current attribute used for coloring
+        let currentColorAttribute = 'Revenue';
+        
+        // Function to find global min and max values for all filters
+        function findGlobalMinMaxValues() {
+            let minRevenue = Infinity;
+            let maxRevenue = -Infinity;
+            let minAcreage = Infinity;
+            let maxAcreage = -Infinity;
+            let minValue = Infinity;
+            let maxValue = -Infinity;
+            let minCost = Infinity;
+            let maxCost = -Infinity;
+            let minDistance = Infinity;
+            let maxDistance = -Infinity;
+            let minProduction = Infinity;
+            let maxProduction = -Infinity;
+            let minSlope = Infinity;
+            let maxSlope = -Infinity;
+            
+            let featuresProcessed = 0;
+            let allRevenueValues = []; // Array to collect all revenue values
+            
+            console.log("Searching for global min/max values for all filters...");
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('loading').innerHTML = "Calculating global ranges for all filters...";
+            
+            // Show loading messages in the filter panels
+            document.getElementById('revenue-value').textContent = "calculating...";
+            document.getElementById('acreage-value').textContent = "calculating...";
+            document.getElementById('price-value').textContent = "calculating...";
+            document.getElementById('cost-value').textContent = "calculating...";
+            document.getElementById('distance-value').textContent = "calculating...";
+            document.getElementById('production-value').textContent = "calculating...";
+            document.getElementById('slope-value').textContent = "calculating...";
+            
+            // Store the current view state
+            const currentZoom = map.getZoom();
+            const currentCenter = map.getCenter();
+            
+            // Directly query the visible features first to get a quick estimate
+            const visibleFeatures = map.queryRenderedFeatures({ layers: ['parcels-fill'] });
+            console.log(`Processing ${visibleFeatures.length} visible features for initial estimates...`);
+            
+            // Process visible features for initial estimates
+            visibleFeatures.forEach(feature => {
+                const props = feature.properties;
+                
+                // Process Revenue
+                if (props && props.Revenue !== undefined) {
+                    const revenue = parseFloat(props.Revenue);
+                    if (!isNaN(revenue)) {
+                        minRevenue = Math.min(minRevenue, revenue);
+                        maxRevenue = Math.max(maxRevenue, revenue);
+                        allRevenueValues.push(revenue);
+                        console.log(`Found revenue value: ${revenue}`); // Debug log
+                    }
+                }
+                
+                // Process Acreage (ll_gisacre)
+                if (props && props.ll_gisacre !== undefined) {
+                    const acreage = parseFloat(props.ll_gisacre);
+                    if (!isNaN(acreage)) {
+                        minAcreage = Math.min(minAcreage, acreage);
+                        maxAcreage = Math.max(maxAcreage, acreage);
+                        console.log(`Found acreage value: ${acreage}`); // Debug log
+                    }
+                }
+                
+                // Process Value (Price)
+                if (props && props.price_mean !== undefined) {
+                    const value = parseFloat(props.price_mean);
+                    if (!isNaN(value)) {
+                        minValue = Math.min(minValue, value);
+                        maxValue = Math.max(maxValue, value);
+                        console.log(`Found price value: ${value}`); // Debug log
+                    }
+                }
+                
+                // Process Cost
+                if (props && props.Cost !== undefined) {
+                    const cost = parseFloat(props.Cost);
+                    if (!isNaN(cost)) {
+                        minCost = Math.min(minCost, cost);
+                        maxCost = Math.max(maxCost, cost);
+                        console.log(`Found cost value: ${cost}`); // Debug log
+                    }
+                }
+                
+                // Process Distance (distance_mean)
+                if (props && props.distance_mean !== undefined) {
+                    const distance = parseFloat(props.distance_mean);
+                    if (!isNaN(distance)) {
+                        minDistance = Math.min(minDistance, distance);
+                        maxDistance = Math.max(maxDistance, distance);
+                        console.log(`Found distance value: ${distance}`); // Debug log
+                    }
+                }
+                
+                // Process Production (production_mean)
+                if (props && props.production_mean !== undefined) {
+                    const production = parseFloat(props.production_mean);
+                    if (!isNaN(production)) {
+                        minProduction = Math.min(minProduction, production);
+                        maxProduction = Math.max(maxProduction, production);
+                        console.log(`Found production value: ${production}`); // Debug log
+                    }
+                }
+                
+                // Process Slope (both slope_mean and slope-mean)
+                if (props && props['slope_mean'] !== undefined) {
+                    const slope = parseFloat(props['slope_mean']);
+                    if (!isNaN(slope)) {
+                        minSlope = Math.min(minSlope, slope);
+                        maxSlope = Math.max(maxSlope, slope);
+                        console.log(`Found slope value: ${slope}`); // Debug log
+                    }
+                }
+                else if (props && props['slope-mean'] !== undefined) {
+                    const slope = parseFloat(props['slope-mean']);
+                    if (!isNaN(slope)) {
+                        minSlope = Math.min(minSlope, slope);
+                        maxSlope = Math.max(maxSlope, slope);
+                        console.log(`Found slope value: ${slope}`); // Debug log
+                    }
+                }
+            });
+            
+            // Use a hidden offscreen canvas to render a zoomed-out view for data collection
+            // without changing the visible map
+            const offscreenCanvas = document.createElement('canvas');
+            offscreenCanvas.width = 1024;
+            offscreenCanvas.height = 1024;
+            offscreenCanvas.style.display = 'none';
+            document.body.appendChild(offscreenCanvas);
+            
+            // Create a temporary map for data collection
+            const tempMap = new maplibregl.Map({
+                container: offscreenCanvas,
+                style: map.getStyle(),
+                center: [-95.85, 37.1], // Center on US for data collection
+                zoom: 4, // Zoomed out to see more data
+                interactive: false,
+                preserveDrawingBuffer: true
+            });
+            
+            tempMap.on('load', function() {
+                // Query all visible features from the temp map
+                const features = tempMap.queryRenderedFeatures({ layers: ['parcels-fill'] });
+                
+                featuresProcessed = features.length;
+                console.log(`Processing ${featuresProcessed} features for global min/max...`);
+                
+                features.forEach(feature => {
+                    const props = feature.properties;
+                    
+                    // Process Revenue
+                    if (props && props.Revenue !== undefined) {
+                        const revenue = parseFloat(props.Revenue);
+                        if (!isNaN(revenue)) {
+                            minRevenue = Math.min(minRevenue, revenue);
+                            maxRevenue = Math.max(maxRevenue, revenue);
+                            allRevenueValues.push(revenue);
+                            console.log(`Found revenue value: ${revenue}`); // Debug log
+                        }
+                    }
+                    
+                    // Process Acreage (ll_gisacre)
+                    if (props && props.ll_gisacre !== undefined) {
+                        const acreage = parseFloat(props.ll_gisacre);
+                        if (!isNaN(acreage)) {
+                            minAcreage = Math.min(minAcreage, acreage);
+                            maxAcreage = Math.max(maxAcreage, acreage);
+                            console.log(`Found acreage value: ${acreage}`); // Debug log
+                        }
+                    }
+                    
+                    // Process Value (Price)
+                    if (props && props.price_mean !== undefined) {
+                        const value = parseFloat(props.price_mean);
+                        if (!isNaN(value)) {
+                            minValue = Math.min(minValue, value);
+                            maxValue = Math.max(maxValue, value);
+                            console.log(`Found price value: ${value}`); // Debug log
+                        }
+                    }
+                    
+                    // Process Cost
+                    if (props && props.Cost !== undefined) {
+                        const cost = parseFloat(props.Cost);
+                        if (!isNaN(cost)) {
+                            minCost = Math.min(minCost, cost);
+                            maxCost = Math.max(maxCost, cost);
+                            console.log(`Found cost value: ${cost}`); // Debug log
+                        }
+                    }
+                    
+                    // Process Distance (distance_mean)
+                    if (props && props.distance_mean !== undefined) {
+                        const distance = parseFloat(props.distance_mean);
+                        if (!isNaN(distance)) {
+                            minDistance = Math.min(minDistance, distance);
+                            maxDistance = Math.max(maxDistance, distance);
+                        }
+                    }
+                    
+                    // Process Production (production_mean)
+                    if (props && props.production_mean !== undefined) {
+                        const production = parseFloat(props.production_mean);
+                        if (!isNaN(production)) {
+                            minProduction = Math.min(minProduction, production);
+                            maxProduction = Math.max(maxProduction, production);
+                        }
+                    }
+                    
+                    // Process Slope (both slope_mean and slope-mean)
+                    if (props && props['slope_mean'] !== undefined) {
+                        const slope = parseFloat(props['slope_mean']);
+                        if (!isNaN(slope)) {
+                            minSlope = Math.min(minSlope, slope);
+                            maxSlope = Math.max(maxSlope, slope);
+                        }
+                    }
+                    else if (props && props['slope-mean'] !== undefined) {
+                        const slope = parseFloat(props['slope-mean']);
+                        if (!isNaN(slope)) {
+                            minSlope = Math.min(minSlope, slope);
+                            maxSlope = Math.max(maxSlope, slope);
+                        }
+                    }
+                });
+                
+                // Update global values if valid ranges were found
+                
+                // Revenue
+                if (minRevenue !== Infinity && maxRevenue !== -Infinity) {
+                    globalMinRevenue = Math.floor(minRevenue / 1000) * 1000;
+                    globalMaxRevenue = Math.ceil(maxRevenue / 1000) * 1000;
+                    console.log(`Found global Revenue range: $${globalMinRevenue.toLocaleString()} to $${globalMaxRevenue.toLocaleString()}`);
+                    
+                    // Calculate deciles for Revenue
+                    if (allRevenueValues.length > 10) {
+                        allRevenueValues.sort((a, b) => a - b);
+                        revenueDeciles = [];
+                        for (let i = 0; i <= 10; i++) {
+                            const index = Math.floor(i * allRevenueValues.length / 10);
+                            if (i === 0) {
+                                revenueDeciles.push(globalMinRevenue);
+                            } else if (i === 10) {
+                                revenueDeciles.push(globalMaxRevenue);
+                            } else {
+                                const decileValue = Math.round(allRevenueValues[index] / 1000) * 1000;
+                                revenueDeciles.push(decileValue);
+                            }
+                        }
+                        attributeDeciles['Revenue'] = revenueDeciles;
+                        updateColorScale();
+                        updateLegend();
+                    }
+                }
+                
+                // Acreage
+                if (minAcreage !== Infinity && maxAcreage !== -Infinity) {
+                    globalMinAcreage = Math.floor(minAcreage);
+                    globalMaxAcreage = Math.ceil(maxAcreage);
+                    console.log(`Found global Acreage range: ${globalMinAcreage.toLocaleString()} to ${globalMaxAcreage.toLocaleString()}`);
+                }
+                
+                // Value (Price)
+                if (minValue !== Infinity && maxValue !== -Infinity) {
+                    globalMinValue = Math.floor(minValue / 1000) * 1000;
+                    globalMaxValue = Math.ceil(maxValue / 1000) * 1000;
+                    console.log(`Found global Value range: $${globalMinValue.toLocaleString()} to $${globalMaxValue.toLocaleString()}`);
+                    console.log(`Raw min/max values: ${minValue} to ${maxValue}`); // Debug log
+                }
+                
+                // Cost
+                if (minCost !== Infinity && maxCost !== -Infinity) {
+                    globalMinCost = Math.floor(minCost / 1000) * 1000;
+                    globalMaxCost = Math.ceil(maxCost / 1000) * 1000;
+                    console.log(`Found global Cost range: $${globalMinCost.toLocaleString()} to $${globalMaxCost.toLocaleString()}`);
+                }
+                
+                // Distance
+                if (minDistance !== Infinity && maxDistance !== -Infinity) {
+                    globalMinDistance = Math.floor(minDistance);
+                    globalMaxDistance = Math.ceil(maxDistance);
+                    console.log(`Found global Distance range: ${globalMinDistance.toLocaleString()} to ${globalMaxDistance.toLocaleString()} meters`);
+                }
+                
+                // Production
+                if (minProduction !== Infinity && maxProduction !== -Infinity) {
+                    globalMinProduction = Math.floor(minProduction);
+                    globalMaxProduction = Math.ceil(maxProduction);
+                    console.log(`Found global Production range: ${globalMinProduction.toLocaleString()} to ${globalMaxProduction.toLocaleString()}`);
+                }
+                
+                // Slope
+                if (minSlope !== Infinity && maxSlope !== -Infinity) {
+                    globalMinSlope = Math.floor(minSlope);
+                    globalMaxSlope = Math.ceil(maxSlope);
+                    // Add a buffer to ensure we capture all values
+                    globalMaxSlope = Math.max(globalMaxSlope, 45); // Ensure max is at least 45 for steep slopes
+                    console.log(`Found global Slope range: ${globalMinSlope.toLocaleString()} to ${globalMaxSlope.toLocaleString()}`);
+                }
+                
+                // Update all sliders with global values
+                updateAllSlidersWithGlobalValues();
+                
+                // Calculate deciles for all attributes
+                calculateAllDeciles(features);
+                
+                // Clean up the temporary map and canvas
+                tempMap.remove();
+                document.body.removeChild(offscreenCanvas);
+                
+                // Hide loading indicator
+                document.getElementById('loading').style.display = 'none';
+                
+                // Log the final ranges for debugging
+                console.log("Final filter ranges:");
+                console.log(`Revenue: $${globalMinRevenue.toLocaleString()} to $${globalMaxRevenue.toLocaleString()}`);
+                console.log(`Acreage: ${globalMinAcreage.toLocaleString()} to ${globalMaxAcreage.toLocaleString()}`);
+                console.log(`Value: $${globalMinValue.toLocaleString()} to $${globalMaxValue.toLocaleString()}`);
+                console.log(`Cost: $${globalMinCost.toLocaleString()} to $${globalMaxCost.toLocaleString()}`);
+                console.log(`Distance: ${globalMinDistance.toLocaleString()} to ${globalMaxDistance.toLocaleString()} meters`);
+                console.log(`Production: ${globalMinProduction.toLocaleString()} to ${globalMaxProduction.toLocaleString()} units`);
+                console.log(`Slope: ${globalMinSlope.toLocaleString()} to ${globalMaxSlope.toLocaleString()}%`);
+            });
+        }
+        
+        // Function to update all sliders with global values
+        function updateAllSlidersWithGlobalValues() {
+            // Update Revenue slider
+            updateSliderWithGlobalValues();
+            
+            // Update Acreage slider
+            const acreageSlider = document.getElementById('acreage-slider');
+            acreageSlider.min = globalMinAcreage;
+            acreageSlider.max = globalMaxAcreage;
+            acreageSlider.value = globalMinAcreage;
+            document.getElementById('acreage-value').textContent = globalMinAcreage.toLocaleString();
+            const acreageRangeLabels = acreageSlider.parentElement.querySelector('.range-labels');
+            acreageRangeLabels.innerHTML = `
+                <span>${globalMinAcreage.toLocaleString()}</span>
+                <span>${globalMaxAcreage.toLocaleString()}</span>
+            `;
+            
+            // Update Price (Value) slider
+            const priceSlider = document.getElementById('price-slider');
+            priceSlider.min = globalMinValue;
+            priceSlider.max = globalMaxValue;
+            priceSlider.value = globalMinValue;
+            document.getElementById('price-value').textContent = globalMinValue.toLocaleString();
+            const priceRangeLabels = priceSlider.parentElement.querySelector('.range-labels');
+            priceRangeLabels.innerHTML = `
+                <span>$${globalMinValue.toLocaleString()}</span>
+                <span>$${globalMaxValue.toLocaleString()}</span>
+            `;
+            
+            // Update Cost slider
+            const costSlider = document.getElementById('cost-slider');
+            costSlider.min = globalMinCost;
+            costSlider.max = globalMaxCost;
+            costSlider.value = globalMinCost;
+            document.getElementById('cost-value').textContent = globalMinCost.toLocaleString();
+            const costRangeLabels = costSlider.parentElement.querySelector('.range-labels');
+            costRangeLabels.innerHTML = `
+                <span>$${globalMinCost.toLocaleString()}</span>
+                <span>$${globalMaxCost.toLocaleString()}</span>
+            `;
+            
+            // Update Distance slider
+            const distanceSlider = document.getElementById('distance-slider');
+            distanceSlider.min = globalMinDistance;
+            distanceSlider.max = globalMaxDistance;
+            distanceSlider.value = globalMinDistance;
+            document.getElementById('distance-value').textContent = globalMinDistance.toLocaleString();
+            const distanceRangeLabels = distanceSlider.parentElement.querySelector('.range-labels');
+            distanceRangeLabels.innerHTML = `
+                <span>${globalMinDistance.toLocaleString()}</span>
+                <span>${globalMaxDistance.toLocaleString()} meters</span>
+            `;
+            
+            // Update Production slider
+            const productionSlider = document.getElementById('production-slider');
+            productionSlider.min = globalMinProduction;
+            productionSlider.max = globalMaxProduction;
+            productionSlider.value = globalMinProduction;
+            document.getElementById('production-value').textContent = globalMinProduction.toLocaleString();
+            const productionRangeLabels = productionSlider.parentElement.querySelector('.range-labels');
+            productionRangeLabels.innerHTML = `
+                <span>${globalMinProduction.toLocaleString()}</span>
+                <span>${globalMaxProduction.toLocaleString()} units</span>
+            `;
+            
+            // Update Slope slider
+            const slopeSlider = document.getElementById('slope-slider');
+            slopeSlider.min = globalMinSlope;
+            slopeSlider.max = globalMaxSlope;
+            slopeSlider.value = globalMinSlope;
+            document.getElementById('slope-value').textContent = globalMinSlope.toLocaleString();
+            const slopeRangeLabels = slopeSlider.parentElement.querySelector('.range-labels');
+            slopeRangeLabels.innerHTML = `
+                <span>${globalMinSlope.toLocaleString()}%</span>
+                <span>${globalMaxSlope.toLocaleString()}%</span>
+            `;
+            
+            console.log("All sliders updated with global min/max values");
+        }
+        
+        // Function to update the slider with global values
+        function updateSliderWithGlobalValues() {
+            // Update the slider
+            const revenueSlider = document.getElementById('revenue-slider');
+            revenueSlider.min = globalMinRevenue;
+            revenueSlider.max = globalMaxRevenue;
+            revenueSlider.value = globalMinRevenue;
+            
+            // Update the displayed value
+            document.getElementById('revenue-value').textContent = globalMinRevenue.toLocaleString();
+            
+            // Update the range labels
+            const rangeLabels = document.querySelector('.range-labels');
+            rangeLabels.innerHTML = `
+                <span>$${globalMinRevenue.toLocaleString()}</span>
+                <span>$${globalMaxRevenue.toLocaleString()}</span>
+            `;
+            
+            console.log(`Slider range set to global values: $${globalMinRevenue.toLocaleString()} - $${globalMaxRevenue.toLocaleString()}`);
+        }
+        
+        // Function to calculate deciles for all attributes
+        function calculateAllDeciles(features) {
+            // Arrays to collect all values for each attribute
+            const attributeValues = {
+                'll_gisacre': [],
+                'Value': [],
+                'Cost': [],
+                'distance_mean': [],
+                'production_mean': [],
+                'slope_mean': []
+            };
+            
+            // Collect values for each attribute
+            features.forEach(feature => {
+                const props = feature.properties;
+                
+                // Process each attribute
+                Object.keys(attributeValues).forEach(attr => {
+                    if (props && props[attr] !== undefined) {
+                        const value = parseFloat(props[attr]);
+                        if (!isNaN(value)) {
+                            attributeValues[attr].push(value);
+                        }
+                    }
+                });
+            });
+            
+            // Calculate deciles for each attribute
+            Object.keys(attributeValues).forEach(attr => {
+                const values = attributeValues[attr];
+                if (values.length > 10) {
+                    values.sort((a, b) => a - b);
+                    const deciles = [];
+                    
+                    // Get min/max values based on the attribute
+                    let min, max;
+                    switch(attr) {
+                        case 'll_gisacre':
+                            min = globalMinAcreage;
+                            max = globalMaxAcreage;
+                            break;
+                        case 'Value':
+                            min = globalMinValue;
+                            max = globalMaxValue;
+                            break;
+                        case 'Cost':
+                            min = globalMinCost;
+                            max = globalMaxCost;
+                            break;
+                        case 'distance_mean':
+                            min = globalMinDistance;
+                            max = globalMaxDistance;
+                            break;
+                        case 'production_mean':
+                            min = globalMinProduction;
+                            max = globalMaxProduction;
+                            break;
+                        case 'slope_mean':
+                            min = globalMinSlope;
+                            max = globalMaxSlope;
+                            break;
+                    }
+                    
+                    // Calculate deciles
+                    for (let i = 0; i <= 10; i++) {
+                        const index = Math.floor(i * values.length / 10);
+                        if (i === 0) {
+                            deciles.push(min);
+                        } else if (i === 10) {
+                            deciles.push(max);
+                        } else {
+                            // Round appropriately based on the attribute
+                            let decileValue;
+                            if (attr === 'Value' || attr === 'Cost') {
+                                decileValue = Math.round(values[index] / 1000) * 1000;
+                            } else if (attr === 'slope_mean') {
+                                decileValue = Math.round(values[index] * 10) / 10;
+                            } else {
+                                decileValue = Math.round(values[index]);
+                            }
+                            deciles.push(decileValue);
+                        }
+                    }
+                    
+                    attributeDeciles[attr] = deciles;
+                    console.log(`Calculated deciles for ${attr}:`, deciles);
+                }
+            });
+        }
+        
+        // Function to update the color scale with the calculated deciles
+        function updateColorScale() {
+            // Get the current style
+            const currentStyle = map.getStyle();
+            
+            // Find the parcels-fill layer
+            const fillLayerIndex = currentStyle.layers.findIndex(layer => layer.id === 'parcels-fill');
+            
+            if (fillLayerIndex !== -1) {
+                // Create the new color scale expression using the deciles
+                const colorScaleExpression = [
+                    'interpolate',
+                    ['linear'],
+                    ['to-number', ['get', currentColorAttribute]] // Add to-number conversion
+                ];
+                
+                // Viridis color scale colors
+                const colors = [
+                    '#440154', // dark purple
+                    '#482173', 
+                    '#433e85',
+                    '#38598c',
+                    '#2d708e',
+                    '#25858e',
+                    '#1e9b8a',
+                    '#2ab07f',
+                    '#52c569',
+                    '#86d549',
+                    '#fde725'  // yellow
+                ];
+                
+                // Get the deciles for the current attribute
+                let deciles = attributeDeciles[currentColorAttribute];
+                
+                // Debug logging for production values
+                if (currentColorAttribute === 'production_mean') {
+                    console.log('Production deciles:', deciles);
+                    // Log some sample features to check their values
+                    const features = map.queryRenderedFeatures({ layers: ['parcels-fill'] });
+                    console.log('Sample production values:', features.slice(0, 5).map(f => ({
+                        id: f.properties.id,
+                        production: f.properties.production_mean
+                    })));
+                }
+                
+                // If we have deciles for this attribute, use them
+                if (deciles && deciles.length > 0) {
+                    // Ensure deciles are in strictly ascending order
+                    // First, create a new array with unique, sorted values
+                    let uniqueDeciles = [...new Set(deciles)].sort((a, b) => a - b);
+                    
+                    // If we have fewer than 2 unique values, create a simple gradient
+                    if (uniqueDeciles.length < 2) {
+                        const min = getAttributeMin(currentColorAttribute);
+                        const max = getAttributeMax(currentColorAttribute);
+                        uniqueDeciles = [min, max];
+                    }
+                    
+                    // Ensure we have at least 2 different values
+                    if (uniqueDeciles[0] === uniqueDeciles[uniqueDeciles.length - 1]) {
+                        uniqueDeciles = [uniqueDeciles[0], uniqueDeciles[0] + 1];
+                    }
+                    
+                    // Log the unique deciles for debugging
+                    console.log(`Unique deciles for ${currentColorAttribute}:`, uniqueDeciles);
+                    
+                    // Add stops to the expression, distributing colors evenly
+                    const numStops = Math.min(uniqueDeciles.length, colors.length);
+                    for (let i = 0; i < numStops; i++) {
+                        colorScaleExpression.push(uniqueDeciles[i]);
+                        colorScaleExpression.push(colors[i]);
+                    }
+                    
+                    // If we have fewer unique values than colors, add the last value again with the last color
+                    if (numStops < colors.length) {
+                        const lastValue = uniqueDeciles[uniqueDeciles.length - 1];
+                        // Only add if it's different from the last one we added
+                        if (lastValue !== uniqueDeciles[numStops - 1]) {
+                            colorScaleExpression.push(lastValue);
+                            colorScaleExpression.push(colors[colors.length - 1]);
+                        }
+                    }
+                } else {
+                    // Fallback to default stops if no deciles available
+                    const min = getAttributeMin(currentColorAttribute);
+                    const max = getAttributeMax(currentColorAttribute);
+                    
+                    // Ensure min and max are different
+                    const effectiveMax = min === max ? min + 1 : max;
+                    const range = effectiveMax - min;
+                    
+                    // Create evenly spaced stops
+                    for (let i = 0; i <= 10; i++) {
+                        const value = min + (range * i / 10);
+                        colorScaleExpression.push(value);
+                        colorScaleExpression.push(colors[i]);
+                    }
+                }
+                
+                // Log the final expression for debugging
+                console.log("Color scale expression:", JSON.stringify(colorScaleExpression));
+                
+                try {
+                    // Update the layer's fill-color property
+                    currentStyle.layers[fillLayerIndex].paint['fill-color'] = colorScaleExpression;
+                    
+                    // Apply the updated style
+                    map.setStyle(currentStyle);
+                    
+                    console.log(`Updated color scale with ${currentColorAttribute} values`);
+                } catch (error) {
+                    console.error("Error updating color scale:", error);
+                    
+                    // Fallback to a simple two-color scale if there's an error
+                    const min = getAttributeMin(currentColorAttribute);
+                    const max = getAttributeMax(currentColorAttribute);
+                    const safeExpression = [
+                        'interpolate',
+                        ['linear'],
+                        ['to-number', ['get', currentColorAttribute]], // Add to-number conversion
+                        min, '#440154',
+                        max, '#fde725'
+                    ];
+                    
+                    currentStyle.layers[fillLayerIndex].paint['fill-color'] = safeExpression;
+                    map.setStyle(currentStyle);
+                    console.log("Applied fallback color scale due to error");
+                }
+            }
+        }
+        
+        // Helper function to get min value for an attribute
+        function getAttributeMin(attribute) {
+            switch(attribute) {
+                case 'Revenue': return globalMinRevenue;
+                case 'll_gisacre': return globalMinAcreage;
+                case 'Value': return globalMinValue;
+                case 'Cost': return globalMinCost;
+                case 'distance_mean': return globalMinDistance;
+                case 'production_mean': return globalMinProduction;
+                case 'slope_mean': return globalMinSlope;
+                default: return 0;
+            }
+        }
+        
+        // Helper function to get max value for an attribute
+        function getAttributeMax(attribute) {
+            switch(attribute) {
+                case 'Revenue': return globalMaxRevenue;
+                case 'll_gisacre': return globalMaxAcreage;
+                case 'Value': return globalMaxValue;
+                case 'Cost': return globalMaxCost;
+                case 'distance_mean': return globalMaxDistance;
+                case 'production_mean': return globalMaxProduction;
+                case 'slope_mean': return globalMaxSlope;
+                default: return 100;
+            }
+        }
+        
+        // Helper function to get formatted value for an attribute
+        function getFormattedValue(attribute, value) {
+            if (attribute === 'Revenue' || attribute === 'Value' || attribute === 'Cost') {
+                return '$' + value.toLocaleString();
+            } else if (attribute === 'slope_mean') {
+                return value.toLocaleString() + '%';
+            } else if (attribute === 'distance_mean') {
+                return value.toLocaleString() + ' meters';
+            } else if (attribute === 'production_mean') {
+                return value.toLocaleString() + ' units';
+            } else {
+                return value.toLocaleString();
+            }
+        }
+        
+        // Helper function to get display name for an attribute
+        function getAttributeDisplayName(attribute) {
+            switch(attribute) {
+                case 'Revenue': return 'Revenue';
+                case 'll_gisacre': return 'Acreage';
+                case 'Value': return 'Price';
+                case 'Cost': return 'Cost';
+                case 'distance_mean': return 'Distance';
+                case 'production_mean': return 'Production';
+                case 'slope_mean': return 'Slope';
+                default: return attribute;
+            }
+        }
+        
+        // Function to update the legend with the new deciles
+        function updateLegend() {
+            const legend = document.querySelector('.map-legend');
+            
+            // Get the deciles for the current attribute
+            let deciles = attributeDeciles[currentColorAttribute];
+            
+            // Ensure we have deciles to work with
+            if (!deciles || deciles.length === 0) {
+                const min = getAttributeMin(currentColorAttribute);
+                const max = getAttributeMax(currentColorAttribute);
+                const range = max - min;
+                
+                deciles = [];
+                for (let i = 0; i <= 10; i++) {
+                    deciles.push(min + (range * i / 10));
+                }
+            }
+            
+            // Ensure deciles are unique and sorted
+            deciles = [...new Set(deciles)].sort((a, b) => a - b);
+            
+            // Get the display name for the attribute
+            const displayName = getAttributeDisplayName(currentColorAttribute);
+            
+            // Viridis color scale colors
+            const colors = ['#440154', '#482173', '#433e85', '#38598c', '#2d708e', '#25858e', '#1e9b8a', '#2ab07f', '#52c569', '#86d549', '#fde725'];
+            
+            // Create the legend HTML
+            let legendHTML = `<div class="legend-title">${displayName}</div><div class="legend-scale">`;
+            
+            // Add exactly 11 legend items
+            for (let i = 0; i < deciles.length; i++) {
+                const formattedValue = getFormattedValue(currentColorAttribute, deciles[i]);
+                legendHTML += `
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: ${colors[i]};"></div>
+                        <span>${formattedValue}</span>
+                    </div>
+                `;
+            }
+            
+            legendHTML += `</div>`;
+            
+            // Update the legend
+            legend.innerHTML = legendHTML;
+        }
+    });
+    
+    // Handle map errors
+    map.on('error', function(e) {
+        console.error('Map error:', e.error);
+        document.getElementById('loading').innerHTML = `<p>Map error: ${e.error ? e.error.message : 'Unknown error'}</p>`;
+        document.getElementById('loading').style.display = 'block';
+    });
+
+    const geocoderApi = {
+        forwardGeocode: async (config) => {
+            const features = [];
+            try {
+                const request =
+            `https://nominatim.openstreetmap.org/search?q=${
+                config.query
+            }&format=geojson&polygon_geojson=1&addressdetails=1`;
+                const response = await fetch(request);
+                const geojson = await response.json();
+                for (const feature of geojson.features) {
+                    const center = [
+                        feature.bbox[0] +
+                    (feature.bbox[2] - feature.bbox[0]) / 2,
+                        feature.bbox[1] +
+                    (feature.bbox[3] - feature.bbox[1]) / 2
+                    ];
+                    const point = {
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: center
+                        },
+                        place_name: feature.properties.display_name,
+                        properties: feature.properties,
+                        text: feature.properties.display_name,
+                        place_type: ['place'],
+                        center
+                    };
+                    features.push(point);
+                }
+            } catch (e) {
+                console.error(`Failed to forwardGeocode with error: ${e}`);
+            }
+
+            return {
+                features
+            };
+        }
+    };
+    map.addControl(
+        new MaplibreGeocoder(geocoderApi, {
+            maplibregl
+        })
+    );
+</script>
+</body>
+</html>
